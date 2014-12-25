@@ -22,7 +22,7 @@
     <meta itemprop="description" content="Nuvola Player 3.0 will be the first release of the third generation of a runtime for web-based music streaming services that provides more native user experience and integration with Linux desktop environments than usual web browsers can offer. Nuvola Players handles multimedia keys, shows desktop notifications, integrates with various sound indicators, media player applets, GNOME lock screen and launchers and more.">
   <meta name="twitter:site" content="@NuvolaPlayer" />
   <meta name="twitter:creator" content="@NuvolaPlayer" />
-    <link rel="stylesheet" href="../theme/bootstrap.min.css" />
+    <link rel="stylesheet" href="../theme/bootstrap.css" />
     <link rel="stylesheet" href="../theme/bootstrap.lightbox.css" media="screen" />
     <link rel="stylesheet" href="../theme/pygments.css" />
     <link rel="stylesheet" href="../theme/main.css" />
@@ -41,6 +41,7 @@
     <script src="../theme/jquery.min.js"></script>
     <script src="../theme/bootstrap.min.js"></script>
     <script src="../theme/bootstrap.lightbox.js"></script>
+    <script src="../theme/iframeResizer.min.js"></script>
   </head>
   <body>
 <!-- Fixed navbar  -->
@@ -53,7 +54,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="https://tiliado.eu/">Tiliado</a>
+            <a class="navbar-brand navbar-big-brand" href="https://tiliado.eu/">Tiliado</a>
         </div>
         <div id="navbar-collapse-0" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
@@ -132,13 +133,12 @@ Nuvola Player<br><small>Cloud music integration for your Linux desktop</small></
 </div>    
     <div class="container">
       <div class="row">
-        
-  <div class="col-sm-12">
+  <div class="col-xs-24">
       <div class="page-header text-center">
         <h1 id="top">Explore Nuvola Player 3.0 Alpha</h1>
       </div>
   </div>
-  <div class="col-md-2 col-lg-3 sidebar">
+  <div class="col-xs-24 col-md-6">
       <p><strong>Contents</strong></p>
       <div class="toc">
 <ul>
@@ -182,9 +182,8 @@ Nuvola Player<br><small>Cloud music integration for your Linux desktop</small></
 </li>
 </ul>
 </div>
-    <span class="backtotop"><a href="#top">↑ Back to top ↑</a></span>
   </div>
-  <div class="col-sm-12 col-md-10 col-lg-9">
+  <div class="col-xs-24 col-md-18 pull-right-md">
     <div class="panel panel-danger"><p class="panel-heading"><strong>In Development - Feedback Welcome</strong></p><div class="panel-body">
 <p><strong>Nuvola Player 3 is a new code-base written from scratch</strong> and the current development stage can be
 described as <strong>alpha</strong>, so please be patient and
@@ -252,8 +251,8 @@ need to use nspluginwrapper and install 32bit libraries on 64bit system. There i
 benefit: If Flash plugin crashes, it doesn't take down whole Nuvola Player application.</p>
 <div class="cointainer">
 <ul class="thumbnails row" data-toggle="lightbox">
-<li class="col-md-4"><a class="thumbnail" href="../images/3.0/new/orig/nuvola_player_2_flash_deps.png" title="Nuvola Player 2 requires a plenty of 32bit libraries on 64bit system because of Flash plugin compatibility hack."><img height="192" src="../images/3.0/new/small/nuvola_player_2_flash_deps.png" width="256"/></a></li>
-<li class="col-md-4"><a class="thumbnail" href="../images/3.0/new/orig/nuvola_player_3_flash_deps.png" title="Nuvola Player 3 doesn't suffer from Flash plugin incompatibility issue ."><img height="192" src="../images/3.0/new/small/nuvola_player_3_flash_deps.png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/new/orig/nuvola_player_2_flash_deps.png" title="Nuvola Player 2 requires a plenty of 32bit libraries on 64bit system because of Flash plugin compatibility hack."><img height="192" src="../images/3.0/new/small/nuvola_player_2_flash_deps.png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/new/orig/nuvola_player_3_flash_deps.png" title="Nuvola Player 3 doesn't suffer from Flash plugin incompatibility issue ."><img height="192" src="../images/3.0/new/small/nuvola_player_3_flash_deps.png" width="256"/></a></li>
 </ul>
 </div>
 <h3 id="independent-instances">Independent Instances</h3>
@@ -266,8 +265,8 @@ when a particular service starts. As a result, you can than pin it to the Unity 
 GNOME Activities dock and launch it directly in the future.</p>
 <div class="cointainer">
 <ul class="thumbnails row" data-toggle="lightbox">
-<li class="col-md-4"><a class="thumbnail" href="../images/3.0/unity/orig/unity_launcher_multiple_pinned.png" title="Multiple services pinned to Unity Launcher."><img height="192" src="../images/3.0/unity/small/unity_launcher_multiple_pinned.png" width="256"/></a></li>
-<li class="col-md-4"><a class="thumbnail" href="../images/3.0/new/orig/gnome_many_favorites.png" title="Multiple services pinned to GNOME Activities dock."><img height="192" src="../images/3.0/new/small/gnome_many_favorites.png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/orig/unity_launcher_multiple_pinned.png" title="Multiple services pinned to Unity Launcher."><img height="192" src="../images/3.0/unity/small/unity_launcher_multiple_pinned.png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/new/orig/gnome_many_favorites.png" title="Multiple services pinned to GNOME Activities dock."><img height="192" src="../images/3.0/new/small/gnome_many_favorites.png" width="256"/></a></li>
 </ul>
 </div>
 <h3 id="other-changes">Other changes</h3>
@@ -295,131 +294,131 @@ browsers can offer.</strong></p>
 <h4 id="first-launch">First Launch</h4>
 <div class="cointainer">
 <ul class="thumbnails row" data-toggle="lightbox">
-<li class="col-md-4"><a class="thumbnail" href="../images/3.0/unity/orig/unity_open_dash.png" title="Click Ubuntu button in the top left corner to open Unity Dash."><img height="192" src="../images/3.0/unity/small/unity_open_dash.png" width="256"/></a></li>
-<li class="col-md-4"><a class="thumbnail" href="../images/3.0/unity/orig/unity_dash_nuvola.png" title="Launch Nuvola Player 3."><img height="192" src="../images/3.0/unity/small/unity_dash_nuvola.png" width="256"/></a></li>
-<li class="col-md-4"><a class="thumbnail" href="../images/3.0/unity/orig/unity_nuvola_selector_about.png" title="Just in case you wonder which version you have installed."><img height="192" src="../images/3.0/unity/small/unity_nuvola_selector_about.png" width="256"/></a></li>
-<li class="col-md-4"><a class="thumbnail" href="../images/3.0/unity/orig/unity_nuvola_selector_launch_grooveshark.png" title="Nuvola Player 3 services selector window. Launch Grooveshark, for example."><img height="192" src="../images/3.0/unity/small/unity_nuvola_selector_launch_grooveshark.png" width="256"/></a></li>
-<li class="col-md-4"><a class="thumbnail" href="../images/3.0/unity/orig/unity_grooveshark_appmenu_about.png" title="Who is the maintainer of this integration script?"><img height="192" src="../images/3.0/unity/small/unity_grooveshark_appmenu_about.png" width="256"/></a></li>
-<li class="col-md-4"><a class="thumbnail" href="../images/3.0/unity/orig/unity_grooveshark_about_dialog.png" title="Grooveshark script is maintained by the main Nuvola Player developer, but other integration scripts can be maintained by independent developers who are properly acknowledged."><img height="192" src="../images/3.0/unity/small/unity_grooveshark_about_dialog.png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/orig/unity_open_dash.png" title="Click Ubuntu button in the top left corner to open Unity Dash."><img height="192" src="../images/3.0/unity/small/unity_open_dash.png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/orig/unity_dash_nuvola.png" title="Launch Nuvola Player 3."><img height="192" src="../images/3.0/unity/small/unity_dash_nuvola.png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/orig/unity_nuvola_selector_about.png" title="Just in case you wonder which version you have installed."><img height="192" src="../images/3.0/unity/small/unity_nuvola_selector_about.png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/orig/unity_nuvola_selector_launch_grooveshark.png" title="Nuvola Player 3 services selector window. Launch Grooveshark, for example."><img height="192" src="../images/3.0/unity/small/unity_nuvola_selector_launch_grooveshark.png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/orig/unity_grooveshark_appmenu_about.png" title="Who is the maintainer of this integration script?"><img height="192" src="../images/3.0/unity/small/unity_grooveshark_appmenu_about.png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/orig/unity_grooveshark_about_dialog.png" title="Grooveshark script is maintained by the main Nuvola Player developer, but other integration scripts can be maintained by independent developers who are properly acknowledged."><img height="192" src="../images/3.0/unity/small/unity_grooveshark_about_dialog.png" width="256"/></a></li>
 </ul>
 </div>
 <h4 id="unity-dash">Unity Dash</h4>
 <p><div class="cointainer">
 <ul class="thumbnails row" data-toggle="lightbox">
-<li class="col-md-4"><a class="thumbnail" href="../images/3.0/unity/orig/unity_open_dash.png" title="Click Ubuntu button in the top left corner to open Unity Dash."><img height="192" src="../images/3.0/unity/small/unity_open_dash.png" width="256"/></a></li>
-<li class="col-md-4"><a class="thumbnail" href="../images/3.0/unity/orig/unity_dash_nuvola.png" title="First, you can launch only the Nuvola Player 3 services selector."><img height="192" src="../images/3.0/unity/small/unity_dash_nuvola.png" width="256"/></a></li>
-<li class="col-md-4"><a class="thumbnail" href="../images/3.0/unity/orig/unity_dash_grooveshark.png" title="However, after the first launch of a particular service integration script, you can launch it again directly from the dash."><img height="192" src="../images/3.0/unity/small/unity_dash_grooveshark.png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/orig/unity_open_dash.png" title="Click Ubuntu button in the top left corner to open Unity Dash."><img height="192" src="../images/3.0/unity/small/unity_open_dash.png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/orig/unity_dash_nuvola.png" title="First, you can launch only the Nuvola Player 3 services selector."><img height="192" src="../images/3.0/unity/small/unity_dash_nuvola.png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/orig/unity_dash_grooveshark.png" title="However, after the first launch of a particular service integration script, you can launch it again directly from the dash."><img height="192" src="../images/3.0/unity/small/unity_dash_grooveshark.png" width="256"/></a></li>
 </ul>
 </div></p>
 <h4 id="pin-to-unity-launcher">Pin to Unity Launcher</h4>
 <p>For a quick access to your favorite streaming services, you can pin them on Unity Launcher.</p>
 <div class="cointainer">
 <ul class="thumbnails row" data-toggle="lightbox">
-<li class="col-md-4"><a class="thumbnail" href="../images/3.0/unity/orig/unity_nuvola_selector_launch_grooveshark.png" title="Launch your favorite service from Nuvola Player 3 services selector window. Grooveshark, for example."><img height="192" src="../images/3.0/unity/small/unity_nuvola_selector_launch_grooveshark.png" width="256"/></a></li>
-<li class="col-md-4"><a class="thumbnail" href="../images/3.0/unity/orig/unity_grooveshark_lock_to_launcher.png" title="Right-click Grooveshark badge in the Unity Launcher and select Lock to Launcher."><img height="192" src="../images/3.0/unity/small/unity_grooveshark_lock_to_launcher.png" width="256"/></a></li>
-<li class="col-md-4"><a class="thumbnail" href="../images/3.0/unity/orig/unity_launcher_multiple_pinned.png" title="You can, of course, pin all services ;-)"><img height="192" src="../images/3.0/unity/small/unity_launcher_multiple_pinned.png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/orig/unity_nuvola_selector_launch_grooveshark.png" title="Launch your favorite service from Nuvola Player 3 services selector window. Grooveshark, for example."><img height="192" src="../images/3.0/unity/small/unity_nuvola_selector_launch_grooveshark.png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/orig/unity_grooveshark_lock_to_launcher.png" title="Right-click Grooveshark badge in the Unity Launcher and select Lock to Launcher."><img height="192" src="../images/3.0/unity/small/unity_grooveshark_lock_to_launcher.png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/orig/unity_launcher_multiple_pinned.png" title="You can, of course, pin all services ;-)"><img height="192" src="../images/3.0/unity/small/unity_launcher_multiple_pinned.png" width="256"/></a></li>
 </ul>
 </div>
 <h4 id="be-quick-with-quick-list">Be Quick with Quick List</h4>
 <div class="cointainer">
 <ul class="thumbnails row" data-toggle="lightbox">
-<li class="col-md-4"><a class="thumbnail" href="../images/3.0/new/orig/unity_grooveshark_quicklist.png" title="All integration scripts provide basic playback actions: Play/pause, previous song and next song."><img height="192" src="../images/3.0/new/small/unity_grooveshark_quicklist.png" width="256"/></a></li>
-<li class="col-md-4"><a class="thumbnail" href="../images/3.0/unity/orig/unity_google_play_music_launcher_star_rating.png" title="Some integration scripts provide extra actions such as star rating in Google Play Music."><img height="192" src="../images/3.0/unity/small/unity_google_play_music_launcher_star_rating.png" width="256"/></a></li>
-<li class="col-md-4"><a class="thumbnail" href="../images/3.0/unity/orig/unity_google_play_music_launcher_star_rating_done.png" title="Rating done. This feature is useful when the Google Play Window is hidden or covered by other windows."><img height="192" src="../images/3.0/unity/small/unity_google_play_music_launcher_star_rating_done.png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/new/orig/unity_grooveshark_quicklist.png" title="All integration scripts provide basic playback actions: Play/pause, previous song and next song."><img height="192" src="../images/3.0/new/small/unity_grooveshark_quicklist.png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/orig/unity_google_play_music_launcher_star_rating.png" title="Some integration scripts provide extra actions such as star rating in Google Play Music."><img height="192" src="../images/3.0/unity/small/unity_google_play_music_launcher_star_rating.png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/orig/unity_google_play_music_launcher_star_rating_done.png" title="Rating done. This feature is useful when the Google Play Window is hidden or covered by other windows."><img height="192" src="../images/3.0/unity/small/unity_google_play_music_launcher_star_rating_done.png" width="256"/></a></li>
 </ul>
 </div>
 <h4 id="became-keyboard-master">Became Keyboard Master</h4>
 <div class="cointainer">
 <ul class="thumbnails row" data-toggle="lightbox">
-<li class="col-md-4"><a class="thumbnail" href="../images/3.0/new/orig/unity_grooveshark_appmenu_keyboard_shortcuts.png" title="Click gear icon and select Keyboard shortcuts from the menu"><img height="192" src="../images/3.0/new/small/unity_grooveshark_appmenu_keyboard_shortcuts.png" width="256"/></a></li>
-<li class="col-md-4"><a class="thumbnail" href="../images/3.0/unity/orig/unity_grooveshark_keyboard_shortcuts.png" title="You can define both in-app and global keyboard shortcuts."><img height="192" src="../images/3.0/unity/small/unity_grooveshark_keyboard_shortcuts.png" width="256"/></a></li>
-<li class="col-md-4"><a class="thumbnail" href="../images/3.0/unity/orig/unity_media_keys.png" title="Moreover, Nuvola Player automatically handles multimedia keys on your keyboard."><img height="192" src="../images/3.0/unity/small/unity_media_keys.png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/new/orig/unity_grooveshark_appmenu_keyboard_shortcuts.png" title="Click gear icon and select Keyboard shortcuts from the menu"><img height="192" src="../images/3.0/new/small/unity_grooveshark_appmenu_keyboard_shortcuts.png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/orig/unity_grooveshark_keyboard_shortcuts.png" title="You can define both in-app and global keyboard shortcuts."><img height="192" src="../images/3.0/unity/small/unity_grooveshark_keyboard_shortcuts.png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/orig/unity_media_keys.png" title="Moreover, Nuvola Player automatically handles multimedia keys on your keyboard."><img height="192" src="../images/3.0/unity/small/unity_media_keys.png" width="256"/></a></li>
 </ul>
 </div>
 <h4 id="head-up-display">Head-Up Display</h4>
 <div class="cointainer">
 <ul class="thumbnails row" data-toggle="lightbox">
-<li class="col-md-4"><a class="thumbnail" href="../images/3.0/unity/orig/unity_grooveshark_hud.png" title="Pres Alt key to show Unity Head-Up display"><img height="192" src="../images/3.0/unity/small/unity_grooveshark_hud.png" width="256"/></a></li>
-<li class="col-md-4"><a class="thumbnail" href="../images/3.0/unity/orig/unity_grooveshark_hud_toggle_play.png" title="Type any command"><img height="192" src="../images/3.0/unity/small/unity_grooveshark_hud_toggle_play.png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/orig/unity_grooveshark_hud.png" title="Pres Alt key to show Unity Head-Up display"><img height="192" src="../images/3.0/unity/small/unity_grooveshark_hud.png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/orig/unity_grooveshark_hud_toggle_play.png" title="Type any command"><img height="192" src="../images/3.0/unity/small/unity_grooveshark_hud_toggle_play.png" width="256"/></a></li>
 </ul>
 </div>
 <h4 id="play-in-background-with-notifications">Play in Background with Notifications</h4>
 <div class="cointainer">
 <ul class="thumbnails row" data-toggle="lightbox">
-<li class="col-md-4"><a class="thumbnail" href="../images/3.0/new/orig/unity_grooveshark_appmenu_preferences.png" title="Click gear icon and select Preferences from the menu"><img height="192" src="../images/3.0/new/small/unity_grooveshark_appmenu_preferences.png" width="256"/></a></li>
-<li class="col-md-4"><a class="thumbnail" href="../images/3.0/new/orig/unity_grooveshark_preferences.png" title="Enable background playback"><img height="192" src="../images/3.0/new/small/unity_grooveshark_preferences.png" width="256"/></a></li>
-<li class="col-md-4"><a class="thumbnail" href="../images/3.0/unity/orig/unity_grooveshark_close.png" title="Now you don't have to worry about closing the window accidentally. Playback continues in background."><img height="192" src="../images/3.0/unity/small/unity_grooveshark_close.png" width="256"/></a></li>
-<li class="col-md-4"><a class="thumbnail" href="../images/3.0/unity/orig/unity_grooveshark_notification.png" title="You'll get notifications on track change."><img height="192" src="../images/3.0/unity/small/unity_grooveshark_notification.png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/new/orig/unity_grooveshark_appmenu_preferences.png" title="Click gear icon and select Preferences from the menu"><img height="192" src="../images/3.0/new/small/unity_grooveshark_appmenu_preferences.png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/new/orig/unity_grooveshark_preferences.png" title="Enable background playback"><img height="192" src="../images/3.0/new/small/unity_grooveshark_preferences.png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/orig/unity_grooveshark_close.png" title="Now you don't have to worry about closing the window accidentally. Playback continues in background."><img height="192" src="../images/3.0/unity/small/unity_grooveshark_close.png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/orig/unity_grooveshark_notification.png" title="You'll get notifications on track change."><img height="192" src="../images/3.0/unity/small/unity_grooveshark_notification.png" width="256"/></a></li>
 </ul>
 </div>
 <h4 id="unity-sound-indicator">Unity Sound Indicator</h4>
 <div class="cointainer">
 <ul class="thumbnails row" data-toggle="lightbox">
-<li class="col-md-4"><a class="thumbnail" href="../images/3.0/unity/orig/unity_grooveshark_close.png" title="Close the window while music is playing. Playback continues in background."><img height="192" src="../images/3.0/unity/small/unity_grooveshark_close.png" width="256"/></a></li>
-<li class="col-md-4"><a class="thumbnail" href="../images/3.0/unity/orig/unity_grooveshark_sound_menu.png" title="You can control playback from the Unity Sound Indicator"><img height="192" src="../images/3.0/unity/small/unity_grooveshark_sound_menu.png" width="256"/></a></li>
-<li class="col-md-4"><a class="thumbnail" href="../images/3.0/unity/orig/unity_grooveshark_open_from_sound_menu.png" title="You can also display the main window from the Unity Sound Indicator"><img height="192" src="../images/3.0/unity/small/unity_grooveshark_open_from_sound_menu.png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/orig/unity_grooveshark_close.png" title="Close the window while music is playing. Playback continues in background."><img height="192" src="../images/3.0/unity/small/unity_grooveshark_close.png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/orig/unity_grooveshark_sound_menu.png" title="You can control playback from the Unity Sound Indicator"><img height="192" src="../images/3.0/unity/small/unity_grooveshark_sound_menu.png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/orig/unity_grooveshark_open_from_sound_menu.png" title="You can also display the main window from the Unity Sound Indicator"><img height="192" src="../images/3.0/unity/small/unity_grooveshark_open_from_sound_menu.png" width="256"/></a></li>
 </ul>
 </div>
 <h3 id="explore-gnome">GNOME</h3>
 <h4 id="first-launch_1">First Launch</h4>
 <div class="cointainer">
 <ul class="thumbnails row" data-toggle="lightbox">
-<li class="col-md-4"><a class="thumbnail" href="../images/3.0/gnome/orig/fedora_flash_install_done_activities.png" title="Click Activities button in the top left corner to open GNOME Overview."><img height="192" src="../images/3.0/gnome/small/fedora_flash_install_done_activities.png" width="256"/></a></li>
-<li class="col-md-4"><a class="thumbnail" href="../images/3.0/gnome/orig/gnome_activities_nuvola.png" title="Launch Nuvola Player 3."><img height="192" src="../images/3.0/gnome/small/gnome_activities_nuvola.png" width="256"/></a></li>
-<li class="col-md-4"><a class="thumbnail" href="../images/3.0/new/orig/gnome_nuvola_appmenu_about.png" title="Just in case you wonder which version you have installed."><img height="192" src="../images/3.0/new/small/gnome_nuvola_appmenu_about.png" width="256"/></a></li>
-<li class="col-md-4"><a class="thumbnail" href="../images/3.0/new/orig/gnome_nuvola_about_dialog.png" title="Just in case you wonder which version you have installed."><img height="192" src="../images/3.0/new/small/gnome_nuvola_about_dialog.png" width="256"/></a></li>
-<li class="col-md-4"><a class="thumbnail" href="../images/3.0/gnome/orig/gnome_selector_launch_grooveshark.png" title="Nuvola Player 3 services selector window. Launch Grooveshark, for example."><img height="192" src="../images/3.0/gnome/small/gnome_selector_launch_grooveshark.png" width="256"/></a></li>
-<li class="col-md-4"><a class="thumbnail" href="../images/3.0/new/orig/gnome_grooveshark_appmenu_about.png" title="Who is the maintainer of this integration script?"><img height="192" src="../images/3.0/new/small/gnome_grooveshark_appmenu_about.png" width="256"/></a></li>
-<li class="col-md-4"><a class="thumbnail" href="../images/3.0/gnome/orig/gnome_grooveshark_about_dialog.png" title="Grooveshark script is maintained by the main Nuvola Player developer, but other integration scripts can be maintained by independent developers who are properly acknowledged."><img height="192" src="../images/3.0/gnome/small/gnome_grooveshark_about_dialog.png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/gnome/orig/fedora_flash_install_done_activities.png" title="Click Activities button in the top left corner to open GNOME Overview."><img height="192" src="../images/3.0/gnome/small/fedora_flash_install_done_activities.png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/gnome/orig/gnome_activities_nuvola.png" title="Launch Nuvola Player 3."><img height="192" src="../images/3.0/gnome/small/gnome_activities_nuvola.png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/new/orig/gnome_nuvola_appmenu_about.png" title="Just in case you wonder which version you have installed."><img height="192" src="../images/3.0/new/small/gnome_nuvola_appmenu_about.png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/new/orig/gnome_nuvola_about_dialog.png" title="Just in case you wonder which version you have installed."><img height="192" src="../images/3.0/new/small/gnome_nuvola_about_dialog.png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/gnome/orig/gnome_selector_launch_grooveshark.png" title="Nuvola Player 3 services selector window. Launch Grooveshark, for example."><img height="192" src="../images/3.0/gnome/small/gnome_selector_launch_grooveshark.png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/new/orig/gnome_grooveshark_appmenu_about.png" title="Who is the maintainer of this integration script?"><img height="192" src="../images/3.0/new/small/gnome_grooveshark_appmenu_about.png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/gnome/orig/gnome_grooveshark_about_dialog.png" title="Grooveshark script is maintained by the main Nuvola Player developer, but other integration scripts can be maintained by independent developers who are properly acknowledged."><img height="192" src="../images/3.0/gnome/small/gnome_grooveshark_about_dialog.png" width="256"/></a></li>
 </ul>
 </div>
 <h4 id="gnome-dash">GNOME Dash</h4>
 <p><div class="cointainer">
 <ul class="thumbnails row" data-toggle="lightbox">
-<li class="col-md-4"><a class="thumbnail" href="../images/3.0/gnome/orig/fedora_flash_install_done_activities.png" title="Click Activities button in the top left corner to open GNOME Overview."><img height="192" src="../images/3.0/gnome/small/fedora_flash_install_done_activities.png" width="256"/></a></li>
-<li class="col-md-4"><a class="thumbnail" href="../images/3.0/gnome/orig/gnome_activities_nuvola.png" title="First, you can launch only the Nuvola Player 3 services selector."><img height="192" src="../images/3.0/gnome/small/gnome_activities_nuvola.png" width="256"/></a></li>
-<li class="col-md-4"><a class="thumbnail" href="../images/3.0/gnome/orig/fedora_flash_install_relaunch_grooveshark.png" title="However, after the first launch of a particular service integration script, you can launch it again directly from the dash."><img height="192" src="../images/3.0/gnome/small/fedora_flash_install_relaunch_grooveshark.png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/gnome/orig/fedora_flash_install_done_activities.png" title="Click Activities button in the top left corner to open GNOME Overview."><img height="192" src="../images/3.0/gnome/small/fedora_flash_install_done_activities.png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/gnome/orig/gnome_activities_nuvola.png" title="First, you can launch only the Nuvola Player 3 services selector."><img height="192" src="../images/3.0/gnome/small/gnome_activities_nuvola.png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/gnome/orig/fedora_flash_install_relaunch_grooveshark.png" title="However, after the first launch of a particular service integration script, you can launch it again directly from the dash."><img height="192" src="../images/3.0/gnome/small/fedora_flash_install_relaunch_grooveshark.png" width="256"/></a></li>
 </ul>
 </div></p>
 <h4 id="dark-or-light-theme">Dark or Light Theme?</h4>
 <div class="cointainer">
 <ul class="thumbnails row" data-toggle="lightbox">
-<li class="col-md-4"><a class="thumbnail" href="../images/3.0/gnome/orig/gnome_grooveshark_appmenu_preferences.png" title="Click application icon and select Preferences from the menu"><img height="192" src="../images/3.0/gnome/small/gnome_grooveshark_appmenu_preferences.png" width="256"/></a></li>
-<li class="col-md-4"><a class="thumbnail" href="../images/3.0/gnome/orig/gnome_grooveshark_preferences.png" title='check "Prefer dark theme&amp;quit; if you want to.'><img height="192" src="../images/3.0/gnome/small/gnome_grooveshark_preferences.png" width="256"/></a></li>
-<li class="col-md-4"><a class="thumbnail" href="../images/3.0/new/orig/gnome_grooveshark_dark.png" title="Grooveshark looks better with dark window decorations."><img height="192" src="../images/3.0/new/small/gnome_grooveshark_dark.png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/gnome/orig/gnome_grooveshark_appmenu_preferences.png" title="Click application icon and select Preferences from the menu"><img height="192" src="../images/3.0/gnome/small/gnome_grooveshark_appmenu_preferences.png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/gnome/orig/gnome_grooveshark_preferences.png" title='check "Prefer dark theme&amp;quit; if you want to.'><img height="192" src="../images/3.0/gnome/small/gnome_grooveshark_preferences.png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/new/orig/gnome_grooveshark_dark.png" title="Grooveshark looks better with dark window decorations."><img height="192" src="../images/3.0/new/small/gnome_grooveshark_dark.png" width="256"/></a></li>
 </ul>
 </div>
 <h4 id="add-to-favorites">Add to Favorites</h4>
 <p>For a quick access to your favorite streaming services, you can pin them on Unity Launcher.</p>
 <div class="cointainer">
 <ul class="thumbnails row" data-toggle="lightbox">
-<li class="col-md-4"><a class="thumbnail" href="../images/3.0/gnome/orig/gnome_selector_launch_grooveshark.png" title="Launch your favorite service from Nuvola Player 3 services selector window. Grooveshark, for example."><img height="192" src="../images/3.0/gnome/small/gnome_selector_launch_grooveshark.png" width="256"/></a></li>
-<li class="col-md-4"><a class="thumbnail" href="../images/3.0/new/orig/gnome_grooveshark_add_to_favorites.png" title="Right-click Grooveshark badge in the GNOME Dash and select Add to favorites."><img height="192" src="../images/3.0/new/small/gnome_grooveshark_add_to_favorites.png" width="256"/></a></li>
-<li class="col-md-4"><a class="thumbnail" href="../images/3.0/new/orig/gnome_many_favorites.png" title="You can, of course, pin all services ;-)"><img height="192" src="../images/3.0/new/small/gnome_many_favorites.png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/gnome/orig/gnome_selector_launch_grooveshark.png" title="Launch your favorite service from Nuvola Player 3 services selector window. Grooveshark, for example."><img height="192" src="../images/3.0/gnome/small/gnome_selector_launch_grooveshark.png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/new/orig/gnome_grooveshark_add_to_favorites.png" title="Right-click Grooveshark badge in the GNOME Dash and select Add to favorites."><img height="192" src="../images/3.0/new/small/gnome_grooveshark_add_to_favorites.png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/new/orig/gnome_many_favorites.png" title="You can, of course, pin all services ;-)"><img height="192" src="../images/3.0/new/small/gnome_many_favorites.png" width="256"/></a></li>
 </ul>
 </div>
 <h4 id="became-keyboard-master_1">Became Keyboard Master</h4>
 <div class="cointainer">
 <ul class="thumbnails row" data-toggle="lightbox">
-<li class="col-md-4"><a class="thumbnail" href="../images/3.0/gnome/orig/gnome_grooveshark_appmenu_keyboard_shortcuts.png" title="Click application icon and select Keyboard shortcuts from the menu"><img height="192" src="../images/3.0/gnome/small/gnome_grooveshark_appmenu_keyboard_shortcuts.png" width="256"/></a></li>
-<li class="col-md-4"><a class="thumbnail" href="../images/3.0/gnome/orig/gnome_grooveshark_keyboard_shortcuts.png" title="You can define both in-app and global keyboard shortcuts."><img height="192" src="../images/3.0/gnome/small/gnome_grooveshark_keyboard_shortcuts.png" width="256"/></a></li>
-<li class="col-md-4"><a class="thumbnail" href="../images/3.0/new/orig/gnome_media_keys.png" title="Moreover, Nuvola Player automatically handles multimedia keys on your keyboard."><img height="192" src="../images/3.0/new/small/gnome_media_keys.png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/gnome/orig/gnome_grooveshark_appmenu_keyboard_shortcuts.png" title="Click application icon and select Keyboard shortcuts from the menu"><img height="192" src="../images/3.0/gnome/small/gnome_grooveshark_appmenu_keyboard_shortcuts.png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/gnome/orig/gnome_grooveshark_keyboard_shortcuts.png" title="You can define both in-app and global keyboard shortcuts."><img height="192" src="../images/3.0/gnome/small/gnome_grooveshark_keyboard_shortcuts.png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/new/orig/gnome_media_keys.png" title="Moreover, Nuvola Player automatically handles multimedia keys on your keyboard."><img height="192" src="../images/3.0/new/small/gnome_media_keys.png" width="256"/></a></li>
 </ul>
 </div>
 <h4 id="play-in-background-with-notifications_1">Play in Background with Notifications</h4>
 <div class="cointainer">
 <ul class="thumbnails row" data-toggle="lightbox">
-<li class="col-md-4"><a class="thumbnail" href="../images/3.0/gnome/orig/gnome_grooveshark_preferences.png" title="Enable background playback if you want to."><img height="192" src="../images/3.0/gnome/small/gnome_grooveshark_preferences.png" width="256"/></a></li>
-<li class="col-md-4"><a class="thumbnail" href="../images/3.0/new/orig/gnome_grooveshark_close.png" title="Now you don't have to worry about closing the window accidentally. Playback continues in background."><img height="192" src="../images/3.0/new/small/gnome_grooveshark_close.png" width="256"/></a></li>
-<li class="col-md-4"><a class="thumbnail" href="../images/3.0/gnome/orig/gnome_notification_small.png" title="You'll get notifications on track change."><img height="192" src="../images/3.0/gnome/small/gnome_notification_small.png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/gnome/orig/gnome_grooveshark_preferences.png" title="Enable background playback if you want to."><img height="192" src="../images/3.0/gnome/small/gnome_grooveshark_preferences.png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/new/orig/gnome_grooveshark_close.png" title="Now you don't have to worry about closing the window accidentally. Playback continues in background."><img height="192" src="../images/3.0/new/small/gnome_grooveshark_close.png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/gnome/orig/gnome_notification_small.png" title="You'll get notifications on track change."><img height="192" src="../images/3.0/gnome/small/gnome_notification_small.png" width="256"/></a></li>
 </ul>
 </div>
 <h4 id="notifications-with-playback-controls">Notifications with Playback Controls</h4>
 <div class="cointainer">
 <ul class="thumbnails row" data-toggle="lightbox">
-<li class="col-md-4"><a class="thumbnail" href="../images/3.0/gnome/orig/gnome_notification_expanded.png" title="Hover mouse over small notification and you will get expanded notification with playback controls."><img height="192" src="../images/3.0/gnome/small/gnome_notification_expanded.png" width="256"/></a></li>
-<li class="col-md-4"><a class="thumbnail" href="../images/3.0/gnome/orig/gnome_notification_messaging_area.png" title="You can also display notification from the GNOME messaging area (key Super+M)."><img height="192" src="../images/3.0/gnome/small/gnome_notification_messaging_area.png" width="256"/></a></li>
-<li class="col-md-4"><a class="thumbnail" href="../images/3.0/gnome/orig/gnome_lock_screen_controls.png" title="How about playback controls on lock screen?"><img height="192" src="../images/3.0/gnome/small/gnome_lock_screen_controls.png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/gnome/orig/gnome_notification_expanded.png" title="Hover mouse over small notification and you will get expanded notification with playback controls."><img height="192" src="../images/3.0/gnome/small/gnome_notification_expanded.png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/gnome/orig/gnome_notification_messaging_area.png" title="You can also display notification from the GNOME messaging area (key Super+M)."><img height="192" src="../images/3.0/gnome/small/gnome_notification_messaging_area.png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/gnome/orig/gnome_lock_screen_controls.png" title="How about playback controls on lock screen?"><img height="192" src="../images/3.0/gnome/small/gnome_lock_screen_controls.png" width="256"/></a></li>
 </ul>
 </div>
 <h4 id="extension-of-the-day-media-player-indicator">Extension of the Day: Media Player Indicator</h4>
@@ -427,24 +426,24 @@ browsers can offer.</strong></p>
 GNOME Shell extension.</p>
 <div class="cointainer">
 <ul class="thumbnails row" data-toggle="lightbox">
-<li class="col-md-4"><a class="thumbnail" href="../images/3.0/gnome/orig/gnome_mpris_extension_web_page.png" title="Search for Media Player Indicator in GNOME Extensions website."><img height="192" src="../images/3.0/gnome/small/gnome_mpris_extension_web_page.png" width="256"/></a></li>
-<li class="col-md-4"><a class="thumbnail" href="../images/3.0/gnome/orig/gnome_mpris_extension_turn_on.png" title="Turn the extension on."><img height="192" src="../images/3.0/gnome/small/gnome_mpris_extension_turn_on.png" width="256"/></a></li>
-<li class="col-md-4"><a class="thumbnail" href="../images/3.0/gnome/orig/gnome_mpris_extension_install.png" title="Confirm installation."><img height="192" src="../images/3.0/gnome/small/gnome_mpris_extension_install.png" width="256"/></a></li>
-<li class="col-md-4"><a class="thumbnail" href="../images/3.0/gnome/orig/gnome_mpris_extension_reload.png" title="Reload the web page."><img height="192" src="../images/3.0/gnome/small/gnome_mpris_extension_reload.png" width="256"/></a></li>
-<li class="col-md-4"><a class="thumbnail" href="../images/3.0/gnome/orig/gnome_mpris_extension_open_preferences.png" title="Open preferences."><img height="192" src="../images/3.0/gnome/small/gnome_mpris_extension_open_preferences.png" width="256"/></a></li>
-<li class="col-md-4"><a class="thumbnail" href="../images/3.0/gnome/orig/gnome_mpris_extension_preferences_right.png" title="Change position of the indicator, if you want to."><img height="192" src="../images/3.0/gnome/small/gnome_mpris_extension_preferences_right.png" width="256"/></a></li>
-<li class="col-md-4"><a class="thumbnail" href="../images/3.0/new/orig/gnome_grooveshark_close.png" title="Close the window while music is playing. Playback continues in background."><img height="192" src="../images/3.0/new/small/gnome_grooveshark_close.png" width="256"/></a></li>
-<li class="col-md-4"><a class="thumbnail" href="../images/3.0/new/orig/gnome_grooveshark_mpris_pause.png" title="You can control playback from the Media Player Indicator."><img height="192" src="../images/3.0/new/small/gnome_grooveshark_mpris_pause.png" width="256"/></a></li>
-<li class="col-md-4"><a class="thumbnail" href="../images/3.0/new/orig/gnome_grooveshark_mpris_raise.png" title="You can also display the hidden main window from the Media Player Indicator"><img height="192" src="../images/3.0/new/small/gnome_grooveshark_mpris_raise.png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/gnome/orig/gnome_mpris_extension_web_page.png" title="Search for Media Player Indicator in GNOME Extensions website."><img height="192" src="../images/3.0/gnome/small/gnome_mpris_extension_web_page.png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/gnome/orig/gnome_mpris_extension_turn_on.png" title="Turn the extension on."><img height="192" src="../images/3.0/gnome/small/gnome_mpris_extension_turn_on.png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/gnome/orig/gnome_mpris_extension_install.png" title="Confirm installation."><img height="192" src="../images/3.0/gnome/small/gnome_mpris_extension_install.png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/gnome/orig/gnome_mpris_extension_reload.png" title="Reload the web page."><img height="192" src="../images/3.0/gnome/small/gnome_mpris_extension_reload.png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/gnome/orig/gnome_mpris_extension_open_preferences.png" title="Open preferences."><img height="192" src="../images/3.0/gnome/small/gnome_mpris_extension_open_preferences.png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/gnome/orig/gnome_mpris_extension_preferences_right.png" title="Change position of the indicator, if you want to."><img height="192" src="../images/3.0/gnome/small/gnome_mpris_extension_preferences_right.png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/new/orig/gnome_grooveshark_close.png" title="Close the window while music is playing. Playback continues in background."><img height="192" src="../images/3.0/new/small/gnome_grooveshark_close.png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/new/orig/gnome_grooveshark_mpris_pause.png" title="You can control playback from the Media Player Indicator."><img height="192" src="../images/3.0/new/small/gnome_grooveshark_mpris_pause.png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/new/orig/gnome_grooveshark_mpris_raise.png" title="You can also display the hidden main window from the Media Player Indicator"><img height="192" src="../images/3.0/new/small/gnome_grooveshark_mpris_raise.png" width="256"/></a></li>
 </ul>
 </div>
 <h3 id="explore-terminal">Terminal &amp; Scripts</h3>
 <h4 id="command-line-controller">Command-line Controller</h4>
 <div class="cointainer">
 <ul class="thumbnails row" data-toggle="lightbox">
-<li class="col-md-4"><a class="thumbnail" href="../images/3.0/unity/orig/unity_nuvolactl_help.png" title="Nuvola Player comes with command-line controller for your scripts"><img height="192" src="../images/3.0/unity/small/unity_nuvolactl_help.png" width="256"/></a></li>
-<li class="col-md-4"><a class="thumbnail" href="../images/3.0/unity/orig/unity_nuvolactl_track_info.png" title="Get track info, pause playback, ..."><img height="192" src="../images/3.0/unity/small/unity_nuvolactl_track_info.png" width="256"/></a></li>
-<li class="col-md-4"><a class="thumbnail" href="../images/3.0/unity/orig/unity_nuvolactl_multiple_apps.png" title="How about controlling three Nuvola Player instances?"><img height="192" src="../images/3.0/unity/small/unity_nuvolactl_multiple_apps.png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/orig/unity_nuvolactl_help.png" title="Nuvola Player comes with command-line controller for your scripts"><img height="192" src="../images/3.0/unity/small/unity_nuvolactl_help.png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/orig/unity_nuvolactl_track_info.png" title="Get track info, pause playback, ..."><img height="192" src="../images/3.0/unity/small/unity_nuvolactl_track_info.png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/orig/unity_nuvolactl_multiple_apps.png" title="How about controlling three Nuvola Player instances?"><img height="192" src="../images/3.0/unity/small/unity_nuvolactl_multiple_apps.png" width="256"/></a></li>
 </ul>
 </div>
 <div class="cointainer">
@@ -452,20 +451,25 @@ GNOME Shell extension.</p>
 </ul>
 </div>
 
-<div class="footer">
-  <hr />
-  <div class="panel panel-primary">
-    <p class="panel-heading">
-      Questions? Feedback?
-    </p>
-    <div class="panel-body">
-      <p>
-        <strong>Having trouble? We'd like to help!</strong> Search for information in the archives of
-          <a href="https://groups.google.com/d/forum/nuvola-player-users">the Nuvola Player Users
-          mailing list</a>, or post a question.
-        </p>
-    </div>
+<hr />
+<div class="panel panel-primary">
+  <p class="panel-heading">
+    Questions? Feedback?
+  </p>
+  <div class="panel-body">
+    <p>
+      <strong>Having trouble? We'd like to help!</strong> Search for information in the archives of
+        <a href="https://groups.google.com/d/forum/nuvola-player-users">the Nuvola Player Users
+        mailing list</a>, or post a question.
+      </p>
   </div>
+</div>  </div>
+  <div class="col-xs-24 col-md-6 sidebar">
+<iframe src="https://tiliado.eu/nuvolaplayer/funding/patrons_list_box/" width="100%" scrolling="no" border="0" frameborder="0" class="patrons-box"></iframe>
+<script type="text/javascript">$('iframe').iFrameResize();</script>  </div>
+      </div>
+      <div class="row">
+<div class="footer">
   <hr />
   <p class="text-center">
     &copy; 2014 Jiří Janoušek.
@@ -473,8 +477,7 @@ GNOME Shell extension.</p>
     Uses <a href="http://getbootstrap.com/">Bootstrap</a> theme
     <a href="http://bootswatch.com/united/">United</a>.
   </p>
-</div>  </div> 
-      </div>
+</div>      </div>
     </div>
   </body>
 </html>

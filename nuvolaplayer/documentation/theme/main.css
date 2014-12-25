@@ -29,16 +29,15 @@ dl dd {
   padding-left: 12px;
 }
 
-.navbar-topics {
-  margin-top: 1.5em;
-}
-
-.navbar-main .navbar-brand {
-  font-weight: bold;
-  font-size: 170%;
-}
-
 .project-logo img
 {
   vertical-align: -30%;
+}
+
+iframe {
+  border-size: 0px;
+}
+
+.patrons-box {
+  margin-top: 1em;
 }
