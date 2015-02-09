@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Nuvola Player 3.0 Alpha</title>
+        <title>Nuvola Player 3.0 Beta</title>
 
-  <meta itemprop="name" content="Nuvola Player 3.0 Alpha">
-  <meta property="og:title" content="Nuvola Player 3.0 Alpha" />
-  <meta name="twitter:title" content="Nuvola Player 3.0 Alpha" />
+  <meta itemprop="name" content="Nuvola Player 3.0 Beta">
+  <meta property="og:title" content="Nuvola Player 3.0 Beta" />
+  <meta name="twitter:title" content="Nuvola Player 3.0 Beta" />
   <meta property="og:type" content="article" />
   <meta name="twitter:card" content="summary" />
   <meta property="og:url" content="http://tiliado.github.io/nuvolaplayer/documentation/3.0.html" />
@@ -135,42 +135,56 @@ Nuvola Player<br><small>Cloud music integration for your Linux desktop</small></
       <div class="row">
   <div class="col-xs-24">
       <div class="page-header text-center">
-        <h1 id="top">Nuvola Player 3.0 Alpha</h1>
+        <h1 id="top">Nuvola Player 3.0 Beta</h1>
       </div>
   </div>
   <div class="col-xs-24 col-md-6">
       <p><strong>Contents</strong></p>
       <div class="toc">
 <ul>
-<li><a href="#development-roadmap">Development Roadmap</a></li>
-<li><a href="#support-development">Support Development</a></li>
-<li><a href="#install-alpha-builds">Install Alpha Builds</a></li>
+<li><a href="#about-nuvola-player">About Nuvola Player</a></li>
+<li><a href="#minimal-requirements">Minimal Requirements</a></li>
+<li><a href="#install-beta-builds">Install Beta Builds</a></li>
 <li><a href="#explore-features">Explore Features</a></li>
 </ul>
 </div>
   </div>
   <div class="col-xs-24 col-md-18 pull-right-md">
-    <div class="panel panel-danger"><p class="panel-heading"><strong>In Development - Feedback Welcome</strong></p><div class="panel-body">
-<p><strong>Nuvola Player 3 is a new code-base written from scratch</strong> and the current development stage can be
-described as <strong>alpha</strong>, so please be patient and
-<a href="https://groups.google.com/d/forum/nuvola-player-users">ask questions and provide feedback</a> whenever you find a bug
-or two.</p>
-</div></div>
-<h2 id="development-roadmap">Development Roadmap</h2>
-<p>You can check <a href="https://github.com/tiliado/nuvolaplayer/wiki/Nuvola-Player-3.0-Roadmap">more detailed roadmap at Github</a>.</p>
+    <h2 id="about-nuvola-player">About Nuvola Player</h2>
+<p><strong>Nuvola Player</strong> is a runtime for web-based music streaming services providing more native user experience and integration with Linux desktop environments
+than usual web browsers can offer. It tries to feel and look like a native application as possible. However, it cannot overcome 
+common drawbacks of web-based music streaming: some music streaming services require Flash plugin and web apps usually have higher memory usage than native apps.</p>
+<p>Overall, Nuvola Player is a handy tool that is used by many users around the world. Moreover, some of them love Nuvola Player so much that they
+<a href="https://tiliado.eu/nuvolaplayer/funding/">support further maintenance and development</a> of the project.</p>
+<h2 id="minimal-requirements">Minimal Requirements</h2>
+<p>Although Nuvola Player 3 <strong>officially supports</strong> only three distributions (Debian, Ubuntu and Fedora) and two desktop environments (Unity and GNOME Shell),
+it should work on other modern Linux distributions and environments that fulfill following minimal requirements. However, user experience might not be optimal
+(e.g. inconsistent look and behavior). Official support for more distributions and environments are expected to be added in the future depending on
+<a href="https://tiliado.eu/nuvolaplayer/funding/">project funding</a> and demand from users, especially from donators.</p>
 <ul>
-<li>October 2014 - Alpha builds</li>
-<li>November 2014 - Beta builds</li>
-<li>December 2014 - Stable release</li>
+<li><a href="http://python.org">Python 2</a> &gt;= 2.7 (recommended)
+    or <a href="http://python.org">Python 3</a> &gt;= 3.4 (not well tested)</li>
+<li><a href="https://wiki.gnome.org/Projects/Vala">Vala</a> &gt;= 0.22.1</li>
+<li><a href="https://github.com/tiliado/diorite">Diorite library</a></li>
+<li><a href="https://wiki.gnome.org/Projects/GLib">glib-2.0</a> &gt;= 2.38</li>
+<li><a href="https://wiki.gnome.org/Projects/GLib">gio-2.0</a> &gt;= 2.38</li>
+<li><a href="https://wiki.gnome.org/Projects/GLib">gobject-2.0</a> &gt;= 2.38</li>
+<li><a href="https://wiki.gnome.org/Projects/GLib">gthread-2.0</a> &gt;= 2.38</li>
+<li><a href="http://www.gtk.org/">gtk+-3.0</a> &gt;= 3.10</li>
+<li><a href="http://www.gtk.org/">gdk-3.0</a> &gt;= 3.10</li>
+<li><a href="http://www.gtk.org/">gdk-x11-3.0</a> &gt;= 3.10</li>
+<li><a href="http://www.x.org/wiki/">x11</a> &gt;= 0.5</li>
+<li><a href="https://wiki.gnome.org/Projects/JsonGlib">json-glib-1.0</a> &gt;= 0.7</li>
+<li><a href="http://www.libarchive.org/">libarchive</a> &gt;= 3.1</li>
+<li><a href="http://webkitgtk.org/">webkit2gtk-3.0</a> &gt;= 2.2</li>
+<li><a href="http://webkitgtk.org/">javascriptcoregtk-3.0</a> &gt;= 1.8</li>
+<li><a href="https://git.gnome.org/browse/libnotify/">libnotify</a> &gt;= 0.7</li>
+<li>optional unity &gt;= 3.0</li>
+<li>optional dbusmenu-glib-0.4 &gt;= 0.4 </li>
 </ul>
-<h2 id="support-development">Support Development</h2>
-<p>As development of Nuvola Player is not funded by any company, foundation nor organization, it
-completely depends on donations from users, Tiliado Patrons. Without them Nuvola Player would be
-a history. </p>
-<p><strong>There are many awesome things to to. <a href="https://tiliado.eu/nuvolaplayer/donate/">Make a donation to support development</a></strong></p>
-<h2 id="install-alpha-builds">Install Alpha Builds</h2>
+<h2 id="install-beta-builds">Install Beta Builds</h2>
 <div class="panel panel-info"><p class="panel-heading">Info</p><div class="panel-body">
-<p><strong>Nuvola Player 3 Alpha won't replace Nuvola Player 2 in your system.</strong> You can keep using Nuvola
+<p><strong>Nuvola Player 3 won't replace Nuvola Player 2 in your system.</strong> You can keep using Nuvola
 Player 2 until Nuvola Player 3 is stable enough for you.</p>
 </div></div>
 <table class="badges">
