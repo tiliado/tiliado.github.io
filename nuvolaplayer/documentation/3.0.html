@@ -143,9 +143,10 @@ Nuvola Player<br><small>Cloud music integration for your Linux desktop</small></
       <div class="toc">
 <ul>
 <li><a href="#about-nuvola-player">About Nuvola Player</a></li>
-<li><a href="#minimal-requirements">Minimal Requirements</a></li>
+<li><a href="#release-notes">Release Notes</a></li>
+<li><a href="#desktop-integration">Desktop Integration</a></li>
+<li><a href="#music-streaming-services">Music Streaming Services</a></li>
 <li><a href="#install-beta-builds">Install Beta Builds</a></li>
-<li><a href="#explore-features">Explore Features</a></li>
 </ul>
 </div>
   </div>
@@ -154,54 +155,68 @@ Nuvola Player<br><small>Cloud music integration for your Linux desktop</small></
 <p><strong>Nuvola Player</strong> is a runtime for web-based music streaming services providing more native user experience and integration with Linux desktop environments
 than usual web browsers can offer. It tries to feel and look like a native application as possible. However, it cannot overcome 
 common drawbacks of web-based music streaming: some music streaming services require Flash plugin and web apps usually have higher memory usage than native apps.</p>
-<p>Overall, Nuvola Player is a handy tool that is used by many users around the world. Moreover, some of them love Nuvola Player so much that they
-<a href="https://tiliado.eu/nuvolaplayer/funding/">support further maintenance and development</a> of the project.</p>
-<h2 id="minimal-requirements">Minimal Requirements</h2>
-<p>Although Nuvola Player 3 <strong>officially supports</strong> only three distributions (Debian, Ubuntu and Fedora) and two desktop environments (Unity and GNOME Shell),
-it should work on other modern Linux distributions and environments that fulfill following minimal requirements. However, user experience might not be optimal
-(e.g. inconsistent look and behavior). Official support for more distributions and environments are expected to be added in the future depending on
-<a href="https://tiliado.eu/nuvolaplayer/funding/">project funding</a> and demand from users, especially from donators.</p>
+<h2 id="release-notes">Release Notes</h2>
+<p>Although Nuvola Player 3.0 is currently in development, beta builds are available and are recommended for general usage.
+Nuvola Player 3 has been rewritten from scratch and contains plenty of improvements over Nuvola Player 2.
+See <a href="./3.0/notes.html">release notes for more information</a>.</p>
+<h2 id="desktop-integration">Desktop Integration</h2>
+<p>Goal of Nuvola Player is to provide better <a href="./3.0/explore.html">user experience and desktop integration</a> than common web
+browsers can offer.</p>
+<table class="table text-center table-bordered">
+<tr>
+<td><a href="3.0/explore.html#explore-unity"><img height="192" src="./images/3.0/unity/small/unity_google_play_music_launcher_star_rating.png" width="256"/></a></td>
+<td><a href="3.0/explore.html#explore-gnome"><img height="192" src="./images/3.0/new/small/gnome_grooveshark_add_to_favorites.png" width="256"/></a></td>
+<td><a href="3.0/explore.html#explore-terminal"><img height="192" src="./images/3.0/unity/small/unity_nuvolactl_multiple_apps.png" width="256"/></a></td>
+</tr>
+<tr>
+<td><a href="3.0/explore.html#explore-unity">Unity</a></td>
+<td><a href="3.0/explore.html#explore-gnome">GNOME</a></td>
+<td><a href="3.0/explore.html#explore-terminal">Terminal &amp; scripts</a></td>
+</tr>
+</table>
+<h2 id="music-streaming-services">Music Streaming Services</h2>
+<p>Nuvola Player 3 currently ships with five music streamimg services:</p>
 <ul>
-<li><a href="http://python.org">Python 2</a> &gt;= 2.7 (recommended)
-    or <a href="http://python.org">Python 3</a> &gt;= 3.4 (not well tested)</li>
-<li><a href="https://wiki.gnome.org/Projects/Vala">Vala</a> &gt;= 0.22.1</li>
-<li><a href="https://github.com/tiliado/diorite">Diorite library</a></li>
-<li><a href="https://wiki.gnome.org/Projects/GLib">glib-2.0</a> &gt;= 2.38</li>
-<li><a href="https://wiki.gnome.org/Projects/GLib">gio-2.0</a> &gt;= 2.38</li>
-<li><a href="https://wiki.gnome.org/Projects/GLib">gobject-2.0</a> &gt;= 2.38</li>
-<li><a href="https://wiki.gnome.org/Projects/GLib">gthread-2.0</a> &gt;= 2.38</li>
-<li><a href="http://www.gtk.org/">gtk+-3.0</a> &gt;= 3.10</li>
-<li><a href="http://www.gtk.org/">gdk-3.0</a> &gt;= 3.10</li>
-<li><a href="http://www.gtk.org/">gdk-x11-3.0</a> &gt;= 3.10</li>
-<li><a href="http://www.x.org/wiki/">x11</a> &gt;= 0.5</li>
-<li><a href="https://wiki.gnome.org/Projects/JsonGlib">json-glib-1.0</a> &gt;= 0.7</li>
-<li><a href="http://www.libarchive.org/">libarchive</a> &gt;= 3.1</li>
-<li><a href="http://webkitgtk.org/">webkit2gtk-3.0</a> &gt;= 2.2</li>
-<li><a href="http://webkitgtk.org/">javascriptcoregtk-3.0</a> &gt;= 1.8</li>
-<li><a href="https://git.gnome.org/browse/libnotify/">libnotify</a> &gt;= 0.7</li>
-<li>optional unity &gt;= 3.0</li>
-<li>optional dbusmenu-glib-0.4 &gt;= 0.4 </li>
+<li><a href="https://github.com/tiliado/nuvola-app-deezer">Deezer</a> 2.2 - Jiří Janoušek</li>
+<li><a href="https://github.com/tiliado/nuvola-app-google-play">Google Play Music</a> 5.0 - Jiří Janoušek</li>
+<li><a href="https://github.com/tiliado/nuvola-app-grooveshark">Grooveshark</a> 4.0 - Jiří Janoušek</li>
+<li><a href="https://github.com/tiliado/nuvola-app-jango">Jango</a> 2.0 - Stefano Bagnatica</li>
+<li><a href="https://github.com/tiliado/nuvola-app-this-is-my-jam">This is My Jam</a> 2.0 - Jan Vlnas</li>
+</ul>
+<p>Five more services are in preparation and will be added to the repository when finished:</p>
+<ul>
+<li>Rdio (Aaron Cripps)</li>
+<li>Bandcamp (Jiří Janoušek)</li>
+<li>Spotify (Michael Nye)</li>
+<li>KEXP Live Stream (Michael Nye)</li>
+<li>Synology Audio Station (Daniel Schep).</li>
+<li>8tracks (Jiří Janoušek)</li>
 </ul>
 <h2 id="install-beta-builds">Install Beta Builds</h2>
 <div class="panel panel-info"><p class="panel-heading">Info</p><div class="panel-body">
 <p><strong>Nuvola Player 3 won't replace Nuvola Player 2 in your system.</strong> You can keep using Nuvola
 Player 2 until Nuvola Player 3 is stable enough for you.</p>
 </div></div>
-<table class="badges">
+<table class="table text-center table-bordered">
 <tr>
-<td><a href="3.0/install.html" title="Install Nuvola Player"><img height="108" src="./images/nuvola-logos/install_vertical_2.png"/></a></td>
 <td><a href="3.0/install.html#ubuntu" title="Install Nuvola Player in Ubuntu"><img height="108" src="./images/dist-logos/ubuntu_vertical.png"/></a></td>
 <td><a href="3.0/install.html#fedora" title="Install Nuvola Player in Fedora"><img height="108" src="./images/dist-logos/fedora_vertical.png"/></a></td>
-<!--<td><a title="Install Nuvola Player in Debian" href="3.0/install.html#debian"><img src="./images/dist-logos/debian_vertical.png" height="108" /></a></td>-->
+<td><a href="3.0/install.html#debian" title="Install Nuvola Player in Debian"><img height="108" src="./images/dist-logos/debian_vertical.png"/></a></td>
+<td><a href="3.0/install.html#other-linux" title="Install Nuvola Player"><img height="108" src="./images/nuvola-logos/install_vertical_2.png"/></a></td>
 </tr>
-</table>
-<h2 id="explore-features">Explore Features</h2>
-<table class="badges">
 <tr>
-<td><a href="3.0/explore.html#news"><img height="192" src="./images/3.0/unity/small/unity_google_play_music_launcher_star_rating.png" width="256"/></a></td>
-<td><a href="3.0/explore.html#news"><img height="192" src="./images/3.0/new/small/gnome_grooveshark_add_to_favorites.png" width="256"/></a></td>
+<td><a href="3.0/install.html#ubuntu" title="Install Nuvola Player in Ubuntu">Ubuntu</a></td>
+<td><a href="3.0/install.html#fedora" title="Install Nuvola Player in Fedora">Fedora</a></td>
+<td><a href="3.0/install.html#debian" title="Install Nuvola Player in Debian">Debian</a></td>
+<td><a href="3.0/install.html#other-linux" title="Install Nuvola Player">Other Linux</a></td>
 </tr>
 </table>
+<p>Nuvola Player 3 project officially supports and provides packages for <a href="./3.0/install.html#ubuntu">Ubuntu</a> 14.04-14.10,
+<a href="./3.0/install.html#fedora">Fedora</a> 20-21 and <a href="./3.0/install.html#debian">Debian</a>
+Jessie and Sid. The Nuvola Player developer has tested installation and functionality in clean virtualized instances
+of these distributions and can assure reasonable user support in case of problems.</p>
+<p>However, Nuvola Player should also work on <a href="./3.0/install.html#other-linux">other modern Linux distributions</a>, but user experience might
+not be optimal (e.g. inconsistent look and behavior) and quality of user support depends on complexity of an issue.</p>
 
 <hr />
 <div class="panel panel-primary">

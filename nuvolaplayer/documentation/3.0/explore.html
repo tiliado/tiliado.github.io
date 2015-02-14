@@ -142,16 +142,6 @@ Nuvola Player<br><small>Cloud music integration for your Linux desktop</small></
       <p><strong>Contents</strong></p>
       <div class="toc">
 <ul>
-<li><a href="#install">Install</a></li>
-<li><a href="#news">What's New</a><ul>
-<li><a href="#new-codebase">New Codebase</a></li>
-<li><a href="#tiliado-repository">Tiliado Repository</a></li>
-<li><a href="#no-hacks-for-flash-support">No Hacks for Flash Support</a></li>
-<li><a href="#independent-instances">Independent Instances</a></li>
-<li><a href="#other-changes">Other changes</a></li>
-</ul>
-</li>
-<li><a href="#user-experience">User Experience</a><ul>
 <li><a href="#explore-unity">Unity</a><ul>
 <li><a href="#first-launch">First Launch</a></li>
 <li><a href="#unity-dash">Unity Dash</a></li>
@@ -161,17 +151,19 @@ Nuvola Player<br><small>Cloud music integration for your Linux desktop</small></
 <li><a href="#head-up-display">Head-Up Display</a></li>
 <li><a href="#play-in-background-with-notifications">Play in Background with Notifications</a></li>
 <li><a href="#unity-sound-indicator">Unity Sound Indicator</a></li>
+<li><a href="#lastfm-scrobbling">Last.fm Scrobbling</a></li>
 </ul>
 </li>
 <li><a href="#explore-gnome">GNOME</a><ul>
 <li><a href="#first-launch_1">First Launch</a></li>
 <li><a href="#gnome-dash">GNOME Dash</a></li>
-<li><a href="#dark-or-light-theme">Dark or Light Theme?</a></li>
 <li><a href="#add-to-favorites">Add to Favorites</a></li>
 <li><a href="#became-keyboard-master_1">Became Keyboard Master</a></li>
 <li><a href="#play-in-background-with-notifications_1">Play in Background with Notifications</a></li>
 <li><a href="#notifications-with-playback-controls">Notifications with Playback Controls</a></li>
-<li><a href="#extension-of-the-day-media-player-indicator">Extension of the Day: Media Player Indicator</a></li>
+<li><a href="#media-player-indicator-extension">Media Player Indicator extension</a></li>
+<li><a href="#dark-or-light-theme">Dark or Light Theme?</a></li>
+<li><a href="#lastfm-scrobbling_1">Last.fm Scrobbling</a></li>
 </ul>
 </li>
 <li><a href="#explore-terminal">Terminal &amp; Scripts</a><ul>
@@ -179,113 +171,15 @@ Nuvola Player<br><small>Cloud music integration for your Linux desktop</small></
 </ul>
 </li>
 </ul>
-</li>
-</ul>
 </div>
   </div>
   <div class="col-xs-24 col-md-18 pull-right-md">
-    <h2 id="install">Install</h2>
-<table class="badges">
-<tr>
-<td><a href="./install.html" title="Install Nuvola Player"><img height="108" src="../images/nuvola-logos/install_vertical_2.png"/></a></td>
-<td><a href="./install.html#ubuntu" title="Install Nuvola Player in Ubuntu"><img height="108" src="../images/dist-logos/ubuntu_vertical.png"/></a></td>
-<td><a href="./install.html#fedora" title="Install Nuvola Player in Fedora"><img height="108" src="../images/dist-logos/fedora_vertical.png"/></a></td>
-<!--<td><a title="Install Nuvola Player in Debian" href="./install.html#debian"><img src="../images/dist-logos/debian_vertical.png" height="108" /></a></td>-->
-</tr>
-</table>
-<h2 id="news">What's New</h2>
-<p><strong>Have you upgraded from Nuvola Player 2?</strong> Take a look at following changes!</p>
-<h3 id="new-codebase">New Codebase</h3>
-<p><strong>Nuvola Player 3 is a new code-base written from scratch</strong>:</p>
-<ul>
-<li>Ported to the <strong>second generation of the WebKit2Gtk+</strong> web rendering library that doesn't suffer from
-   Flash plugin compatibility issues (see section bellow).</li>
-<li>Removed calls of deprecated functions.</li>
-<li>Dropped a heavy bag of backward compatibility with old distributions that limits potential of the application.</li>
-<li>Use of <strong>modern widgets and technologies</strong> (e.g. header bar and client side decorations in GNOME).</li>
-<li>New more <strong>powerful and flexible JavaScript API</strong> for service integration scripts.</li>
-<li>The runtime is more generic than Nuvola Player 2, so the fourth generation will be probably
-   called <strong>Nuvola Apps 4</strong> (competitor of Unity web Apps?) and used not only for music streaming services. </li>
-</ul>
-<h3 id="tiliado-repository">Tiliado Repository</h3>
-<p>While Nuvola Player 2 packages are hosted at Launchpad PPA, Nuvola Player 3 packages are maintained
-in a custom repository.</p>
-<ul>
-<li><strong>Debian</strong> and <strong>Ubuntu packages</strong> are now in one place. Moreover, there are packages for <strong>Fedora</strong>.</li>
-<li>It is possible to continue <strong>support of releases abandoned by Canonical</strong> after the short nine-month
-   support window and their removal from Launchpad PPA build machines. </li>
-<li>Tiliado Repository Installer makes installation of Nuvola Player easier and without a terminal.</li>
-<li>Packages won't get stuck in a Launchpad build queue.</li>
-</ul>
-<h3 id="no-hacks-for-flash-support">No Hacks for Flash Support</h3>
-<p>Nuvola Player 2 uses graphical toolkit GTK+ version 3 for its user interface, while Adobe Flash,
-Gnash and Lightspark use GTK+ version 2. The old GTK+ 2 and the new GTK+ 3 are not compatible,
-so they cannot live in the same process. The problem is that the first generation WebKitGtk+ web
-rendering engine used in Nuvola Player 2 runs plugins in the same process as the rest of the user
-interface, so GTK+ 2 based Flash plugins cannot be loaded without conflicts with GTK+ 3.</p>
-<p><strong>Nuvola Player 2 has to employ an ugly hack to support Flash</strong>: run the Flash plugin in its own
-non-conflicting process via nspluginwrapper. However, this approach has several disadvantages:</p>
-<ul>
-<li>
-<p>nspluginwrapper only supports only 32bit Flash plugin. As a result, you have to install hundreds
-    of 32bit libraries on you 64bit system to be able to run 32bit Flash plugin. Yes, this is insane.</p>
-</li>
-<li>
-<p>Memory usage is higher and performance is lower.</p>
-</li>
-<li>
-<p>Wrapped Flash plugin is less stable, it often crashes and takes down whole Nuvola Player
-    2 application.</p>
-</li>
-</ul>
-<p><strong>Nuvola Player 3 doesn't need any hacks to support Flash plugin</strong>, because it is built on top of
-WebKit2Gtk+, the second generation of this web rendering library.
-The major diference is that plugins are run in a separate GTK+ 2 compatible process, so there is no
-need to use nspluginwrapper and install 32bit libraries on 64bit system. There is also one extra
-benefit: If Flash plugin crashes, it doesn't take down whole Nuvola Player application.</p>
-<div class="cointainer">
-<ul class="thumbnails row" data-toggle="lightbox">
-<li class="col-md-8"><a class="thumbnail" href="../images/3.0/new/orig/nuvola_player_2_flash_deps.png" title="Nuvola Player 2 requires a plenty of 32bit libraries on 64bit system because of Flash plugin compatibility hack."><img height="192" src="../images/3.0/new/small/nuvola_player_2_flash_deps.png" width="256"/></a></li>
-<li class="col-md-8"><a class="thumbnail" href="../images/3.0/new/orig/nuvola_player_3_flash_deps.png" title="Nuvola Player 3 doesn't suffer from Flash plugin incompatibility issue ."><img height="192" src="../images/3.0/new/small/nuvola_player_3_flash_deps.png" width="256"/></a></li>
-</ul>
-</div>
-<h3 id="independent-instances">Independent Instances</h3>
-<p>It was possible to have only one instance of <strong>Nuvola Player 2</strong> shared by all streaming services
-and switch between them. In <strong>Nuvola Player 3</strong>, it's possible to run multiple services side-by-side
-(<a href="https://bugs.launchpad.net/nuvola-player/+bug/1007185">feature request</a>).
-The services selector launches new instance for each service and creates a desktop application
-shortcut (<a href="https://bugs.launchpad.net/nuvola-player/+bug/1211351">feature request</a>)
-when a particular service starts. As a result, you can than pin it to the Unity Launcher or
-GNOME Activities dock and launch it directly in the future.</p>
-<div class="cointainer">
-<ul class="thumbnails row" data-toggle="lightbox">
-<li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/orig/unity_launcher_multiple_pinned.png" title="Multiple services pinned to Unity Launcher."><img height="192" src="../images/3.0/unity/small/unity_launcher_multiple_pinned.png" width="256"/></a></li>
-<li class="col-md-8"><a class="thumbnail" href="../images/3.0/new/orig/gnome_many_favorites.png" title="Multiple services pinned to GNOME Activities dock."><img height="192" src="../images/3.0/new/small/gnome_many_favorites.png" width="256"/></a></li>
-</ul>
-</div>
-<h3 id="other-changes">Other changes</h3>
-<ul>
-<li>Added manager of keyboard shortcuts
-    (<a href="https://bugs.launchpad.net/nuvola-player/+bug/1294082">feature request</a>) and added support
-    for <strong>global keyboard shortcuts</strong>
-    (<a href="https://bugs.launchpad.net/nuvola-player/+bug/1200911">feature request</a>). You can,
-    for example, define a keyboard shortcut to show currently playing track in notification
-    (<a href="https://bugs.launchpad.net/nuvola-player/+bug/1207926">feature request</a>)</li>
-<li>Menu bar has been replaced with <strong>header bar</strong> (with client-side decorations in GNOME).</li>
-<li><strong>Command line interface</strong> has been reworked. See <code>nuvolaplayer3ctl --help</code>. It is no possible to
-    invoke toggle and radio actions (e.g. thumbs up/down, star rating;
-    <a href="https://bugs.launchpad.net/nuvola-player/+bug/1084145">feature request</a>)</li>
-<li>Unity Quick list integration was enhanced to show state of toggle actions (e.g. thumbs up/down,
-    <a href="https://bugs.launchpad.net/nuvola-player/+bug/1081077">feature request</a>) and radio actions
-    (e.g. star rating)</li>
-<li>Queue page of Google Play Music is not used as a start-up page
-    (<a href="https://bugs.launchpad.net/nuvola-player/+bug/1306678">feature request</a>)</li>
-</ul>
-<h2 id="user-experience">User Experience</h2>
-<p><strong>Goal of Nuvola Player is to provide better user experience and desktop integration than common web
-browsers can offer.</strong></p>
-<h3 id="explore-unity">Unity</h3>
-<h4 id="first-launch">First Launch</h4>
+    <p>Goal of Nuvola Player is to provide better user experience and desktop integration than common web
+browsers can offer.</p>
+<h2 id="explore-unity">Unity</h2>
+<h3 id="first-launch">First Launch</h3>
+<p>Let's launch Nuvola Player from Unity Dash. As you can see, you have all supported streaming services in one place,
+no need to look for them in your browser's bookmarks or to remember and type in address of a service.</p>
 <div class="cointainer">
 <ul class="thumbnails row" data-toggle="lightbox">
 <li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/orig/unity_open_dash.png" title="Click Ubuntu button in the top left corner to open Unity Dash."><img height="192" src="../images/3.0/unity/small/unity_open_dash.png" width="256"/></a></li>
@@ -296,16 +190,20 @@ browsers can offer.</strong></p>
 <li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/orig/unity_grooveshark_about_dialog.png" title="Grooveshark script is maintained by the main Nuvola Player developer, but other integration scripts can be maintained by independent developers who are properly acknowledged."><img height="192" src="../images/3.0/unity/small/unity_grooveshark_about_dialog.png" width="256"/></a></li>
 </ul>
 </div>
-<h4 id="unity-dash">Unity Dash</h4>
-<p><div class="cointainer">
+<h3 id="unity-dash">Unity Dash</h3>
+<p>Nuvola Player neatly integrates with Unity Dash. Once a particular music streaming service is launched for the first time,
+a desktop launcher is created in the background. You can then get to your favorite music faster, just start typing its name
+in Unity Dash screen. Can do this your web browser?</p>
+<div class="cointainer">
 <ul class="thumbnails row" data-toggle="lightbox">
 <li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/orig/unity_open_dash.png" title="Click Ubuntu button in the top left corner to open Unity Dash."><img height="192" src="../images/3.0/unity/small/unity_open_dash.png" width="256"/></a></li>
 <li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/orig/unity_dash_nuvola.png" title="First, you can launch only the Nuvola Player 3 services selector."><img height="192" src="../images/3.0/unity/small/unity_dash_nuvola.png" width="256"/></a></li>
 <li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/orig/unity_dash_grooveshark.png" title="However, after the first launch of a particular service integration script, you can launch it again directly from the dash."><img height="192" src="../images/3.0/unity/small/unity_dash_grooveshark.png" width="256"/></a></li>
 </ul>
-</div></p>
-<h4 id="pin-to-unity-launcher">Pin to Unity Launcher</h4>
-<p>For a quick access to your favorite streaming services, you can pin them on Unity Launcher.</p>
+</div>
+<h3 id="pin-to-unity-launcher">Pin to Unity Launcher</h3>
+<p>For even faster access to your music, you can pin our favorite music streaming services to Unity Launcher. One click
+to launch it again!</p>
 <div class="cointainer">
 <ul class="thumbnails row" data-toggle="lightbox">
 <li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/orig/unity_nuvola_selector_launch_grooveshark.png" title="Launch your favorite service from Nuvola Player 3 services selector window. Grooveshark, for example."><img height="192" src="../images/3.0/unity/small/unity_nuvola_selector_launch_grooveshark.png" width="256"/></a></li>
@@ -313,7 +211,9 @@ browsers can offer.</strong></p>
 <li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/orig/unity_launcher_multiple_pinned.png" title="You can, of course, pin all services ;-)"><img height="192" src="../images/3.0/unity/small/unity_launcher_multiple_pinned.png" width="256"/></a></li>
 </ul>
 </div>
-<h4 id="be-quick-with-quick-list">Be Quick with Quick List</h4>
+<h3 id="be-quick-with-quick-list">Be Quick with Quick List</h3>
+<p>Nuvola Player integrates with Unity Launcher quick list and adds playback actions. In addition, some screaming services
+provide other actions like star rating.</p>
 <div class="cointainer">
 <ul class="thumbnails row" data-toggle="lightbox">
 <li class="col-md-8"><a class="thumbnail" href="../images/3.0/new/orig/unity_grooveshark_quicklist.png" title="All integration scripts provide basic playback actions: Play/pause, previous song and next song."><img height="192" src="../images/3.0/new/small/unity_grooveshark_quicklist.png" width="256"/></a></li>
@@ -321,7 +221,9 @@ browsers can offer.</strong></p>
 <li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/orig/unity_google_play_music_launcher_star_rating_done.png" title="Rating done. This feature is useful when the Google Play Window is hidden or covered by other windows."><img height="192" src="../images/3.0/unity/small/unity_google_play_music_launcher_star_rating_done.png" width="256"/></a></li>
 </ul>
 </div>
-<h4 id="became-keyboard-master">Became Keyboard Master</h4>
+<h3 id="became-keyboard-master">Became Keyboard Master</h3>
+<p>Nuvola Player allows you to change keyboard shortcuts or to add your own. Another killer feature is ability to handle
+special multimedia keys.</p>
 <div class="cointainer">
 <ul class="thumbnails row" data-toggle="lightbox">
 <li class="col-md-8"><a class="thumbnail" href="../images/3.0/new/orig/unity_grooveshark_appmenu_keyboard_shortcuts.png" title="Click gear icon and select Keyboard shortcuts from the menu"><img height="192" src="../images/3.0/new/small/unity_grooveshark_appmenu_keyboard_shortcuts.png" width="256"/></a></li>
@@ -329,14 +231,18 @@ browsers can offer.</strong></p>
 <li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/orig/unity_media_keys.png" title="Moreover, Nuvola Player automatically handles multimedia keys on your keyboard."><img height="192" src="../images/3.0/unity/small/unity_media_keys.png" width="256"/></a></li>
 </ul>
 </div>
-<h4 id="head-up-display">Head-Up Display</h4>
+<h3 id="head-up-display">Head-Up Display</h3>
+<p>Unity's unique feature, Head-up display, is also supported. Just press Alt key and then start typing an action.</p>
 <div class="cointainer">
 <ul class="thumbnails row" data-toggle="lightbox">
 <li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/orig/unity_grooveshark_hud.png" title="Pres Alt key to show Unity Head-Up display"><img height="192" src="../images/3.0/unity/small/unity_grooveshark_hud.png" width="256"/></a></li>
 <li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/orig/unity_grooveshark_hud_toggle_play.png" title="Type any command"><img height="192" src="../images/3.0/unity/small/unity_grooveshark_hud_toggle_play.png" width="256"/></a></li>
 </ul>
 </div>
-<h4 id="play-in-background-with-notifications">Play in Background with Notifications</h4>
+<h3 id="play-in-background-with-notifications">Play in Background with Notifications</h3>
+<p>With Nuvola Player, you will never accidentally close your web browser while music is playing. If you close
+Nuvola Player window, it keeps playing in background and you will get notifications on track changes.
+Simple and extremely useful.</p>
 <div class="cointainer">
 <ul class="thumbnails row" data-toggle="lightbox">
 <li class="col-md-8"><a class="thumbnail" href="../images/3.0/new/orig/unity_grooveshark_appmenu_preferences.png" title="Click gear icon and select Preferences from the menu"><img height="192" src="../images/3.0/new/small/unity_grooveshark_appmenu_preferences.png" width="256"/></a></li>
@@ -345,7 +251,9 @@ browsers can offer.</strong></p>
 <li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/orig/unity_grooveshark_notification.png" title="You'll get notifications on track change."><img height="192" src="../images/3.0/unity/small/unity_grooveshark_notification.png" width="256"/></a></li>
 </ul>
 </div>
-<h4 id="unity-sound-indicator">Unity Sound Indicator</h4>
+<h3 id="unity-sound-indicator">Unity Sound Indicator</h3>
+<p>I hope you are not surprised that Nuvola Player also integrates with Unity sound indicator. You can control playback
+or show the main window if hidden.</p>
 <div class="cointainer">
 <ul class="thumbnails row" data-toggle="lightbox">
 <li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/orig/unity_grooveshark_close.png" title="Close the window while music is playing. Playback continues in background."><img height="192" src="../images/3.0/unity/small/unity_grooveshark_close.png" width="256"/></a></li>
@@ -353,8 +261,12 @@ browsers can offer.</strong></p>
 <li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/orig/unity_grooveshark_open_from_sound_menu.png" title="You can also display the main window from the Unity Sound Indicator"><img height="192" src="../images/3.0/unity/small/unity_grooveshark_open_from_sound_menu.png" width="256"/></a></li>
 </ul>
 </div>
-<h3 id="explore-gnome">GNOME</h3>
-<h4 id="first-launch_1">First Launch</h4>
+<h3 id="lastfm-scrobbling">Last.fm Scrobbling</h3>
+<p>Nuvola Player allows you to scrobble your music taste to <a href="http://www.last.fm">Last.fm</a> audio scrobbler and music recommendation service.</p>
+<h2 id="explore-gnome">GNOME</h2>
+<h3 id="first-launch_1">First Launch</h3>
+<p>Let's launch Nuvola Player from GNOME Activities screen. As you can see, you have all supported streaming services
+in one place, no need to look for them in your browser's bookmarks or to remember and type in address of a service.</p>
 <div class="cointainer">
 <ul class="thumbnails row" data-toggle="lightbox">
 <li class="col-md-8"><a class="thumbnail" href="../images/3.0/gnome/orig/fedora_flash_install_done_activities.png" title="Click Activities button in the top left corner to open GNOME Overview."><img height="192" src="../images/3.0/gnome/small/fedora_flash_install_done_activities.png" width="256"/></a></li>
@@ -366,24 +278,20 @@ browsers can offer.</strong></p>
 <li class="col-md-8"><a class="thumbnail" href="../images/3.0/gnome/orig/gnome_grooveshark_about_dialog.png" title="Grooveshark script is maintained by the main Nuvola Player developer, but other integration scripts can be maintained by independent developers who are properly acknowledged."><img height="192" src="../images/3.0/gnome/small/gnome_grooveshark_about_dialog.png" width="256"/></a></li>
 </ul>
 </div>
-<h4 id="gnome-dash">GNOME Dash</h4>
-<p><div class="cointainer">
+<h3 id="gnome-dash">GNOME Dash</h3>
+<p>Nuvola Player neatly integrates with list of applications in GNOME Activities screen. Once a particular music
+streaming service is launched for the first time, a desktop launcher is created in the background. You can then get
+to your favorite music faster, just start typing its name in GNOME Activities screen. Can do this your web browser?</p>
+<div class="cointainer">
 <ul class="thumbnails row" data-toggle="lightbox">
 <li class="col-md-8"><a class="thumbnail" href="../images/3.0/gnome/orig/fedora_flash_install_done_activities.png" title="Click Activities button in the top left corner to open GNOME Overview."><img height="192" src="../images/3.0/gnome/small/fedora_flash_install_done_activities.png" width="256"/></a></li>
 <li class="col-md-8"><a class="thumbnail" href="../images/3.0/gnome/orig/gnome_activities_nuvola.png" title="First, you can launch only the Nuvola Player 3 services selector."><img height="192" src="../images/3.0/gnome/small/gnome_activities_nuvola.png" width="256"/></a></li>
 <li class="col-md-8"><a class="thumbnail" href="../images/3.0/gnome/orig/fedora_flash_install_relaunch_grooveshark.png" title="However, after the first launch of a particular service integration script, you can launch it again directly from the dash."><img height="192" src="../images/3.0/gnome/small/fedora_flash_install_relaunch_grooveshark.png" width="256"/></a></li>
 </ul>
-</div></p>
-<h4 id="dark-or-light-theme">Dark or Light Theme?</h4>
-<div class="cointainer">
-<ul class="thumbnails row" data-toggle="lightbox">
-<li class="col-md-8"><a class="thumbnail" href="../images/3.0/gnome/orig/gnome_grooveshark_appmenu_preferences.png" title="Click application icon and select Preferences from the menu"><img height="192" src="../images/3.0/gnome/small/gnome_grooveshark_appmenu_preferences.png" width="256"/></a></li>
-<li class="col-md-8"><a class="thumbnail" href="../images/3.0/gnome/orig/gnome_grooveshark_preferences.png" title='check "Prefer dark theme&amp;quit; if you want to.'><img height="192" src="../images/3.0/gnome/small/gnome_grooveshark_preferences.png" width="256"/></a></li>
-<li class="col-md-8"><a class="thumbnail" href="../images/3.0/new/orig/gnome_grooveshark_dark.png" title="Grooveshark looks better with dark window decorations."><img height="192" src="../images/3.0/new/small/gnome_grooveshark_dark.png" width="256"/></a></li>
-</ul>
 </div>
-<h4 id="add-to-favorites">Add to Favorites</h4>
-<p>For a quick access to your favorite streaming services, you can pin them on Unity Launcher.</p>
+<h3 id="add-to-favorites">Add to Favorites</h3>
+<p>For even faster access to your music, you can add our favorite music streaming services to dock with favorite
+applications in GNOME Activities screen. One click to launch it again!</p>
 <div class="cointainer">
 <ul class="thumbnails row" data-toggle="lightbox">
 <li class="col-md-8"><a class="thumbnail" href="../images/3.0/gnome/orig/gnome_selector_launch_grooveshark.png" title="Launch your favorite service from Nuvola Player 3 services selector window. Grooveshark, for example."><img height="192" src="../images/3.0/gnome/small/gnome_selector_launch_grooveshark.png" width="256"/></a></li>
@@ -391,7 +299,9 @@ browsers can offer.</strong></p>
 <li class="col-md-8"><a class="thumbnail" href="../images/3.0/new/orig/gnome_many_favorites.png" title="You can, of course, pin all services ;-)"><img height="192" src="../images/3.0/new/small/gnome_many_favorites.png" width="256"/></a></li>
 </ul>
 </div>
-<h4 id="became-keyboard-master_1">Became Keyboard Master</h4>
+<h3 id="became-keyboard-master_1">Became Keyboard Master</h3>
+<p>Nuvola Player allows you to change keyboard shortcuts or to add your own. Another killer feature is ability to handle
+special multimedia keys.</p>
 <div class="cointainer">
 <ul class="thumbnails row" data-toggle="lightbox">
 <li class="col-md-8"><a class="thumbnail" href="../images/3.0/gnome/orig/gnome_grooveshark_appmenu_keyboard_shortcuts.png" title="Click application icon and select Keyboard shortcuts from the menu"><img height="192" src="../images/3.0/gnome/small/gnome_grooveshark_appmenu_keyboard_shortcuts.png" width="256"/></a></li>
@@ -399,7 +309,10 @@ browsers can offer.</strong></p>
 <li class="col-md-8"><a class="thumbnail" href="../images/3.0/new/orig/gnome_media_keys.png" title="Moreover, Nuvola Player automatically handles multimedia keys on your keyboard."><img height="192" src="../images/3.0/new/small/gnome_media_keys.png" width="256"/></a></li>
 </ul>
 </div>
-<h4 id="play-in-background-with-notifications_1">Play in Background with Notifications</h4>
+<h3 id="play-in-background-with-notifications_1">Play in Background with Notifications</h3>
+<p>With Nuvola Player, you will never accidentally close your web browser while music is playing. If you close
+Nuvola Player window, it keeps playing in background and you will get notifications on track changes.
+Simple and extremely useful.</p>
 <div class="cointainer">
 <ul class="thumbnails row" data-toggle="lightbox">
 <li class="col-md-8"><a class="thumbnail" href="../images/3.0/gnome/orig/gnome_grooveshark_preferences.png" title="Enable background playback if you want to."><img height="192" src="../images/3.0/gnome/small/gnome_grooveshark_preferences.png" width="256"/></a></li>
@@ -407,7 +320,9 @@ browsers can offer.</strong></p>
 <li class="col-md-8"><a class="thumbnail" href="../images/3.0/gnome/orig/gnome_notification_small.png" title="You'll get notifications on track change."><img height="192" src="../images/3.0/gnome/small/gnome_notification_small.png" width="256"/></a></li>
 </ul>
 </div>
-<h4 id="notifications-with-playback-controls">Notifications with Playback Controls</h4>
+<h3 id="notifications-with-playback-controls">Notifications with Playback Controls</h3>
+<p>I hope you are not surprised that Nuvola Player also supports rich notifications with playback actions.
+You can than control playback even from a lock screen.</p>
 <div class="cointainer">
 <ul class="thumbnails row" data-toggle="lightbox">
 <li class="col-md-8"><a class="thumbnail" href="../images/3.0/gnome/orig/gnome_notification_expanded.png" title="Hover mouse over small notification and you will get expanded notification with playback controls."><img height="192" src="../images/3.0/gnome/small/gnome_notification_expanded.png" width="256"/></a></li>
@@ -415,9 +330,9 @@ browsers can offer.</strong></p>
 <li class="col-md-8"><a class="thumbnail" href="../images/3.0/gnome/orig/gnome_lock_screen_controls.png" title="How about playback controls on lock screen?"><img height="192" src="../images/3.0/gnome/small/gnome_lock_screen_controls.png" width="256"/></a></li>
 </ul>
 </div>
-<h4 id="extension-of-the-day-media-player-indicator">Extension of the Day: Media Player Indicator</h4>
-<p>Take a look at <a href="https://extensions.gnome.org/extension/55/media-player-indicator/">Media Player Indicator</a>
-GNOME Shell extension.</p>
+<h3 id="media-player-indicator-extension">Media Player Indicator extension</h3>
+<p>Nuvola Player integrates with <a href="https://extensions.gnome.org/extension/55/media-player-indicator/">Media Player Indicator</a>
+GNOME Shell extension. You can control playback or show the main window if hidden.</p>
 <div class="cointainer">
 <ul class="thumbnails row" data-toggle="lightbox">
 <li class="col-md-8"><a class="thumbnail" href="../images/3.0/gnome/orig/gnome_mpris_extension_web_page.png" title="Search for Media Player Indicator in GNOME Extensions website."><img height="192" src="../images/3.0/gnome/small/gnome_mpris_extension_web_page.png" width="256"/></a></li>
@@ -431,8 +346,20 @@ GNOME Shell extension.</p>
 <li class="col-md-8"><a class="thumbnail" href="../images/3.0/new/orig/gnome_grooveshark_mpris_raise.png" title="You can also display the hidden main window from the Media Player Indicator"><img height="192" src="../images/3.0/new/small/gnome_grooveshark_mpris_raise.png" width="256"/></a></li>
 </ul>
 </div>
-<h3 id="explore-terminal">Terminal &amp; Scripts</h3>
-<h4 id="command-line-controller">Command-line Controller</h4>
+<h3 id="dark-or-light-theme">Dark or Light Theme?</h3>
+<p>Nuvola Player allows you to set a dark theme. Some streaming services look better that way.</p>
+<div class="cointainer">
+<ul class="thumbnails row" data-toggle="lightbox">
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/gnome/orig/gnome_grooveshark_appmenu_preferences.png" title="Click application icon and select Preferences from the menu"><img height="192" src="../images/3.0/gnome/small/gnome_grooveshark_appmenu_preferences.png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/gnome/orig/gnome_grooveshark_preferences.png" title='check "Prefer dark theme&amp;quit; if you want to.'><img height="192" src="../images/3.0/gnome/small/gnome_grooveshark_preferences.png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/new/orig/gnome_grooveshark_dark.png" title="Grooveshark looks better with dark window decorations."><img height="192" src="../images/3.0/new/small/gnome_grooveshark_dark.png" width="256"/></a></li>
+</ul>
+</div>
+<h3 id="lastfm-scrobbling_1">Last.fm Scrobbling</h3>
+<p>Nuvola Player allows you to scrobble your music taste to <a href="http://www.last.fm">Last.fm</a> audio scrobbler and music recommendation service.</p>
+<h2 id="explore-terminal">Terminal &amp; Scripts</h2>
+<h3 id="command-line-controller">Command-line Controller</h3>
+<p>Nuvola Player 3 can be also controlled from command line via <code>nuvolaplayer3ctl</code>.</p>
 <div class="cointainer">
 <ul class="thumbnails row" data-toggle="lightbox">
 <li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/orig/unity_nuvolactl_help.png" title="Nuvola Player comes with command-line controller for your scripts"><img height="192" src="../images/3.0/unity/small/unity_nuvolactl_help.png" width="256"/></a></li>

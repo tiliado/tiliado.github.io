@@ -160,12 +160,17 @@ Nuvola Player<br><small>Cloud music integration for your Linux desktop</small></
 </ul>
 </li>
 <li><a href="#debian">Debian</a></li>
-<li><a href="#other-distributions">Other Distributions</a></li>
+<li><a href="#other-linux">Other Distributions</a></li>
 </ul>
 </div>
   </div>
   <div class="col-xs-24 col-md-18 pull-right-md">
-    <h2 id="ubuntu">Ubuntu</h2>
+    <p>Nuvola Player 3 project officially supports and provides packages for <a href="#ubuntu">Ubuntu</a> 14.10-14.10, <a href="#fedora">Fedora</a> 20-21 and <a href="#debian">Debian</a>
+Jessie and Sid. The Nuvola Player developer has tested installation and functionality in clean virtualized instances
+of these distributions and can assure reasonable user support in case of problems.</p>
+<p>However, Nuvola Player should also work on <a href="#other-linux">other modern Linux distributions</a>, but user experience might
+not be optimal (e.g. inconsistent look and behavior) and quality of user support depends on complexity of an issue.</p>
+<h2 id="ubuntu">Ubuntu</h2>
 <div class="panel panel-info"><p class="panel-heading">Info</p><div class="panel-body">
 <p><strong>Nuvola Player 3 won't replace Nuvola Player 2 in you system.</strong> You can keep using Nuvola
 Player 2 until Nuvola Player 3 is stable enough for your.</p>
@@ -424,17 +429,36 @@ http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-stable.n
 </tr>
 </table>
 <h2 id="debian">Debian</h2>
-<p>Installation instructions for Debian haven't been written yet. You can follow <a href="#ubuntu">instructions for Ubuntu</a> for now.
-Please report any issues to <a href="https://groups.google.com/d/forum/nuvola-player-users">the Nuvola Player Users mailing list</a>.
+<p>Installation instructions for Debian haven't been written yet, but will be made before the stable release.
+You can follow <a href="#ubuntu">instructions for Ubuntu</a> for now. Please report any issues to
+<a href="https://groups.google.com/d/forum/nuvola-player-users">the Nuvola Player Users mailing list</a>.
 I'll be there to help you ;-)</p>
-<h2 id="other-distributions">Other Distributions</h2>
-<p>Although Nuvola Player 3 <strong>officially supports</strong> only three distributions (Debian, Ubuntu and Fedora),
-it should work on other modern Linux distributions. You can take a look at
-<a href="https://github.com/tiliado/nuvolaplayer/wiki/Unofficial">a list of unofficial packages</a> provided by a community
-or <a href="https://github.com/tiliado/nuvolaplayer">build Nuvola Player from source</a>.
-However, user experience might not be optimal (e.g. inconsistent look and behavior). Official support for more
-distributions and environments is expected to be added in the future depending on
-<a href="https://tiliado.eu/nuvolaplayer/funding/">project funding</a> and demand from users, especially from donators.</p>
+<h2 id="other-linux">Other Distributions</h2>
+<p>Nuvola Player 3 should work also on modern linux distributions which meet minimal requirements listed bellow,
+but hasn't been tested here by the developer and support may be limited for that reason.
+You can take a look at <a href="https://github.com/tiliado/nuvolaplayer/wiki/Unofficial">a list of unofficial packages</a>
+provided by a community or <a href="https://github.com/tiliado/nuvolaplayer">build Nuvola Player from source</a>.</p>
+<ul>
+<li><a href="http://python.org">Python 2</a> &gt;= 2.7 (recommended)
+    or <a href="http://python.org">Python 3</a> &gt;= 3.4 (not well tested)</li>
+<li><a href="https://wiki.gnome.org/Projects/Vala">Vala</a> &gt;= 0.22.1</li>
+<li><a href="https://github.com/tiliado/diorite">Diorite library</a></li>
+<li><a href="https://wiki.gnome.org/Projects/GLib">glib-2.0</a> &gt;= 2.38</li>
+<li><a href="https://wiki.gnome.org/Projects/GLib">gio-2.0</a> &gt;= 2.38</li>
+<li><a href="https://wiki.gnome.org/Projects/GLib">gobject-2.0</a> &gt;= 2.38</li>
+<li><a href="https://wiki.gnome.org/Projects/GLib">gthread-2.0</a> &gt;= 2.38</li>
+<li><a href="http://www.gtk.org/">gtk+-3.0</a> &gt;= 3.10</li>
+<li><a href="http://www.gtk.org/">gdk-3.0</a> &gt;= 3.10</li>
+<li><a href="http://www.gtk.org/">gdk-x11-3.0</a> &gt;= 3.10</li>
+<li><a href="http://www.x.org/wiki/">x11</a> &gt;= 0.5</li>
+<li><a href="https://wiki.gnome.org/Projects/JsonGlib">json-glib-1.0</a> &gt;= 0.7</li>
+<li><a href="http://www.libarchive.org/">libarchive</a> &gt;= 3.1</li>
+<li><a href="http://webkitgtk.org/">webkit2gtk-3.0</a> &gt;= 2.2</li>
+<li><a href="http://webkitgtk.org/">javascriptcoregtk-3.0</a> &gt;= 1.8</li>
+<li><a href="https://git.gnome.org/browse/libnotify/">libnotify</a> &gt;= 0.7</li>
+<li>optional unity &gt;= 3.0</li>
+<li>optional dbusmenu-glib-0.4 &gt;= 0.4 </li>
+</ul>
 
 <hr />
 <div class="panel panel-primary">
