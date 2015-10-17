@@ -170,28 +170,28 @@ Nuvola Player<br><small>Cloud music integration for your Linux desktop</small></
 </div>
   </div>
   <div class="col-xs-24 col-md-18 pull-right-md">
-    <p>Nuvola Player 3 project officially supports and provides packages for <a href="#ubuntu">Ubuntu</a> 14.10-15.04, <a href="#fedora">Fedora</a> 20-21 and <a href="#debian">Debian</a>
-Jessie and Sid. The Nuvola Player developer has tested installation and functionality in clean virtualized instances
-of these distributions and can assure reasonable user support in case of problems.</p>
-<p>However, Nuvola Player should also work on <a href="#other-linux">other modern Linux distributions</a>, but user experience might
-not be optimal (e.g. inconsistent look and behavior) and quality of user support depends on complexity of an issue.</p>
+    <p>Nuvola Player 3 project officially supports and provides packages for <a href="#ubuntu">Ubuntu</a> 14.10-15.04,
+(<a href="https://github.com/tiliado/nuvolaplayer/issues/166">15.10 in progress</a>), <a href="#fedora">Fedora</a> 22
+(<a href="https://github.com/tiliado/nuvolaplayer/issues/167">23 in progress</a>) and <a href="#debian">Debian</a>
+Jessie, Stretch and Sid. The Nuvola Player developer has tested installation and functionality in
+clean virtualized instances of these distributions and can assure reasonable user support in case
+of problems.</p>
+<p>However, Nuvola Player should also work on <a href="#other-linux">other modern Linux distributions</a>, but
+user experience might not be optimal (e.g. inconsistent look and behaviour) and quality of user
+support depends on complexity of an issue.</p>
 <h2 id="ubuntu">Ubuntu</h2>
-<div class="panel panel-info"><p class="panel-heading">Info</p><div class="panel-body">
-<p><strong>Nuvola Player 3 won't replace Nuvola Player 2 in you system.</strong> You can keep using Nuvola
-Player 2 until Nuvola Player 3 is stable enough for your.</p>
-</div></div>
 <h3 id="graphical-installer-or-terminal-kung-fu">Graphical Installer or Terminal Kung-fu</h3>
 <p>There are two ways how to install Nuvola Player:</p>
 <ol>
 <li>
 <p><strong>Power users</strong> who are excellent in command-line kung-fu can just add
-    <a href="https://tiliado.eu/nuvolaplayer/repository/">the Nuvola Player Repository</a> manually and install Nuvola Player
-    using common package management tools of your linux distribution. Then skip to the section
-    <a href="#ubuntu-format-support">Check format support</a>.</p>
+    <a href="https://tiliado.eu/nuvolaplayer/repository/">the Nuvola Player Repository</a> manually and install
+    Nuvola Player using common package management tools of your linux distribution. Then skip to the
+    section <a href="#ubuntu-format-support">Check format support</a>.</p>
 </li>
 <li>
-<p>Users who are <strong>not friends with a terminal</strong> can take advantage of an easy-to-use graphical installer
-    and follow instructions in the next section.</p>
+<p>Users who are <strong>not friends with a terminal</strong> can take advantage of an easy-to-use graphical
+    installer and follow instructions in the next section.</p>
 </li>
 </ol>
 <h3 id="install-tiliado-repository-installer">Install Tiliado Repository Installer</h3>
@@ -200,7 +200,10 @@ Player 2 until Nuvola Player 3 is stable enough for your.</p>
     distribution release and open it with Ubuntu Software Center.<ul>
 <li><a href="https://tiliado.eu/repository-installer/download/trusty/">Ubuntu 14.04 LTS Trusty Tahr</a> </li>
 <li><a href="https://tiliado.eu/repository-installer/download/utopic/">Ubuntu 14.10 Utopic Unicorn</a> </li>
-<li><a href="https://tiliado.eu/repository-installer/download/vivid/">Ubuntu 15.04 Vivid Vervet</a> </li>
+<li><a href="https://tiliado.eu/repository-installer/download/vivid/">Ubuntu 15.04 Vivid Vervet</a></li>
+<li>In progress: <a href="https://tiliado.eu/repository-installer/download/wily/">Ubuntu 15.10 Wily Werewolf</a> -
+   be careful as
+   <a href="https://github.com/tiliado/nuvolaplayer/issues/166">not all issues have been solved yet</a></li>
 </ul>
 </li>
 <li>Wait a bit as Ubuntu Software Center is a pretty slow beast. Then click <strong>Install</strong> button.</li>
@@ -303,31 +306,27 @@ dependencies, so these plugins should work out of the box without any hassles.</
 </div>
 </div>
 <h2 id="fedora">Fedora</h2>
-<div class="panel panel-info"><p class="panel-heading">Info</p><div class="panel-body">
-<p><strong>Nuvola Player 3 won't replace Nuvola Player 2 in your system.</strong> You can keep using Nuvola
-Player 2 until Nuvola Player 3 is stable enough for you.</p>
-</div></div>
 <h3 id="graphical-installer-or-terminal-kung-fu_1">Graphical Installer or Terminal Kung-fu</h3>
 <p>There are two ways how to install Nuvola Player:</p>
 <ol>
 <li>
 <p><strong>Power users</strong> who are excellent in command-line kung-fu can just add
-    <a href="https://tiliado.eu/nuvolaplayer/repository/">the Nuvola Player Repository</a> manually and install Nuvola Player
-    using common package management tools of your linux distribution. Then skip to the section
-    <a href="#fedora-flash">Install Flash Plugin</a>.</p>
+    <a href="https://tiliado.eu/nuvolaplayer/repository/">the Nuvola Player Repository</a> manually and install
+    Nuvola Player using common package management tools of your linux distribution. Then skip to the
+    section <a href="#fedora-flash">Install Flash Plugin</a>.</p>
 </li>
 <li>
-<p>Users who are <strong>not friends with a terminal</strong> can take advantage of an easy-to-use graphical installer
-    and follow instructions in the next section.</p>
+<p>Users who are <strong>not friends with a terminal</strong> can take advantage of an easy-to-use graphical
+    installer and follow instructions in the next section.</p>
 </li>
 </ol>
 <h3 id="install-tiliado-repository-installer_1">Install Tiliado Repository Installer</h3>
 <ol>
 <li>Download Tiliado Repository Installer for your
     distribution release and open it with Software Install tool.<ul>
-<li><a href="https://tiliado.eu/repository-installer/download/fc20/">Fefora 20</a></li>
-<li><a href="https://tiliado.eu/repository-installer/download/fc21/">Fefora 21</a></li>
 <li><a href="https://tiliado.eu/repository-installer/download/fc22/">Fefora 22</a></li>
+<li>In progress: <a href="https://tiliado.eu/repository-installer/download/fc23/">Fefora 23</a> - be careful
+  as <a href="https://github.com/tiliado/nuvolaplayer/issues/166">not all issues have been solved yet</a></li>
 </ul>
 </li>
 <li>When the Software Install tool is launched, click <strong>Install</strong> button.</li>
@@ -565,18 +564,18 @@ provided by a community or <a href="https://github.com/tiliado/nuvolaplayer">bui
     or <a href="http://python.org">Python 3</a> &gt;= 3.4 (not well tested)</li>
 <li><a href="https://wiki.gnome.org/Projects/Vala">Vala</a> &gt;= 0.22.1</li>
 <li><a href="https://github.com/tiliado/diorite">Diorite library</a></li>
-<li><a href="https://wiki.gnome.org/Projects/GLib">glib-2.0</a> &gt;= 2.38</li>
-<li><a href="https://wiki.gnome.org/Projects/GLib">gio-2.0</a> &gt;= 2.38</li>
-<li><a href="https://wiki.gnome.org/Projects/GLib">gobject-2.0</a> &gt;= 2.38</li>
-<li><a href="https://wiki.gnome.org/Projects/GLib">gthread-2.0</a> &gt;= 2.38</li>
+<li><a href="https://wiki.gnome.org/Projects/GLib">glib-2.0</a> &gt;= 2.40</li>
+<li><a href="https://wiki.gnome.org/Projects/GLib">gio-2.0</a> &gt;= 2.40</li>
+<li><a href="https://wiki.gnome.org/Projects/GLib">gobject-2.0</a> &gt;= 2.40</li>
+<li><a href="https://wiki.gnome.org/Projects/GLib">gthread-2.0</a> &gt;= 2.40</li>
 <li><a href="http://www.gtk.org/">gtk+-3.0</a> &gt;= 3.10</li>
 <li><a href="http://www.gtk.org/">gdk-3.0</a> &gt;= 3.10</li>
 <li><a href="http://www.gtk.org/">gdk-x11-3.0</a> &gt;= 3.10</li>
 <li><a href="http://www.x.org/wiki/">x11</a> &gt;= 0.5</li>
 <li><a href="https://wiki.gnome.org/Projects/JsonGlib">json-glib-1.0</a> &gt;= 0.7</li>
 <li><a href="http://www.libarchive.org/">libarchive</a> &gt;= 3.1</li>
-<li><a href="http://webkitgtk.org/">webkit2gtk-3.0</a> &gt;= 2.2</li>
-<li><a href="http://webkitgtk.org/">javascriptcoregtk-3.0</a> &gt;= 1.8</li>
+<li><a href="http://webkitgtk.org/">webkit2gtk-3.0</a> &gt;= 2.4</li>
+<li><a href="http://webkitgtk.org/">javascriptcoregtk-3.0</a> &gt;= 2.4</li>
 <li><a href="https://git.gnome.org/browse/libnotify/">libnotify</a> &gt;= 0.7</li>
 <li>optional unity &gt;= 3.0</li>
 <li>optional dbusmenu-glib-0.4 &gt;= 0.4 </li>
