@@ -66,12 +66,6 @@
                         <li><a href="https://tiliado.eu/diorite/">Diorite Library - Utility and widget library based on GLib and GTK+ 3</a></li>
                     </ul>
                 </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="http://nuvolaplayer.fenryxo.cz/blog/">Nuvola Player</a></li>
-                    </ul>
-                </li>
                 <li><a href="https://tiliado.eu/contact/">Contact</a></li>
             </ul>
         </div><!--/.nav-collapse -->
@@ -98,11 +92,11 @@ Nuvola Player<br><small>Cloud music integration for your Linux desktop</small></
 <ul class="nav nav-tabs">
   <li><a href="https://tiliado.eu/nuvolaplayer/">About</a></li>
   <li class="active"><a href="../">Documentation</a></li>
-  <li><a href="https://tiliado.eu/nuvolaplayer/repository/">Repository</a></li>
   <li><a href="https://tiliado.eu/nuvolaplayer/funding/">Funding</a></li>
-  <li><a href="http://nuvolaplayer.fenryxo.cz/blog/">Blog</a></li>
+  <li><a href="https://tiliado.eu/nuvolaplayer/repository/">Repository</a></li>
   <li><a href="http://tiliado.github.io/nuvolaplayer/development/">Development</a></li>
-  
+  <li><a href="https://tiliado.eu/nuvolaplayer/team/">Team</a></li>
+  <li><a href="https://tiliado.eu/nuvolaplayer/">About</a></li>
 </ul>
 
 </div>
@@ -387,7 +381,7 @@ so it <strong>cannot be installed automatically with Nuvola Player 3</strong> pa
 <li>Click <strong>Activities button</strong> in the top left corner to open GNOME Overview and launch Terminal.</li>
 <li>Run command <code>su</code> or <code>sudo -i</code> to get superuser rights.</li>
 <li>Run command <code>rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-adobe-linux</code> to import PGP key.</li>
-<li>Run command <code>yum -y install flash-plugin</code> to install Flash plugin.</li>
+<li>Run command <code>dnf -y install flash-plugin</code> to install Flash plugin.</li>
 <li>Close both terminal and Nuvola Player.</li>
 <li>Click <strong>Activities button</strong> in the top left corner to open GNOME Overview and launch Nuvola Player again.</li>
 <li>Open Format support dialog and check whether Flash plugin is recognized.</li>
@@ -421,14 +415,14 @@ so it <strong>cannot be installed automatically with Nuvola Player 3</strong> pa
 <li>Run command <code>su</code> or <code>sudo -i</code> to get superuser rights.</li>
 <li>
 <p>Run following command to add a RPM Fusion repository.</p>
-<div class="codehilite"><pre>yum localinstall --nogpgcheck \
+<div class="codehilite"><pre>dnf install --nogpgcheck \
 http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.rpm \
 http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-stable.noarch.rpm
 </pre></div>
 </li>
 <li>
 <p>Run following command to install GStreamer MP3 Audio Decoder from the RPM Fusion repository.</p>
-<div class="codehilite"><pre>yum install gstreamer1-{libav,plugins-{good,ugly,bad-free}}
+<div class="codehilite"><pre>dnf install gstreamer1-{libav,plugins-{good,ugly,bad-free}}
 </pre></div>
 </li>
 <li>
