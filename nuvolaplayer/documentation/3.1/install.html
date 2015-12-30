@@ -13,8 +13,8 @@
   <meta name="twitter:title" content="Install Nuvola Player 3.0" />
   <meta property="og:type" content="article" />
   <meta name="twitter:card" content="summary" />
-  <meta property="og:url" content="http://tiliado.github.io/nuvolaplayer/documentation/3.0/install.html" />
-  <meta name="twitter:url" content="http://tiliado.github.io/nuvolaplayer/documentation/3.0/install.html" />
+  <meta property="og:url" content="http://tiliado.github.io/nuvolaplayer/documentation/3.1/install.html" />
+  <meta name="twitter:url" content="http://tiliado.github.io/nuvolaplayer/documentation/3.1/install.html" />
   
     <meta itemprop="image" content="http://tiliado.github.io/nuvolaplayer/documentation/images/3.0/unity/unity_google_play_music_launcher_thumbs_up.png"> 
     <meta property="og:image" content="http://tiliado.github.io/nuvolaplayer/documentation/images/3.0/unity/unity_google_play_music_launcher_thumbs_up.png" />
@@ -127,8 +127,8 @@ Nuvola Player<br><small>Cloud music integration for your Linux desktop</small></
     <div class="collapse navbar-collapse" id="navbar-collapse-1">
   <ul class="nav navbar-nav">
     <li><a href="../index.html">Index</a></li>
-    <li><a href="../3.1.html"><b>3.1</b> Rolling Releases</a></li>
-    <li class="active"><a href="../3.0.html"><b>3.0</b> Stable Releases</a></li>
+    <li class="active"><a href="../3.1.html"><b>3.1</b> Rolling Releases</a></li>
+    <li><a href="../3.0.html"><b>3.0</b> Stable Releases</a></li>
   </ul>
 </div><!-- .navbar-collapse -->
   </nav>
@@ -183,10 +183,10 @@ Nuvola Player<br><small>Cloud music integration for your Linux desktop</small></
   </div>
   <div class="col-xs-24 col-md-18 pull-right-md">
     
-       <div class="alert alert-success" role="alert"><strong>Nuvola Player 3.0 is the current stable series.</strong>
-       New releases 3.0.x receive only bug fixes, but no new features except for compatible service integrations.
-       <strong>Do you want something more fresh?</strong>
-       Check out <a href="../3.1.html">Nuvola Player 3.1 Rolling Releases</a>.</div>
+       <div class="alert alert-info" role="alert"><strong>Nuvola Player 3.1 is the current rolling series.</strong>
+       New buils are constantly rolling out as new features are being developed.
+       <strong>Do you want something a bit more stable?</strong>
+       Check out <a href="../3.0.html">Nuvola Player 3.0 Stable Releases</a>.</div>
     
     
     <p>Nuvola Player 3 project officially supports and provides packages for <a href="#ubuntu">Ubuntu</a> 14.10, 15.04 and 15.10,
@@ -231,14 +231,16 @@ support depends on complexity of an issue.</p>
 </ul>
 </div>
 <h3 id="add-nuvola-player-repository">Add Nuvola Player Repository</h3>
-<div class="panel panel-danger"><p class="panel-heading">Warning</p><div class="panel-body">
-<p>Make sure you have installed <strong>Tiliado Repository Installer version 0.3.2</strong> or newer. If unsure,
-<a href="https://tiliado.eu/nuvolaplayer/repository/">download the latest version</a>.</p>
+<div class="panel panel-warning"><p class="panel-heading">Rolling Releases are for Patrons</p><div class="panel-body">
+<p>Rolling Releases are provided for patrons as a benefit for their support. You will need to
+enter credentials of your Tiliado account with active
+<a href="https://tiliado.eu/nuvolaplayer/funding/">Nuvola Patron membership</a>
+to access these builds.</p>
 </div></div>
 <ol>
 <li>Click <strong>Ubuntu button</strong> in the top left corner to open Unity Dash.</li>
 <li>Launch <strong>Tiliado Repositories</strong> installer.</li>
-<li>Use anonymous access or Enter login credentials to your Tiliado account.</li>
+<li>Enter login credentials to your Tiliado account.</li>
 <li>Select Nuvola Player repository.</li>
 <li>Select repository components you want to install Nuvola Player from.</li>
 <li>Select which packages you want to install from the repository.</li>
@@ -254,7 +256,7 @@ support depends on complexity of an issue.</p>
 <ul class="thumbnails row" data-toggle="lightbox">
 <li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/unity_open_dash.png" title="Click Ubuntu button in the top left corner to open Unity Dash."><img height="192" src="../images/3.0/unity/unity_open_dash[256x192].png" width="256"/></a></li>
 <li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/unity_dash_tiliado_installer.png" title="Launch Tiliado Repositories installer."><img height="192" src="../images/3.0/unity/unity_dash_tiliado_installer[256x192].png" width="256"/></a></li>
-<li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/unity_installer_anonymous.png" title="Use anonymous access or enter login credentials to your Tiliado account."><img height="192" src="../images/3.0/unity/unity_installer_anonymous[256x192].png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/unity_installer_anonymous.png" title="Enter login credentials to your Tiliado account."><img height="192" src="../images/3.0/unity/unity_installer_anonymous[256x192].png" width="256"/></a></li>
 <li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/unity_installer_repositories.png" title="Select Nuvola Player repository."><img height="192" src="../images/3.0/unity/unity_installer_repositories[256x192].png" width="256"/></a></li>
 <li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/unity_installer_components_stable_beta.png" title="Select repository components you want to install Nuvola Player from."><img height="192" src="../images/3.0/unity/unity_installer_components_stable_beta[256x192].png" width="256"/></a></li>
 <li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/unity_installer_packages.png" title="Select which packages you want to install from the repository."><img height="192" src="../images/3.0/unity/unity_installer_packages[256x192].png" width="256"/></a></li>
@@ -361,14 +363,16 @@ dnf install /path/to/location/of/tiliado-repositories*.rpm
 </ul>
 </div>
 <h3 id="add-nuvola-player-repository_1">Add Nuvola Player Repository</h3>
-<div class="panel panel-danger"><p class="panel-heading">Warning</p><div class="panel-body">
-<p>Make sure you have installed <strong>Tiliado Repository Installer version 0.3.2</strong> or newer. If unsure,
-<a href="https://tiliado.eu/nuvolaplayer/repository/">download the latest version</a>.</p>
+<div class="panel panel-warning"><p class="panel-heading">Rolling Releases are for Patrons</p><div class="panel-body">
+<p>Rolling Releases are provided for patrons as a benefit for their support. You will need to
+enter credentials of your Tiliado account with active
+<a href="https://tiliado.eu/nuvolaplayer/funding/">Nuvola Patron membership</a>
+to access these builds.</p>
 </div></div>
 <ol>
 <li>Click <strong>Activities button</strong> in the top left corner to open GNOME Overview.</li>
 <li>Launch <strong>Tiliado Repositories</strong> installer.</li>
-<li>Use anonymous access or enter login credentials to your Tiliado account.</li>
+<li>Enter login credentials to your Tiliado account.</li>
 <li>Select Nuvola Player repository.</li>
 <li>Select repository components you want to install Nuvola Player from.</li>
 <li>Select which packages you want to install from the repository.</li>
@@ -384,7 +388,7 @@ dnf install /path/to/location/of/tiliado-repositories*.rpm
 <ul class="thumbnails row" data-toggle="lightbox">
 <li class="col-md-8"><a class="thumbnail" href="../images/3.0/gnome/fedora_open_activities.png" title="Click Activities button in the top left corner to open GNOME Overview."><img height="192" src="../images/3.0/gnome/fedora_open_activities[256x192].png" width="256"/></a></li>
 <li class="col-md-8"><a class="thumbnail" href="../images/3.0/gnome/fedora_activities_tiliado_installer.png" title="Launch Tiliado Repositories installer."><img height="192" src="../images/3.0/gnome/fedora_activities_tiliado_installer[256x192].png" width="256"/></a></li>
-<li class="col-md-8"><a class="thumbnail" href="../images/3.0/gnome/gnome_installer_anonymous.png" title="Use anonymous access or enter login credentials to your Tiliado account."><img height="192" src="../images/3.0/gnome/gnome_installer_anonymous[256x192].png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/gnome/gnome_installer_anonymous.png" title="Enter login credentials to your Tiliado account."><img height="192" src="../images/3.0/gnome/gnome_installer_anonymous[256x192].png" width="256"/></a></li>
 <li class="col-md-8"><a class="thumbnail" href="../images/3.0/gnome/gnome_installer_repositories.png" title="Select Nuvola Player repository."><img height="192" src="../images/3.0/gnome/gnome_installer_repositories[256x192].png" width="256"/></a></li>
 <li class="col-md-8"><a class="thumbnail" href="../images/3.0/gnome/gnome_installer_components_stable_beta.png" title="Select repository components you want to install Nuvola Player from."><img height="192" src="../images/3.0/gnome/gnome_installer_components_stable_beta[256x192].png" width="256"/></a></li>
 <li class="col-md-8"><a class="thumbnail" href="../images/3.0/gnome/gnome_installer_packages.png" title="Select which packages you want to install from the repository."><img height="192" src="../images/3.0/gnome/gnome_installer_packages[256x192].png" width="256"/></a></li>
@@ -526,13 +530,15 @@ I'll be there to help you ;-)</p>
 <li><a href="https://tiliado.eu/repository-installer/download/sid/">Debian Sid</a> </li>
 </ul>
 <h3 id="add-nuvola-player-repository_2">Add Nuvola Player Repository</h3>
-<div class="panel panel-danger"><p class="panel-heading">Warning</p><div class="panel-body">
-<p>Make sure you have installed <strong>Tiliado Repository Installer version 0.3.2</strong> or newer. If unsure,
-<a href="https://tiliado.eu/nuvolaplayer/repository/">download the latest version</a>.</p>
+<div class="panel panel-warning"><p class="panel-heading">Rolling Releases are for Patrons</p><div class="panel-body">
+<p>Rolling Releases are provided for patrons as a benefit for their support. You will need to
+enter credentials of your Tiliado account with active
+<a href="https://tiliado.eu/nuvolaplayer/funding/">Nuvola Patron membership</a>
+to access these builds.</p>
 </div></div>
 <ol>
 <li>Launch <strong>Tiliado Repositories</strong> installer from applications list.</li>
-<li>Use anonymous access or Enter login credentials to your Tiliado account.</li>
+<li>Enter login credentials to your Tiliado account.</li>
 <li>Select Nuvola Player repository.</li>
 <li>Select repository components you want to install Nuvola Player from.</li>
 <li>Select which packages you want to install from the repository.</li>
