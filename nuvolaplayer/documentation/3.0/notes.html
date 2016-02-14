@@ -161,6 +161,10 @@ Nuvola Player<br><small>Cloud music integration for your Linux desktop</small></
 <li><a href="#missing-features">Missing Features</a></li>
 <li><a href="#limited-support-and-commercial-support">Limited Support and Commercial Support</a></li>
 <li><a href="#project-funding">Project Funding</a></li>
+<li><a href="#maintenance">Maintenance Releases</a><ul>
+<li><a href="#nuvola-player-301">Nuvola Player 3.0.1</a></li>
+</ul>
+</li>
 </ul>
 </div>
     
@@ -173,7 +177,9 @@ Nuvola Player<br><small>Cloud music integration for your Linux desktop</small></
        Check out <a href="../3.1.html">Nuvola Player 3.1 Rolling Releases</a>.</div>
     
     
-    <p>Nuvola Player 3.0.0 was released on December 30th, 2015. Continue reading these release notes,
+    <p><strong>Nuvola Player 3.0.0</strong> was released on December 30th, 2015 and 
+<a href="#maintenance">maintenance release <strong>3.0.1</strong></a> was released on February 14th, 2016.
+Continue reading these release notes,
 <a href="../3.0/explore.html">explore all features</a> or just <a href="../3.0/install.html">jump to installation instructions</a>.</p>
 <h2 id="about-nuvola-player">About Nuvola Player</h2>
 <p><strong>Nuvola Player</strong> is a runtime for web-based music streaming services providing more native user
@@ -271,7 +277,7 @@ scripts has been reworked to be more flexible.</p>
     (<a href="https://bugs.launchpad.net/nuvola-player/+bug/1306678">feature request</a>)</li>
 </ul>
 <h2 id="streaming-services">Streaming Services</h2>
-<p>On December 29th, Nuvola Player 3 shipped with 13 music streaming services.
+<p>On February 7th 2016, Nuvola Player 3 shipped with 14 music streaming services.
 See <a href="https://tiliado.eu/nuvolaplayer/">Nuvola Player hompage</a> for more up-to-date list.</p>
 <ul>
 <li><a href="https://github.com/tiliado/nuvola-app-8tracks">8tracks 5.0</a>
@@ -282,7 +288,7 @@ See <a href="https://tiliado.eu/nuvolaplayer/">Nuvola Player hompage</a> for mor
    maintained by <a href="https://github.com/fenryxo">Jiří Janoušek</a></li>
 <li><a href="https://github.com/tiliado/nuvola-app-deezer">Deezer 2.3</a>
    maintained by <a href="https://github.com/fenryxo">Jiří Janoušek</a></li>
-<li><a href="https://github.com/tiliado/nuvola-app-google-play-music">Google Play Music 5.11</a>
+<li><a href="https://github.com/tiliado/nuvola-app-google-play-music">Google Play Music 5.12</a>
    maintained by <a href="https://github.com/fenryxo">Jiří Janoušek</a></li>
 <li><a href="https://github.com/tiliado/nuvola-app-jango">Jango 2.0</a>
    maintained by <a href="https://github.com/thepisu">Stefano Bagnatica</a></li>
@@ -294,6 +300,8 @@ See <a href="https://tiliado.eu/nuvolaplayer/">Nuvola Player hompage</a> for mor
    maintained by <a href="https://github.com/s83">Samuel Mansour</a></li>
 <li><a href="https://github.com/tiliado/nuvola-app-plex">Plex Music 1.1</a>
    maintained by <a href="https://github.com/skyghis">SkyghiS</a></li>
+<li><a href="https://github.com/tiliado/nuvola-app-soundcloud">SoundCloud 1.1</a>
+   maintained by <a href="https://github.com/kixam">KiXaM</a></li>
 <li><a href="https://github.com/tiliado/nuvola-app-spotify">Spotify 2.1</a>
    maintained by <a href="https://github.com/thenyeguy">Michael Nye</a></li>
 <li><a href="https://github.com/tiliado/nuvola-app-tunein">TuneIn 1.0</a>
@@ -352,6 +360,29 @@ world, software for you. If you like Nuvola Player, or even use it every day, yo
 <a href="https://tiliado.eu/nuvolaplayer/funding/">show your gratitude by supporting the project</a>.</p>
 <p>Thank you and happy listening!</p>
 <p>Jiří Janoušek</p>
+<h2 id="maintenance">Maintenance Releases</h2>
+<h3 id="nuvola-player-301">Nuvola Player 3.0.1</h3>
+<p>Maintenance release <strong>3.0.1</strong> was released on February 14th, 2016, addressing following issues:</p>
+<ul>
+<li>
+<p>Configuration option <code>--with-appindicator</code> was removed as AppIndicator integration is currently
+    unmaintained. Issues: tiliado/nuvolaplayer#201 and tiliado/nuvolaplayer#45</p>
+</li>
+<li>
+<p>Web app integration template was moved to
+    <a href="https://github.com/tiliado/nuvola-app-template">its own repository</a>
+    to keep it up-to-date independently on Nuvola Player releases. Developer documentation was
+    updated accordingly.</p>
+</li>
+<li>
+<p>The <code>nuvolaplayer3 --help</code> screen now lists also the <code>-a/--app-id</code> argument used to launch
+    a particular service. Issue: tiliado/nuvolaplayer#147</p>
+</li>
+<li>
+<p>All pop-up windows now can pop up a new window, which is required by the SoundCloud's
+    log-in-via-Google feature, for instance. Issue: tiliado/nuvola-app-soundcloud#3</p>
+</li>
+</ul>
 
     <hr />
 <div class="panel panel-primary">
