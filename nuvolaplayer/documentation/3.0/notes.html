@@ -162,6 +162,7 @@ Nuvola Player<br><small>Cloud music integration for your Linux desktop</small></
 <li><a href="#limited-support-and-commercial-support">Limited Support and Commercial Support</a></li>
 <li><a href="#project-funding">Project Funding</a></li>
 <li><a href="#maintenance">Maintenance Releases</a><ul>
+<li><a href="#nuvola-player-303">Nuvola Player 3.0.3</a></li>
 <li><a href="#nuvola-player-302">Nuvola Player 3.0.2</a></li>
 <li><a href="#nuvola-player-301">Nuvola Player 3.0.1</a></li>
 </ul>
@@ -362,6 +363,24 @@ world, software for you. If you like Nuvola Player, or even use it every day, yo
 <p>Thank you and happy listening!</p>
 <p>Jiří Janoušek</p>
 <h2 id="maintenance">Maintenance Releases</h2>
+<h3 id="nuvola-player-303">Nuvola Player 3.0.3</h3>
+<p>Maintenance release <strong>3.0.3</strong> was released on June 4th, 2016, addressing following issues:</p>
+<ul>
+<li>A wrong implementation of the CanPlay and CanPause flags of the Media Player Remote Interface Specification (MPRIS)
+    was fixed resolving issues with Unity Sound Indicator as a result. Issue: tiliado/nuvolaplayer#224</li>
+<li>Console warnings produced when notifications component were being disabled were fixed.
+    Issue: tiliado/nuvolaplayer#227</li>
+<li>Initialization of the Web Worker process is more robust. Blank incompletely loaded and improperly initialized
+    web pages should no longer occur.</li>
+<li>Notifications API is no longer called if it is disabled as it is obviously not functional and produces only console
+    warnings. Issue: tiliado/nuvolaplayer#227</li>
+<li>JavaScript API got new Nuvola.VERSION and Nuvola.API_VERSION constants for scripts to be able to detect whether
+    currently running instance is NP 3.0.3 or higher and it is possible to run code which caused improper Web Worker
+    initialization in older versions.</li>
+<li>A version of the LibSoup library is shown in <code>nuvolaplayer3 --version</code> and in the About dialog. In addition,
+    JavaScript API got Nuvola.LIBSOUP_VERSION, Nuvola.LIBSOUP_MAJOR, Nuvola.LIBSOUP_MINOR and LIBSOUP_MICRO constants
+    for script to detect not new enough versions and to recommend upgrading. Issue: tiliado/nuvola-app-spotify#13</li>
+</ul>
 <h3 id="nuvola-player-302">Nuvola Player 3.0.2</h3>
 <p>Maintenance release <strong>3.0.2</strong> was released on April 29th, 2016, addressing following issues:</p>
 <ul>
