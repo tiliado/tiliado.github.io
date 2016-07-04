@@ -6,15 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
 
-        <title>Install Nuvola Player 3.0</title>
+        <title>Install Nuvola Player 3.0 on Other Linux</title>
     
-  <meta itemprop="name" content="Install Nuvola Player 3.0">
-  <meta property="og:title" content="Install Nuvola Player 3.0" />
-  <meta name="twitter:title" content="Install Nuvola Player 3.0" />
+  <meta itemprop="name" content="Install Nuvola Player 3.0 on Other Linux">
+  <meta property="og:title" content="Install Nuvola Player 3.0 on Other Linux" />
+  <meta name="twitter:title" content="Install Nuvola Player 3.0 on Other Linux" />
   <meta property="og:type" content="article" />
   <meta name="twitter:card" content="summary" />
-  <meta property="og:url" content="http://tiliado.github.io/nuvolaplayer/documentation/3.0/install.html" />
-  <meta name="twitter:url" content="http://tiliado.github.io/nuvolaplayer/documentation/3.0/install.html" />
+  <meta property="og:url" content="http://tiliado.github.io/nuvolaplayer/documentation/3.0/install-other-linux.html" />
+  <meta name="twitter:url" content="http://tiliado.github.io/nuvolaplayer/documentation/3.0/install-other-linux.html" />
   
     <meta itemprop="image" content="http://tiliado.github.io/nuvolaplayer/documentation/images/3.0/unity/unity_google_play_music_launcher_thumbs_up.png"> 
     <meta property="og:image" content="http://tiliado.github.io/nuvolaplayer/documentation/images/3.0/unity/unity_google_play_music_launcher_thumbs_up.png" />
@@ -139,7 +139,7 @@ Nuvola Player<br><small>Cloud music integration for your Linux desktop</small></
         
   <div class="col-xs-24">
       <div class="page-header text-center">
-        <h1 id="top">Install Nuvola Player 3.0</h1>
+        <h1 id="top">Install Nuvola Player 3.0 on Other Linux</h1>
       </div>
   </div>
   <div class="col-xs-24 col-md-6">
@@ -147,7 +147,11 @@ Nuvola Player<br><small>Cloud music integration for your Linux desktop</small></
       <p><strong>Contents</strong></p>
       <div class="toc">
 <ul>
-<li><a href="#install">Install Nuvola Player</a></li>
+<li><a href="#build-source">Build Nuvola Player from Source</a><ul>
+<li><a href="#get-source-code">Get Source Code</a></li>
+<li><a href="#install-dependencies">Install Dependencies</a></li>
+</ul>
+</li>
 <li><a href="#format-support">Format Support Issues</a></li>
 <li><a href="#explore-features">Explore Features</a></li>
 </ul>
@@ -166,95 +170,61 @@ Nuvola Player<br><small>Cloud music integration for your Linux desktop</small></
 <a href="./install-ubuntu.html">Ubuntu</a> 14.04, 15.04, 15.10 and 16.04,
 <a href="./install-fedora.html">Fedora</a> 23-24
 and <a href="./install-debian.html">Debian</a> Jessie, Stretch and Sid.
-However, Nuvola Player should also work on <a href="./install-other-linux.md">other modern Linux distributions</a>, but
+However, Nuvola Player should also work on other modern Linux distributions, but
 user experience might not be optimal (e.g. inconsistent look and behaviour) and quality of user
 support depends on complexity of an issue.</p>
-<h2 id="install">Install Nuvola Player</h2>
-<div class="row">
-<div class="col-sm-12 col-md-6">
-<div class="thumbnail">
-<a href="install-ubuntu.html" title="Install Nuvola Player in Ubuntu"><img src="../images/dist-logos/ubuntu_vertical.png"/></a>
-<div class="caption">
-<a class="btn btn-primary btn-block" href="install-ubuntu.html" role="button" title="Install Nuvola Player in Ubuntu">Ubuntu</a>
-</div>
-</div>
-</div>
-<div class="col-sm-12 col-md-6">
-<div class="thumbnail">
-<a href="install-fedora.html" title="Install Nuvola Player in Fedora"><img src="../images/dist-logos/fedora_vertical.png"/></a>
-<div class="caption">
-<a class="btn btn-primary btn-block" href="install-fedora.html" role="button" title="Install Nuvola Player in Fedora">Fedora</a>
-</div>
-</div>
-</div>
-<div class="col-sm-12 col-md-6">
-<div class="thumbnail">
-<a href="install-debian.html" title="Install Nuvola Player in Debian"><img src="../images/dist-logos/debian_vertical.png"/></a>
-<div class="caption">
-<a class="btn btn-primary btn-block" href="install-debian.html" role="button" title="Install Nuvola Player in Debian">Debian</a>
-</div>
-</div>
-</div>
-<div class="col-sm-12 col-md-6">
-<div class="thumbnail">
-<a href="install-other-linux.html" title="Install Nuvola Player"><img src="../images/nuvola-logos/install_vertical_3.png"/></a>
-<div class="caption">
-<a class="btn btn-primary btn-block" href="install-other-linux.html" role="button" title="Install Nuvola Player">Other Linux</a>
-</div>
-</div>
-</div>
-</div>
+<p>Nuvola Player 3 should work also on modern linux distributions which meet minimal requirements listed bellow,
+but hasn't been tested here by the developer and support may be limited for that reason.
+You can take a look at <a href="https://github.com/tiliado/nuvolaplayer/wiki/Unofficial">a list of unofficial packages</a>
+provided by a community or <a href="#build-source">build Nuvola Player from source</a>.</p>
+<h2 id="build-source">Build Nuvola Player from Source</h2>
+<h3 id="get-source-code">Get Source Code</h3>
+<p>You can download <a href="https://github.com/tiliado/nuvolaplayer/releases">a release tarball</a>
+or <a href="https://github.com/tiliado/nuvolaplayer/tree/3.0.x">clone git repository</a>.</p>
+<h3 id="install-dependencies">Install Dependencies</h3>
+<ul>
+<li><a href="http://python.org">Python 2</a> &gt;= 2.7 (recommended)
+    or <a href="http://python.org">Python 3</a> &gt;= 3.4 (not well tested)</li>
+<li><a href="https://wiki.gnome.org/Projects/Vala">Vala</a> &gt;= 0.22.1</li>
+<li><a href="https://github.com/tiliado/diorite">Diorite library</a></li>
+<li><a href="https://wiki.gnome.org/Projects/GLib">glib-2.0</a> &gt;= 2.40</li>
+<li><a href="https://wiki.gnome.org/Projects/GLib">gio-2.0</a> &gt;= 2.40</li>
+<li><a href="https://wiki.gnome.org/Projects/GLib">gobject-2.0</a> &gt;= 2.40</li>
+<li><a href="https://wiki.gnome.org/Projects/GLib">gthread-2.0</a> &gt;= 2.40</li>
+<li><a href="http://www.gtk.org/">gtk+-3.0</a> &gt;= 3.10</li>
+<li><a href="http://www.gtk.org/">gdk-3.0</a> &gt;= 3.10</li>
+<li><a href="http://www.gtk.org/">gdk-x11-3.0</a> &gt;= 3.10</li>
+<li><a href="http://www.x.org/wiki/">x11</a> &gt;= 0.5</li>
+<li><a href="https://wiki.gnome.org/Projects/JsonGlib">json-glib-1.0</a> &gt;= 0.7</li>
+<li><a href="http://www.libarchive.org/">libarchive</a> &gt;= 3.1</li>
+<li><a href="http://webkitgtk.org/">webkit2gtk-3.0</a> &gt;= 2.4</li>
+<li><a href="http://webkitgtk.org/">javascriptcoregtk-3.0</a> &gt;= 2.4</li>
+<li><a href="https://git.gnome.org/browse/libnotify/">libnotify</a> &gt;= 0.7</li>
+<li>optional unity &gt;= 3.0</li>
+<li>optional dbusmenu-glib-0.4 &gt;= 0.4 </li>
+</ul>
 <h2 id="format-support">Format Support Issues</h2>
-<p>Nuvola Player requires Flash plugin and GStreamer MP3 decoder. Find out how to install these components on your system:</p>
-<div class="row">
-<div class="col-sm-12 col-md-6">
-<div class="thumbnail">
-<a href="install-ubuntu.html#format-support" title="Install Nuvola Player in Ubuntu"><img src="../images/dist-logos/ubuntu_vertical.png"/></a>
-<div class="caption">
-<a class="btn btn-primary btn-block" href="install-ubuntu.html#format-support" role="button" title="Install Nuvola Player in Ubuntu">Ubuntu</a>
-</div>
-</div>
-</div>
-<div class="col-sm-12 col-md-6">
-<div class="thumbnail">
-<a href="install-fedora.html#format-support" title="Install Nuvola Player in Fedora"><img src="../images/dist-logos/fedora_vertical.png"/></a>
-<div class="caption">
-<a class="btn btn-primary btn-block" href="install-fedora.html#format-support" role="button" title="Install Nuvola Player in Fedora">Fedora</a>
-</div>
-</div>
-</div>
-<div class="col-sm-12 col-md-6">
-<div class="thumbnail">
-<a href="install-debian.html#format-support" title="Install Nuvola Player in Debian"><img src="../images/dist-logos/debian_vertical.png"/></a>
-<div class="caption">
-<a class="btn btn-primary btn-block" href="install-debian.html#format-support" role="button" title="Install Nuvola Player in Debian">Debian</a>
-</div>
-</div>
-</div>
-<div class="col-sm-12 col-md-6">
-<div class="thumbnail">
-<a href="install-other-linux.html#format-support" title="Install Nuvola Player"><img src="../images/nuvola-logos/install_vertical_3.png"/></a>
-<div class="caption">
-<a class="btn btn-primary btn-block" href="install-other-linux.html#format-support" role="button" title="Install Nuvola Player">Other Linux</a>
-</div>
-</div>
-</div>
-</div>
+<p>Streaming services use following technologies for audio playback:</p>
+<ul>
+<li><strong>Adobe Flash</strong> - you will need a NPAPI based Flash plugin (not PAPI) - see <a href="http://get.adobe.com/flashplayer/">Flash download page</a></li>
+<li><strong>HTML5 Audio with MP3 format</strong> - you will need a functional <a href="http://gstreamer.freedesktop.org/modules/">GStreamer stack</a>
+  with a MP3 decoder. I'd recommend to install modules <code>gst-plugins-base</code>, <code>gst-plugins-good</code>, <code>gst-plugins-ugly</code> and <code>gst-plugins-bad</code>.</li>
+</ul>
 <h2 id="explore-features">Explore Features</h2>
 <div class="row">
-<div class="col-sm-12 col-md-8">
-<div class="thumbnail">
-<a href="./explore.html#explore-unity"><img height="192" src="../images/3.0/unity/unity_google_play_music_launcher_thumbs_up[256x192].png" width="256"/></a>
-<div class="caption">
-<a class="btn btn-primary btn-block" href="./explore.html#explore-unity" role="button">Unity</a>
-</div>
-</div>
-</div>
 <div class="col-sm-12 col-md-8">
 <div class="thumbnail">
 <a href="./explore.html#explore-gnome"><img height="192" src="../images/3.0/gnome/gnome_add_to_favorites[256x192].png" width="256"/></a>
 <div class="caption">
 <a class="btn btn-primary btn-block" href="./explore.html#explore-gnome" role="button">GNOME</a>
+</div>
+</div>
+</div>
+<div class="col-sm-12 col-md-8">
+<div class="thumbnail">
+<a href="./explore.html#explore-unity"><img height="192" src="../images/3.0/unity/unity_google_play_music_launcher_thumbs_up[256x192].png" width="256"/></a>
+<div class="caption">
+<a class="btn btn-primary btn-block" href="./explore.html#explore-unity" role="button">Unity</a>
 </div>
 </div>
 </div>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/Article">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+
+        <title>Install Nuvola Player 3.0 on Debian</title>
+    
+  <meta itemprop="name" content="Install Nuvola Player 3.0 on Debian">
+  <meta property="og:title" content="Install Nuvola Player 3.0 on Debian" />
+  <meta name="twitter:title" content="Install Nuvola Player 3.0 on Debian" />
+  <meta property="og:type" content="article" />
+  <meta name="twitter:card" content="summary" />
+  <meta property="og:url" content="http://tiliado.github.io/nuvolaplayer/documentation/3.0/install-debian.html" />
+  <meta name="twitter:url" content="http://tiliado.github.io/nuvolaplayer/documentation/3.0/install-debian.html" />
+  
+    <meta itemprop="image" content="http://tiliado.github.io/nuvolaplayer/documentation/images/3.0/unity/unity_google_play_music_launcher_thumbs_up.png"> 
+    <meta property="og:image" content="http://tiliado.github.io/nuvolaplayer/documentation/images/3.0/unity/unity_google_play_music_launcher_thumbs_up.png" />
+    <meta name="twitter:image" content="http://tiliado.github.io/nuvolaplayer/documentation/images/3.0/unity/unity_google_play_music_launcher_thumbs_up.png" />
+  
+  
+    
+    <meta name="description" content="Nuvola Player 3.0 is the first release of the third generation of a runtime for web-based music streaming services that provides more native user experience and integration with Linux desktop environments than usual web browsers can offer. Nuvola Players handles multimedia keys, shows desktop notifications, integrates with various sound indicators, media player applets, GNOME lock screen and launchers and more." />
+    <meta property="og:description" content="Nuvola Player 3.0 is the first release of the third generation of a runtime for web-based music streaming services that provides more native user experience and integration with Linux desktop environments than usual web browsers can offer. Nuvola Players handles multimedia keys, shows desktop notifications, integrates with various sound indicators, media player applets, GNOME lock screen and launchers and more." />
+    <meta name="twitter:description" content="Nuvola Player 3.0 is the first release of the third generation of a runtime for web-based music streaming services that provides more native user experience and integration with Linux desktop environments than usual web browsers can offer. Nuvola Players handles multimedia keys, shows desktop notifications, integrates with various sound indicators, media player applets, GNOME lock screen and launchers and more." />
+    <meta itemprop="description" content="Nuvola Player 3.0 is the first release of the third generation of a runtime for web-based music streaming services that provides more native user experience and integration with Linux desktop environments than usual web browsers can offer. Nuvola Players handles multimedia keys, shows desktop notifications, integrates with various sound indicators, media player applets, GNOME lock screen and launchers and more.">
+  
+  <meta name="twitter:site" content="@NuvolaPlayer" />
+  <meta name="twitter:creator" content="@NuvolaPlayer" />
+
+    
+    <link rel="stylesheet" href="../theme/bootstrap.css" />
+    <link rel="stylesheet" href="../theme/bootstrap.lightbox.css" media="screen" />
+    <link rel="stylesheet" href="../theme/pygments.css" />
+    <link rel="stylesheet" href="../theme/main.css" />
+    <style type="text/css" media="screen">
+    ul.thumbnails li {display: inline;}
+    table.badges {width: 100%;}
+    table.badges td {text-align:center; padding: 10px;}
+    table.badges a {display: block; border: 2px solid #ccc; padding: 10px;}
+    table.badges a:hover { border: 2px solid #999;}
+    table.badges img {vertical-align: middle;}
+    </style>
+    
+    
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="../theme/jquery.min.js"></script>
+    <script src="../theme/bootstrap.min.js"></script>
+    <script src="../theme/bootstrap.lightbox.js"></script>
+    <script src="../theme/iframeResizer.min.js"></script>
+    
+  </head>
+  <body>
+    <!-- Fixed navbar  -->
+<div class="navbar navbar-inverse navbar-static-top navbar-main" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-0">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand navbar-big-brand" href="https://tiliado.eu/">Tiliado</a>
+        </div>
+        <div id="navbar-collapse-0" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="https://tiliado.eu/">Home</a></li>
+                <li class="dropdown active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="https://tiliado.eu/nuvolaplayer/">Nuvola Player - Cloud music integration for your Linux desktop</a></li>
+                        <li><a href="https://tiliado.eu/diorite/">Diorite Library - Utility and widget library based on GLib and GTK+ 3</a></li>
+                    </ul>
+                </li>
+                <li><a href="https://tiliado.eu/contact/">Contact</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</div>
+
+
+<div class="container project-header">
+<span class="badges" style="float: right; padding: 10px;">
+<a href="https://plus.google.com/110794636546911932554" title="Google+ page"><img src="../theme/icons/googleplus.png" width="40" height="40" alt="Google+ page" /></a>
+<a href="https://www.facebook.com/nuvolaplayer" title="Facebook page"><img src="../theme/icons/facebook.png" width="40" height="40" alt="Facebook page" /></a>
+<a href="https://twitter.com/NuvolaPlayer" title="Twitter page"><img src="../theme/icons/twitter.png" width="40" height="40" alt="Twitter page" /></a>
+<a href="http://feeds.feedburner.com/nuvolaplayer" title="RSS feed"><img src="../theme/icons/feed.png" width="40" height="40" alt="RSS feed" /></a>
+</span>
+
+
+<p class="h1">
+
+<a href="/nuvolaplayer/" class="project-logo"><img src="../theme/nuvolaplayer/logo.png" width="48" height="48" alt="" /></a>
+
+Nuvola Player<br><small>Cloud music integration for your Linux desktop</small></p>
+
+
+<ul class="nav nav-tabs">
+  <li><a href="https://tiliado.eu/nuvolaplayer/">About</a></li>
+  <li class="active"><a href="../">Documentation</a></li>
+  <li><a href="https://tiliado.eu/nuvolaplayer/funding/">Funding</a></li>
+  <li><a href="https://tiliado.eu/nuvolaplayer/repository/">Repository</a></li>
+  <li><a href="https://tiliado.github.io/nuvolaplayer/development/">Development</a></li>
+  <li><a href="https://tiliado.eu/nuvolaplayer/team/">Team</a></li>
+</ul>
+
+</div>
+
+<div class="container">
+  <nav class="navbar navbar-default navbar-topics" role="navigation">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="../"><span class="navbar-brand">Releases</span></a>
+    </div><!-- .navbar-header -->
+
+    <div class="collapse navbar-collapse" id="navbar-collapse-1">
+  <ul class="nav navbar-nav">
+    <li><a href="../index.html">Index</a></li>
+    <li><a href="../3.1.html"><b>3.1</b> Rolling Releases</a></li>
+    <li class="active"><a href="../3.0.html"><b>3.0</b> Stable Releases</a></li>
+  </ul>
+</div><!-- .navbar-collapse -->
+  </nav>
+</div>
+    
+    <div class="container">
+      <div class="row">
+        
+  <div class="col-xs-24">
+      <div class="page-header text-center">
+        <h1 id="top">Install Nuvola Player 3.0 on Debian</h1>
+      </div>
+  </div>
+  <div class="col-xs-24 col-md-6">
+    
+      <p><strong>Contents</strong></p>
+      <div class="toc">
+<ul>
+<li><a href="#install">Choose Installation Method</a></li>
+<li><a href="#installer">User-Friendly Graphical Installation</a><ul>
+<li><a href="#install-tiliado-repository-installer">Install Tiliado Repository Installer</a></li>
+<li><a href="#add-nuvola-player-repository">Add Nuvola Player Repository</a></li>
+</ul>
+</li>
+<li><a href="#format-support">Check Format Support</a></li>
+<li><a href="#explore-features">Explore Features</a></li>
+</ul>
+</div>
+    
+  </div>
+  <div class="col-xs-24 col-md-18 pull-right-md">
+    
+       <div class="alert alert-success" role="alert"><strong>Nuvola Player 3.0 is the current stable series.</strong>
+       New releases 3.0.x receive only bug fixes, but no new features except for compatible service integrations.
+       <strong>Do you want something more fresh?</strong>
+       Check out <a href="../3.1.html">Nuvola Player 3.1 Rolling Releases</a>.</div>
+    
+    
+    <div class="panel panel-info"><p class="panel-heading">Supported Releases</p><div class="panel-body">
+<p>The Nuvola Player 3 project officially supports and provides packages for
+Debian Jessie, Stretch and Sid.</p>
+</div></div>
+<h2 id="install">Choose Installation Method</h2>
+<p>There are two ways how to install Nuvola Player on your system. Choose the one which suits you best.</p>
+<ol>
+<li>
+<p><a href="#installer">User-friendly graphical installation</a>: Users who are not friends with a terminal
+    can take advantage of an easy-to-use graphical installer.
+    <strong>This method is recommended to less experienced users.</strong></p>
+</li>
+<li>
+<p><a href="./manual-installation.html">Manual installation from terminal</a>: Power users who are excellent in command-line kung-fu can just add
+    <a href="https://tiliado.eu/nuvolaplayer/repository/">the Nuvola Player Repository</a> manually and install
+    Nuvola Player using common package management tools of your linux distribution. Then skip to the
+    section <a href="#format-support">Check format support</a>.
+    <strong>This method is not recommended to less experienced users. Any mistake can break your system.</strong></p>
+</li>
+</ol>
+<h2 id="installer">User-Friendly Graphical Installation</h2>
+<div class="panel panel-info"><p class="panel-heading">Use up-to-date installer</p><div class="panel-body">
+<p>It is recommended to always download an up-to-date version of the Tiliado Repository Installer.</p>
+</div></div>
+<h3 id="install-tiliado-repository-installer">Install Tiliado Repository Installer</h3>
+<ol>
+<li>Download Tiliado Repository Installer for your
+    distribution release and open it with Ubuntu Software Center.<ul>
+<li><a href="https://tiliado.eu/repository-installer/download/jessie/">Debian 8 Jessie</a> </li>
+<li><a href="https://tiliado.eu/repository-installer/download/stretch/">Debian 9 Stretch</a> </li>
+<li><a href="https://tiliado.eu/repository-installer/download/sid/">Debian Sid</a> </li>
+</ul>
+</li>
+<li>Wait a bit as Ubuntu Software Center is a pretty slow beast. Then click <strong>Install</strong> button.</li>
+<li>Enter your password to confirm installation.</li>
+</ol>
+<div class="cointainer">
+<ul class="thumbnails row" data-toggle="lightbox">
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/unity_firefox_download_installer.png" title="Download Tiliado Repository Installer and open it with Ubuntu Software Center"><img height="192" src="../images/3.0/unity/unity_firefox_download_installer[256x192].png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/unity_install_installer.png" title="Wait a bit as Ubuntu Software Center is a pretty slow beast. Then click Install button."><img height="192" src="../images/3.0/unity/unity_install_installer[256x192].png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/unity_install_installer_auth.png" title="Enter your password to confirm installation."><img height="192" src="../images/3.0/unity/unity_install_installer_auth[256x192].png" width="256"/></a></li>
+</ul>
+</div>
+<h3 id="add-nuvola-player-repository">Add Nuvola Player Repository</h3>
+<ol>
+<li>Click <strong>Ubuntu button</strong> in the top left corner to open Unity Dash.</li>
+<li>Launch <strong>Tiliado Repositories</strong> installer.</li>
+<li>Use anonymous access or Enter login credentials to your Tiliado account.</li>
+<li>Select Nuvola Player repository.</li>
+<li>Select repository components you want to install Nuvola Player from.</li>
+<li>Select which packages you want to install from the repository.</li>
+<li>Review the summary and click <strong>Install</strong> button.</li>
+<li>Enter your password to confirm installation.</li>
+<li>If installation is successful, click Quit button. Otherwise copy the installation log and
+     <a href="https://github.com/tiliado/tiliado-repositories/issues/new">contact support</a>.</li>
+<li>Click <strong>Ubuntu button</strong> in the top left corner to open Unity Dash.</li>
+<li>Launch Nuvola Player 3.</li>
+<li>You should see Nuvola Player 3 services selector window.</li>
+</ol>
+<div class="cointainer">
+<ul class="thumbnails row" data-toggle="lightbox">
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/unity_open_dash.png" title="Click Ubuntu button in the top left corner to open Unity Dash."><img height="192" src="../images/3.0/unity/unity_open_dash[256x192].png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/unity_dash_tiliado_installer.png" title="Launch Tiliado Repositories installer."><img height="192" src="../images/3.0/unity/unity_dash_tiliado_installer[256x192].png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/unity_installer_anonymous.png" title="Use anonymous access or enter login credentials to your Tiliado account."><img height="192" src="../images/3.0/unity/unity_installer_anonymous[256x192].png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/unity_installer_repositories.png" title="Select Nuvola Player repository."><img height="192" src="../images/3.0/unity/unity_installer_repositories[256x192].png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/installation/unity_tiliado_installer_components_stable.png" title="Select repository components you want to install Nuvola Player from."><img height="192" src="../images/3.0/installation/unity_tiliado_installer_components_stable[256x192].png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/unity_installer_packages.png" title="Select which packages you want to install from the repository."><img height="192" src="../images/3.0/unity/unity_installer_packages[256x192].png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/unity_installer_summary.png" title="Review the summary and click Install button."><img height="192" src="../images/3.0/unity/unity_installer_summary[256x192].png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/unity_installer_install_auth.png" title="Enter your password to confirm installation."><img height="192" src="../images/3.0/unity/unity_installer_install_auth[256x192].png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/unity_installer_done_quit.png" title="If installation is successful, click Quit button."><img height="192" src="../images/3.0/unity/unity_installer_done_quit[256x192].png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/unity_open_dash.png" title="Click Ubuntu button in the top left corner to open Unity Dash."><img height="192" src="../images/3.0/unity/unity_open_dash[256x192].png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/unity_dash_nuvola.png" title="Launch Nuvola Player 3."><img height="192" src="../images/3.0/unity/unity_dash_nuvola[256x192].png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/unity_nuvola_selector_launch_deezer.png" title="Nuvola Player 3 services selector window."><img height="192" src="../images/3.0/unity/unity_nuvola_selector_launch_deezer[256x192].png" width="256"/></a></li>
+</ul>
+</div>
+<h2 id="format-support">Check Format Support</h2>
+<div class="panel panel-info"><p class="panel-heading">Info</p><div class="panel-body">
+<p><strong>Nuvola Player 3 packages for Debian</strong> have both Flash plugin and GStreamer MP3 audio decoder as
+dependencies, so these plugins should work out of the box without any hassles.</p>
+</div></div>
+<ol>
+<li>Click <strong>Ubuntu button</strong> in the top left corner to open Unity Dash.</li>
+<li>Launch Nuvola Player 3.</li>
+<li>You should see Nuvola Player 3 services selector window. Launch any streaming service.</li>
+<li>Open Gear menu and select Format Support.</li>
+<li>Tab Web Plugins shows information about available Flash Player plugins.</li>
+<li>Tab MP3 format shows information whether GStreamer MP3 Audio encoder has been found. You can
+    click button Check again to run a MP3 support test.</li>
+</ol>
+<div class="cointainer">
+<ul class="thumbnails row" data-toggle="lightbox">
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/unity_open_dash.png" title="Click Ubuntu button in the top left corner to open Unity Dash."><img height="192" src="../images/3.0/unity/unity_open_dash[256x192].png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/unity_dash_nuvola.png" title="Launch Nuvola Player 3."><img height="192" src="../images/3.0/unity/unity_dash_nuvola[256x192].png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/unity_nuvola_selector_launch_deezer.png" title="Nuvola Player 3 services selector window. Launch any streaming service."><img height="192" src="../images/3.0/unity/unity_nuvola_selector_launch_deezer[256x192].png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/unity_gear_menu_format_support.png" title="Open Gear menu and select Format Support."><img height="192" src="../images/3.0/unity/unity_gear_menu_format_support[256x192].png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/unity_format_support_flash.png" title="Tab Web Plugins shows information about available Flash Player plugins."><img height="192" src="../images/3.0/unity/unity_format_support_flash[256x192].png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/unity_format_support_mp3_ok.png" title="Tab MP3 format shows information whether GStreamer MP3 Audio encoder has been found. You can click button Check again to run a MP3 support test."><img height="192" src="../images/3.0/unity/unity_format_support_mp3_ok[256x192].png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/unity_format_support_mp3_check.png" title="A sound is playing during the test."><img height="192" src="../images/3.0/unity/unity_format_support_mp3_check[256x192].png" width="256"/></a></li>
+<li class="col-md-8"><a class="thumbnail" href="../images/3.0/unity/unity_format_support_mp3_check_success.png" title="Test has been successful."><img height="192" src="../images/3.0/unity/unity_format_support_mp3_check_success[256x192].png" width="256"/></a></li>
+</ul>
+</div>
+<h2 id="explore-features">Explore Features</h2>
+<div class="row">
+<div class="col-sm-12 col-md-8">
+<div class="thumbnail">
+<a href="./explore.html#explore-gnome"><img height="192" src="../images/3.0/gnome/gnome_add_to_favorites[256x192].png" width="256"/></a>
+<div class="caption">
+<a class="btn btn-primary btn-block" href="./explore.html#explore-gnome" role="button">GNOME</a>
+</div>
+</div>
+</div>
+<div class="col-sm-12 col-md-8">
+<div class="thumbnail">
+<a href="./explore.html#explore-unity"><img height="192" src="../images/3.0/unity/unity_google_play_music_launcher_thumbs_up[256x192].png" width="256"/></a>
+<div class="caption">
+<a class="btn btn-primary btn-block" href="./explore.html#explore-unity" role="button">Unity</a>
+</div>
+</div>
+</div>
+<div class="col-sm-12 col-md-8">
+<div class="thumbnail">
+<a href="./explore.html#explore-terminal"><img height="192" src="../images/3.0/unity/unity_nuvolactl_multiple_apps[256x192].png" width="256"/></a>
+<div class="caption">
+<a class="btn btn-primary btn-block" href="./explore.html#explore-terminal" role="button">Terminal &amp; scripts</a>
+</div>
+</div>
+</div>
+</div>
+
+    <hr />
+<div class="panel panel-primary">
+  <p class="panel-heading">
+    Questions? Feedback?
+  </p>
+  <div class="panel-body">
+    <p>
+      <strong>Having trouble? We'd like to help!</strong> Search for information in the archives of
+        <a href="https://groups.google.com/d/forum/nuvola-player-users">the Nuvola Player Users
+        mailing list</a>, or post a question.
+      </p>
+  </div>
+</div>
+  </div>
+  <div class="col-xs-24 col-md-6 sidebar">
+    <iframe src="https://tiliado.eu/nuvolaplayer/funding/patrons_list_box/" width="100%" scrolling="no" border="0" frameborder="0" class="patrons-box"></iframe>
+<script type="text/javascript">$('iframe').iFrameResize();</script>
+  </div>
+
+      </div>
+      <div class="row">
+        <div class="footer">
+  <hr />
+  <p class="text-center">
+    &copy; 2014-2015 Jiří Janoušek.
+    Generated by <a href="http://getpelican.com/">Pelican</a>.
+    Uses <a href="http://getbootstrap.com/">Bootstrap</a> theme
+    <a href="http://bootswatch.com/united/">United</a>.
+  </p>
+</div>
+      </div>
+    </div>
+  </body>
+</html>
