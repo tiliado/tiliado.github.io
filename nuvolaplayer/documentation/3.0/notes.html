@@ -162,6 +162,7 @@ Nuvola Player<br><small>Cloud music integration for your Linux desktop</small></
 <li><a href="#limited-support-and-commercial-support">Limited Support and Commercial Support</a></li>
 <li><a href="#project-funding">Project Funding</a></li>
 <li><a href="#maintenance">Maintenance Releases</a><ul>
+<li><a href="#nuvola-player-304">Nuvola Player 3.0.4</a></li>
 <li><a href="#nuvola-player-303">Nuvola Player 3.0.3</a></li>
 <li><a href="#nuvola-player-302">Nuvola Player 3.0.2</a></li>
 <li><a href="#nuvola-player-301">Nuvola Player 3.0.1</a></li>
@@ -179,8 +180,8 @@ Nuvola Player<br><small>Cloud music integration for your Linux desktop</small></
        Check out <a href="../3.1.html">Nuvola Player 3.1 Rolling Releases</a>.</div>
     
     
-    <p><strong>Nuvola Player 3.0.0</strong> was released on December 30th, 2015 and 
-<a href="#maintenance">maintenance release <strong>3.0.1</strong></a> was released on February 14th, 2016.
+    <p><strong>Nuvola Player 3.0.0</strong> was released on December 30th, 2015 and the latest
+<a href="#maintenance">maintenance release <strong>3.0.4</strong></a> was released on September 17th, 2016.
 Continue reading these release notes,
 <a href="../3.0/explore.html">explore all features</a> or just <a href="../3.0/install.html">jump to installation instructions</a>.</p>
 <h2 id="about-nuvola-player">About Nuvola Player</h2>
@@ -367,6 +368,19 @@ world, software for you. If you like Nuvola Player, or even use it every day, yo
 <p>Thank you and happy listening!</p>
 <p>Jiří Janoušek</p>
 <h2 id="maintenance">Maintenance Releases</h2>
+<h3 id="nuvola-player-304">Nuvola Player 3.0.4</h3>
+<p>Maintenance release <strong>3.0.4</strong> was released on September 17th, 2016, addressing following issues:</p>
+<ul>
+<li>A crash under Wayland session was fixed (GDK_BACKEND set to x11).
+    Issue: tiliado/nuvolaplayer#181</li>
+<li>The accelerated compositing mode is disabled with WebKitGTK &lt; 2.13.4 due to a WebKitGTK+ bug that may crash systems with certain graphic cards.
+    Upstream: https://bugs.webkit.org/show_bug.cgi?id=126122
+    Issue: tiliado/nuvolaplayer#245</li>
+<li>A non-functional local-storage-directory setting was removed as it produced a console warning.</li>
+<li>The design of the Welcome screen was improved.</li>
+<li>It is possible to disable media keys in the Preferences dialog.
+    Issue: tiliado/nuvolaplayer#237</li>
+</ul>
 <h3 id="nuvola-player-303">Nuvola Player 3.0.3</h3>
 <p>Maintenance release <strong>3.0.3</strong> was released on June 4th, 2016, addressing following issues:</p>
 <ul>
