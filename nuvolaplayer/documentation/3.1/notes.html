@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/Article">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+
+        <title>Nuvola Player 3.1 Release Notes</title>
+    
+  <meta itemprop="name" content="Nuvola Player 3.1 Release Notes">
+  <meta property="og:title" content="Nuvola Player 3.1 Release Notes" />
+  <meta name="twitter:title" content="Nuvola Player 3.1 Release Notes" />
+  <meta property="og:type" content="article" />
+  <meta name="twitter:card" content="summary" />
+  <meta property="og:url" content="http://tiliado.github.io/nuvolaplayer/documentation/3.1/notes.html" />
+  <meta name="twitter:url" content="http://tiliado.github.io/nuvolaplayer/documentation/3.1/notes.html" />
+  
+    <meta itemprop="image" content="http://tiliado.github.io/nuvolaplayer/documentation/images/3.0/unity/unity_google_play_music_launcher_thumbs_up.png"> 
+    <meta property="og:image" content="http://tiliado.github.io/nuvolaplayer/documentation/images/3.0/unity/unity_google_play_music_launcher_thumbs_up.png" />
+    <meta name="twitter:image" content="http://tiliado.github.io/nuvolaplayer/documentation/images/3.0/unity/unity_google_play_music_launcher_thumbs_up.png" />
+  
+  
+    
+    <meta name="description" content="Nuvola Player 3.1 is the second series of the third generation of a runtime for web-based music streaming services that provides more native user experience and integration with Linux desktop environments than usual web browsers can offer. Nuvola Players handles multimedia keys, shows desktop notifications, integrates with various sound indicators, media player applets, GNOME lock screen and launchers and more." />
+    <meta property="og:description" content="Nuvola Player 3.1 is the second series of the third generation of a runtime for web-based music streaming services that provides more native user experience and integration with Linux desktop environments than usual web browsers can offer. Nuvola Players handles multimedia keys, shows desktop notifications, integrates with various sound indicators, media player applets, GNOME lock screen and launchers and more." />
+    <meta name="twitter:description" content="Nuvola Player 3.1 is the second series of the third generation of a runtime for web-based music streaming services that provides more native user experience and integration with Linux desktop environments than usual web browsers can offer. Nuvola Players handles multimedia keys, shows desktop notifications, integrates with various sound indicators, media player applets, GNOME lock screen and launchers and more." />
+    <meta itemprop="description" content="Nuvola Player 3.1 is the second series of the third generation of a runtime for web-based music streaming services that provides more native user experience and integration with Linux desktop environments than usual web browsers can offer. Nuvola Players handles multimedia keys, shows desktop notifications, integrates with various sound indicators, media player applets, GNOME lock screen and launchers and more.">
+  
+  <meta name="twitter:site" content="@NuvolaPlayer" />
+  <meta name="twitter:creator" content="@NuvolaPlayer" />
+
+    
+    <link rel="stylesheet" href="../theme/bootstrap.css" />
+    <link rel="stylesheet" href="../theme/bootstrap.lightbox.css" media="screen" />
+    <link rel="stylesheet" href="../theme/pygments.css" />
+    <link rel="stylesheet" href="../theme/main.css" />
+    <style type="text/css" media="screen">
+    ul.thumbnails li {display: inline;}
+    table.badges {width: 100%;}
+    table.badges td {text-align:center; padding: 10px;}
+    table.badges a {display: block; border: 2px solid #ccc; padding: 10px;}
+    table.badges a:hover { border: 2px solid #999;}
+    table.badges img {vertical-align: middle;}
+    </style>
+    
+    
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="../theme/jquery.min.js"></script>
+    <script src="../theme/bootstrap.min.js"></script>
+    <script src="../theme/bootstrap.lightbox.js"></script>
+    <script src="../theme/iframeResizer.min.js"></script>
+    
+  </head>
+  <body>
+    <!-- Fixed navbar  -->
+<div class="navbar navbar-inverse navbar-static-top navbar-main" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-0">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand navbar-big-brand" href="https://tiliado.eu/">Tiliado</a>
+        </div>
+        <div id="navbar-collapse-0" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="https://tiliado.eu/">Home</a></li>
+                <li class="dropdown active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="https://tiliado.eu/nuvolaplayer/">Nuvola Player - Cloud music integration for your Linux desktop</a></li>
+                        <li><a href="https://tiliado.eu/diorite/">Diorite Library - Utility and widget library based on GLib and GTK+ 3</a></li>
+                    </ul>
+                </li>
+                <li><a href="https://tiliado.eu/contact/">Contact</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</div>
+
+
+<div class="container project-header">
+<span class="badges" style="float: right; padding: 10px;">
+<a href="https://plus.google.com/110794636546911932554" title="Google+ page"><img src="../theme/icons/googleplus.png" width="40" height="40" alt="Google+ page" /></a>
+<a href="https://www.facebook.com/nuvolaplayer" title="Facebook page"><img src="../theme/icons/facebook.png" width="40" height="40" alt="Facebook page" /></a>
+<a href="https://twitter.com/NuvolaPlayer" title="Twitter page"><img src="../theme/icons/twitter.png" width="40" height="40" alt="Twitter page" /></a>
+<a href="http://feeds.feedburner.com/nuvolaplayer" title="RSS feed"><img src="../theme/icons/feed.png" width="40" height="40" alt="RSS feed" /></a>
+</span>
+
+
+<p class="h1">
+
+<a href="https://tiliado.eu/nuvolaplayer/" class="project-logo"><img src="../theme/nuvolaplayer/logo.png" width="48" height="48" alt="" /></a>
+
+Nuvola Player<br><small>Cloud music integration for your Linux desktop</small></p>
+
+
+<ul class="nav nav-tabs">
+  <li><a href="https://tiliado.eu/nuvolaplayer/">About</a></li>
+  <li class="active"><a href="../">Documentation</a></li>
+  <li><a href="https://tiliado.eu/nuvolaplayer/funding/">Funding</a></li>
+  <li><a href="https://tiliado.eu/nuvolaplayer/repository/">Repository</a></li>
+  <li><a href="https://tiliado.github.io/nuvolaplayer/development/">Development</a></li>
+  <li><a href="https://tiliado.eu/nuvolaplayer/team/">Team</a></li>
+</ul>
+
+</div>
+
+<div class="container">
+  <nav class="navbar navbar-default navbar-topics" role="navigation">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="../"><span class="navbar-brand">Releases</span></a>
+    </div><!-- .navbar-header -->
+
+    <div class="collapse navbar-collapse" id="navbar-collapse-1">
+  <ul class="nav navbar-nav">
+    <li><a href="../index.html">Index</a></li>
+    <li class="active"><a href="../3.1.html"><b>3.1</b> Rolling Releases</a></li>
+    <li><a href="../3.0.html"><b>3.0</b> Stable Releases</a></li>
+  </ul>
+</div><!-- .navbar-collapse -->
+  </nav>
+</div>
+    
+    <div class="container">
+      <div class="row">
+        
+  <div class="col-xs-24">
+      <div class="page-header text-center">
+        <h1 id="top">Nuvola Player 3.1 Release Notes</h1>
+      </div>
+  </div>
+  <div class="col-xs-24 col-md-6">
+    
+      <p><strong>Contents</strong></p>
+      <div class="toc">
+<ul>
+<li><a href="#about-nuvola-player">About Nuvola Player</a></li>
+<li><a href="#whats-new">What's New</a><ul>
+<li><a href="#milestone-311">Milestone 3.1.1</a><ul>
+<li><a href="#new-features">New Features</a></li>
+<li><a href="#enhancements">Enhancements:</a></li>
+<li><a href="#bug-fixes">Bug Fixes</a></li>
+<li><a href="#news-for-script-maintainers">News for Script Maintainers:</a></li>
+<li><a href="#changes-in-dependencies">Changes in Dependencies</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#install-nuvola-player">Install Nuvola Player</a></li>
+</ul>
+</div>
+    
+  </div>
+  <div class="col-xs-24 col-md-18 pull-right-md">
+    
+       <div class="alert alert-info" role="alert"><strong>Nuvola Player 3.1 is the current rolling series.</strong>
+       New buils are constantly rolling out as new features are being developed.
+       <strong>Do you want something a bit more stable?</strong>
+       Check out <a href="../3.0.html">Nuvola Player 3.0 Stable Releases</a>.</div>
+    
+    
+    <div class="panel panel-warning"><p class="panel-heading">Rolling Releases are for Patrons</p><div class="panel-body">
+<p>Rolling Releases are provided for patrons as a benefit for their support. You will need to
+enter credentials of your Tiliado account with active
+<a href="https://tiliado.eu/nuvolaplayer/funding/">Nuvola Patron membership</a>
+to access these builds.</p>
+</div></div>
+<p>Nuvola Player 3.1 was forked from release 3.0 on December 30, 2015 and many changes under the hood 
+have been made and many new features &amp; enhancements have been added since then. </p>
+<h2 id="about-nuvola-player">About Nuvola Player</h2>
+<p><strong>Nuvola Player</strong> is a runtime for web-based music streaming services providing more native user
+experience and integration with Linux desktop environments than usual web browsers can offer. It
+tries to feel and look like a native application as possible. However, it cannot overcome common
+drawbacks of web-based music streaming: some music streaming services require Flash plugin and web
+apps usually have higher memory usage than native apps.</p>
+<h2 id="whats-new">What's New</h2>
+<p>Nuvola Player 3.1 is constantly evolving, to <strong>stay in touch</strong></p>
+<ul>
+<li>Follow Nuvola Player on <a href="https://www.facebook.com/nuvolaplayer">Facebook</a>,
+    <a href="https://plus.google.com/110794636546911932554">Google+</a> or
+    <a href="https://twitter.com/NuvolaPlayer">Twitter</a>.</li>
+<li>Subscribe to the Nuvola Player Newsletter: <a href="http://eepurl.com/bLbm5H">weekly</a>
+    or <a href="http://eepurl.com/bLbtM1">monthly</a>.</li>
+</ul>
+<h3 id="milestone-311">Milestone 3.1.1</h3>
+<p>The milestone 3.1.1 was released on October 2016.</p>
+<h4 id="new-features">New Features</h4>
+<dl>
+<dt><a href="../3.1/explore.html#media-player-indicator-extension">Ability to both display and set track rating in Media Player Indicator GNOME Shell extension</a></dt>
+<dd>Providing a streaming service supports it, Nuvola Player 3.1 exports track rating in MPRIS
+interface and a custom method to set rating of a track. Note that as of October 30th 2016,
+<a href="../3.1/explore.html#media-player-indicator-extension">Player Indicator git master version</a> is required.</dd>
+<dt><a href="../3.1/explore.html#remote-control-over-http">HTTP Remote Control interface</a></dt>
+<dd>This interface allows creation of client apps to control Nuvola Player over network via an Engine.io socket.</dd>
+<dt><a href="../3.1/explore.html#media-player-controller-web-page">Media Player Controller web page</a></dt>
+<dd>This page is an example of a client using the HTTP Remote Control interface. It allows you to control Nuvola Player
+from any device with a web browser (e.g. a phone).</dd>
+<dt><a href="../3.1/explore.html#nuvola-controller-pebble-watchapp">Nuvola Controller Pebble Watchapp</a></dt>
+<dd>This app for Pebble watches is another example of a client using the HTTP Remote Control interface. It allows you to control Nuvola Player
+from your wrist.</dd>
+<dt><a href="../3.1/explore.html#password-manager">Password Manager</a></dt>
+<dd>With the Password Manager, you can store passwords from login forms in a secure keyring.</dd>
+</dl>
+<h4 id="enhancements">Enhancements:</h4>
+<ul>
+<li>An option to always run in background regardless a song is playing or not. See in action in
+    <a href="./explore.html#play-in-background-with-notifications">Unity</a> or
+    <a href="./explore.html#play-in-background-with-notifications_1">GNOME</a>.</li>
+<li>Better support of HTML5 Audio. It is sufficient for ownCloud Music web app but more work is still necessary to support Google Play Music. Issue: tiliado/nuvolaplayer#52</li>
+<li>Pop-up windows are allowed to pop up a new window, which is required by the SoundCloud's log-in-via-Google feature. Issue: tiliado/nuvola-app-soundcloud#3</li>
+<li>A hint how to edit or remove a keyboard shortcut. Issue: tiliado/nuvolaplayer#217</li>
+<li>Users can disable media keys bindings in the Preferences dialog. Issue: tiliado/nuvolaplayer#237</li>
+<li>Inter process communication backed has been rewritten.</li>
+<li>All web app scripts have been ported to comply with the latest guidelines.</li>
+<li>Packaging improvements: support of independent installation of individual scripts and correct package metadata (e.g. license and homepage).</li>
+</ul>
+<h4 id="bug-fixes">Bug Fixes</h4>
+<ul>
+<li>Remove config option <code>--with-appindicator</code> as the AppIndicator integration is currently unmaintained. Issue: tiliado/nuvolaplayer#201, tiliado/nuvolaplayer#45</li>
+<li>Add missing <code>-a/--app-id</code> command-line argument to the <code>--help</code> screen. Issue: tiliado/nuvolaplayer#147 </li>
+<li>MPRIS implementation of CanPlay and CanPause flags has been fixed. Issue: tiliado/nuvolaplayer#224</li>
+<li>Warnings when Notifications is being disabled has been removed. Issue: tiliado/nuvolaplayer#227</li>
+<li>Don't use notifications API if disabled as it produces critical warnings. Issue: tiliado/nuvolaplayer#227</li>
+<li>Set GDK_BACKEND to x11 not to crash under Wayland. Issue: tiliado/nuvolaplayer#181</li>
+<li>Disable compositing mode in WebKitGTK &lt; 2.13.4 as it may crash some websites. Issue: tiliado/nuvolaplayer#245</li>
+</ul>
+<h4 id="news-for-script-maintainers">News for Script Maintainers:</h4>
+<ul>
+<li>Web app integration template has been moved to <a href="https://github.com/tiliado/nuvola-app-template">its own repository</a>.</li>
+<li>Added information about Format Requirements Flags. Issue: tiliado/nuvolaplayer#158</li>
+<li><code>Nuvola.VERSION</code> property contains Nuvola version encoded as single integer, e.g. e.g. 30105 for 3.1.5.</li>
+<li><code>Nuvola.API_VERSION</code> property contains Nuvola API version encoded as single integer, e.g. e.g. 301 for 3.1.</li>
+<li><code>Nuvola.WEBKITGTK_{VERSION,MAJOR,MINOR,MICRO}</code> properties contain version information about WebKitGTK+ library.</li>
+<li><code>Nuvola.LIBSOUP_{VERSION,MAJOR,MINOR,MICRO}</code> properties contain version information about Soup library.</li>
+<li>New API to set rating.</li>
+<li>It is possible to set a user agent string via the <code>user_agent</code> field of metadata.json. Issue: tiliado/nuvolaplayer#91</li>
+<li>It is possible to enable access to insecure content. This happens when a web page loaded over HTTPS protocol loads any content over HTTP protocol.</li>
+<li>Developer documentation and guidelines have been updated.</li>
+</ul>
+<h4 id="changes-in-dependencies">Changes in Dependencies</h4>
+<ul>
+<li>Increased: WebKitGTK &gt;= 2.6.2, Valac &gt;= 0.26.1, GLib &gt;= 2.42.1 and GTK+ &gt;= 3.14.5.</li>
+<li>New: libuuid and libnm-(util/glib)</li>
+</ul>
+<h2 id="install-nuvola-player">Install Nuvola Player</h2>
+<div class="row">
+<div class="col-sm-12 col-md-6">
+<div class="thumbnail">
+<a href="../3.1/install.html#ubuntu" title="Install Nuvola Player in Ubuntu"><img src="./images/dist-logos/ubuntu_vertical.png"/></a>
+<div class="caption">
+<a class="btn btn-primary btn-block" href="../3.1/install.html#ubuntu" role="button" title="Install Nuvola Player in Ubuntu">Ubuntu</a>
+</div>
+</div>
+</div>
+<div class="col-sm-12 col-md-6">
+<div class="thumbnail">
+<a href="../3.1/install.html#fedora" title="Install Nuvola Player in Fedora"><img src="./images/dist-logos/fedora_vertical.png"/></a>
+<div class="caption">
+<a class="btn btn-primary btn-block" href="../3.1/install.html#fedora" role="button" title="Install Nuvola Player in Fedora">Fedora</a>
+</div>
+</div>
+</div>
+<div class="col-sm-12 col-md-6">
+<div class="thumbnail">
+<a href="../3.1/install.html#debian" title="Install Nuvola Player in Debian"><img src="./images/dist-logos/debian_vertical.png"/></a>
+<div class="caption">
+<a class="btn btn-primary btn-block" href="../3.1/install.html#debian" role="button" title="Install Nuvola Player in Debian">Debian</a>
+</div>
+</div>
+</div>
+<div class="col-sm-12 col-md-6">
+<div class="thumbnail">
+<a href="../3.1/install.html#other-linux" title="Install Nuvola Player"><img src="./images/nuvola-logos/install_vertical_3.png"/></a>
+<div class="caption">
+<a class="btn btn-primary btn-block" href="../3.1/install.html#other-linux" role="button" title="Install Nuvola Player">Other Linux</a>
+</div>
+</div>
+</div>
+</div>
+<p>Nuvola Player 3 project officially supports and provides packages for
+<a href="../3.1/install.html#ubuntu">Ubuntu</a> 15.04, 15.10, 16.04 and 16.10,
+<a href="../3.1/install.html#fedora">Fedora</a> 23-24 and
+<a href="../3.1/install.html#debian">Debian</a> Jessie, Stretch and Sid. The Nuvola Player
+developer has tested installation and functionality in clean virtualized instances of these
+distributions and can assure reasonable user support in case of problems.</p>
+<p>However, Nuvola Player should also work on
+<a href="../3.1/install.html#other-linux">other modern Linux distributions</a>, but user experience might
+not be optimal (e.g. inconsistent look and behavior) and quality of user support depends on
+complexity of an issue.</p>
+
+    <hr />
+<div class="panel panel-primary">
+  <p class="panel-heading">
+    Questions? Feedback?
+  </p>
+  <div class="panel-body">
+    <p>
+      <strong>Having trouble? We'd like to help!</strong> Search for information in the archives of
+        <a href="https://groups.google.com/d/forum/nuvola-player-users">the Nuvola Player Users
+        mailing list</a>, or post a question.
+      </p>
+  </div>
+</div>
+  </div>
+  <div class="col-xs-24 col-md-6 sidebar">
+    <iframe src="https://tiliado.eu/nuvolaplayer/funding/patrons_list_box/" width="100%" scrolling="no" border="0" frameborder="0" class="patrons-box"></iframe>
+<script type="text/javascript">$('iframe').iFrameResize();</script>
+  </div>
+
+      </div>
+      <div class="row">
+        <div class="footer">
+  <hr />
+  <p class="text-center">
+    &copy; 2014-2015 Jiří Janoušek.
+    Generated by <a href="http://getpelican.com/">Pelican</a>.
+    Uses <a href="http://getbootstrap.com/">Bootstrap</a> theme
+    <a href="http://bootswatch.com/united/">United</a>.
+  </p>
+</div>
+      </div>
+    </div>
+  </body>
+</html>
