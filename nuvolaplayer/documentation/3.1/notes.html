@@ -150,25 +150,34 @@ Nuvola Player<br><small>Cloud music integration for your Linux desktop</small></
 <ul>
 <li><a href="#about-nuvola-apps">About Nuvola Apps</a></li>
 <li><a href="#whats-new">What's New</a><ul>
-<li><a href="#milestone-313">Milestone 3.1.3</a><ul>
+<li><a href="#milestone-314">Milestone 3.1.4</a><ul>
+<li><a href="#gallery">Gallery</a></li>
 <li><a href="#new-features">New Features</a></li>
 <li><a href="#enhancements">Enhancements</a></li>
+<li><a href="#web-app-scripts">Web App Scripts</a></li>
 <li><a href="#bug-fixes">Bug fixes</a></li>
 <li><a href="#under-the-hood">Under the Hood</a></li>
 </ul>
 </li>
-<li><a href="#milestone-312">Milestone 3.1.2</a><ul>
+<li><a href="#milestone-313">Milestone 3.1.3</a><ul>
 <li><a href="#new-features_1">New Features</a></li>
 <li><a href="#enhancements_1">Enhancements</a></li>
+<li><a href="#bug-fixes_1">Bug fixes</a></li>
 <li><a href="#under-the-hood_1">Under the Hood</a></li>
-<li><a href="#bug-fixes_1">Bug Fixes</a></li>
+</ul>
+</li>
+<li><a href="#milestone-312">Milestone 3.1.2</a><ul>
+<li><a href="#new-features_2">New Features</a></li>
+<li><a href="#enhancements_2">Enhancements</a></li>
+<li><a href="#under-the-hood_2">Under the Hood</a></li>
+<li><a href="#bug-fixes_2">Bug Fixes</a></li>
 <li><a href="#news-for-script-maintainers">News for Script Maintainers</a></li>
 </ul>
 </li>
 <li><a href="#milestone-311">Milestone 3.1.1</a><ul>
-<li><a href="#new-features_2">New Features</a></li>
-<li><a href="#enhancements_2">Enhancements:</a></li>
-<li><a href="#bug-fixes_2">Bug Fixes</a></li>
+<li><a href="#new-features_3">New Features</a></li>
+<li><a href="#enhancements_3">Enhancements:</a></li>
+<li><a href="#bug-fixes_3">Bug Fixes</a></li>
 <li><a href="#news-for-script-maintainers_1">News for Script Maintainers:</a></li>
 <li><a href="#changes-in-dependencies">Changes in Dependencies</a></li>
 </ul>
@@ -211,9 +220,57 @@ apps usually have higher memory usage than native apps.</p>
 <li>Subscribe to the Nuvola Player Newsletter: <a href="http://eepurl.com/bLbm5H">weekly</a>
     or <a href="http://eepurl.com/bLbtM1">monthly</a>.</li>
 </ul>
+<h3 id="milestone-314">Milestone 3.1.4</h3>
+<p>The milestone 3.1.4 is still in development.</p>
+<h4 id="gallery">Gallery</h4>
+<div class="cointainer">
+<ul class="thumbnails row" data-toggle="lightbox">
+<li class="col-md-12"><a class="thumbnail" href="../images/3.1/appindicator/appindicator_unity_thumbs_up.png" title="Preferences dialog and AppIndicator in Ubuntu's Unity."><img src="../images/3.1/appindicator/appindicator_unity_thumbs_up[320x].png" width="320"/></a></li>
+<li class="col-md-12"><a class="thumbnail" href="../images/3.1/appindicator/appindicator_unity_activate_window.png" title="AppIndicator in Ubuntu's Unity while Nuvola is running in background."><img src="../images/3.1/appindicator/appindicator_unity_activate_window[320x].png" width="320"/></a></li>
+<li class="col-md-12"><a class="thumbnail" href="../images/3.1/appindicator/appindicator_pantheon_thumbs_up.png" title="Preferences dialog and AppIndicator in elementaryOS."><img src="../images/3.1/appindicator/appindicator_pantheon_thumbs_up[320x].png" width="320"/></a></li>
+<li class="col-md-12"><a class="thumbnail" href="../images/3.1/appindicator/appindicator_pantheon_activate_window.png" title="AppIndicator in elementaryOS while Nuvola is running in background."><img src="../images/3.1/appindicator/appindicator_pantheon_activate_window[320x].png" width="320"/></a></li>
+<li class="col-md-12"><a class="thumbnail" href="../images/3.1/appindicator/appindicator_gnome_thumbs_up.png" title="Preferences dialog and AppIndicator in GNOME Shell."><img src="../images/3.1/appindicator/appindicator_gnome_thumbs_up[320x].png" width="320"/></a></li>
+<li class="col-md-12"><a class="thumbnail" href="../images/3.1/appindicator/appindicator_gnome_activate_window.png" title="AppIndicator in GNOME Shell while Nuvola is running in background."><img src="../images/3.1/appindicator/appindicator_gnome_activate_window[320x].png" width="320"/></a></li>
+<li class="col-md-12"><a class="thumbnail" href="../images/3.1/features/website_data_manager.png" title="Website data manager."><img src="../images/3.1/features/website_data_manager[320x].png" width="320"/></a></li>
+</ul>
+</div>
+<h4 id="new-features">New Features</h4>
+<ul>
+<li>Tray icon feature can now use AppIndicator library instead of obsolete X11 tray icons. Although app indicators
+    are mostly known from Ubuntu's Unity desktop, they also work in elementaryOS and GNOME Shell (with
+    <a href="https://extensions.gnome.org/extension/615/appindicator-support">AppIndicator extension</a>) and provide
+    superior user experience. Issue: tiliado/nuvolaplayer#45</li>
+<li>Users can easily clear cookies, cache and temporary files, IndexedDB and WebSQL databases and local storage
+    from the Preferences dialog → tab Website Data. Issue: tiliado/nuvolaplayer#331</li>
+</ul>
+<h4 id="enhancements">Enhancements</h4>
+<ul>
+<li>Nuvola can do its own user agent quirks (i.e. to disguise itself as a different web browser) in order to work
+    around web pages that doesn't work with the WebKit's user agent string. Issue: tiliado/nuvolaplayer#336</li>
+</ul>
+<h4 id="web-app-scripts">Web App Scripts</h4>
+<ul>
+<li>Google Play Music script uses own user agent quirks to work around the malfunctioning Google sign-in web page.
+    Issue: tiliado/nuvolaplayer#336</li>
+</ul>
+<h4 id="bug-fixes">Bug fixes</h4>
+<ul>
+<li>The build script now raises error if it is ran with Python &lt; 3.4.</li>
+<li>Fixed a bug when the menus of tray icons and dock items were not updated.</li>
+<li>Nuvola now aborts when required data files are not found (e.g. in incomplete installation) rather they running
+    with errors in the background.</li>
+<li>Obsolete test suite has been removed. A new one will be created during ongoing modernization.
+    Issue: tiliado/nuvolaplayer#335</li>
+</ul>
+<h4 id="under-the-hood">Under the Hood</h4>
+<ul>
+<li>WebKitGTK+ &gt;= 2.16.0 is required as all new API is now used unconditionally to make maintenance easier.</li>
+<li>Added optional dependency on appindicator3-0.1 &gt;= 0.4. Use <code>./waf configure --noappindicator</code> to disable
+    this dependency and related functionality (AppIndicator backend for Tray icon feature).</li>
+</ul>
 <h3 id="milestone-313">Milestone 3.1.3</h3>
 <p>The milestone 3.1.2 was released on April 30, 2017.</p>
-<h4 id="new-features">New Features</h4>
+<h4 id="new-features_1">New Features</h4>
 <ul>
 <li>elementaryOS Loki has been added among officially supported distributions. Nuvola flatpaks contain
     a work-in-progress GTK+ 3.22 port of the elementary theme to provide elementaryOS users with a native look.
@@ -221,7 +278,7 @@ apps usually have higher memory usage than native apps.</p>
     Issue: tiliado/nuvolaplayer#4</li>
 <li>All three variants of the Arc theme have been added to Nuvola flatpaks. Issue: tiliado/nuvolaplayer/issues/318</li>
 </ul>
-<h4 id="enhancements">Enhancements</h4>
+<h4 id="enhancements_1">Enhancements</h4>
 <ul>
 <li>Ubuntu themes have been updated. Issue: tiliado/nuvolaplayer#324</li>
 <li>Initial start-up of flatpak builds is faster.</li>
@@ -229,13 +286,13 @@ apps usually have higher memory usage than native apps.</p>
 <li>WebKitGTK+ 2.16 API to set network proxy is used replacing previous legacy hacks.</li>
 <li>The official builds of Nuvola are marked as "genuine flatpak builds"</li>
 </ul>
-<h4 id="bug-fixes">Bug fixes</h4>
+<h4 id="bug-fixes_1">Bug fixes</h4>
 <ul>
 <li>Apps that are not media players no longer steal media keys. Issue: tiliado/nuvolaplayer#230</li>
 <li>Fixed activation for Premium users. Issue: tiliado/nuvolaplayer#325</li>
 <li>App menu, toolbar &amp; menu bar handling was refactored and double app menus fixed. Issue: tiliado/diorite#4</li>
 </ul>
-<h4 id="under-the-hood">Under the Hood</h4>
+<h4 id="under-the-hood_1">Under the Hood</h4>
 <ul>
 <li>Build script of Nuvola was reworked, ported to Waf 1.9.10 and supports branding. See Readme.md
     for more information.</li>
@@ -246,7 +303,7 @@ apps usually have higher memory usage than native apps.</p>
 </ul>
 <h3 id="milestone-312">Milestone 3.1.2</h3>
 <p>The milestone 3.1.2 was released on March 26, 2017 (123 commit since the 3.1.1 milestone).</p>
-<h4 id="new-features_1">New Features</h4>
+<h4 id="new-features_2">New Features</h4>
 <ul>
 <li>Nuvola Player was renamed to Nuvola Apps as non-media player apps (Google Calendar) were enabled
     and should be fully supported in the 4.0 release.</li>
@@ -256,7 +313,7 @@ apps usually have higher memory usage than native apps.</p>
 <li>WebApp scripts provide own desktop files so the unnecessary create/delete desktop launchers actions
     were removed.</li>
 </ul>
-<h4 id="enhancements_1">Enhancements</h4>
+<h4 id="enhancements_2">Enhancements</h4>
 <ul>
 <li>Enhanced support of HTML5 Audio and Media Source Extension (MSE), which is currently enabled only
     in the BBC iPlayer script with a custom WebKitGTK+ build.</li>
@@ -264,7 +321,7 @@ apps usually have higher memory usage than native apps.</p>
     Issue: tiliado/nuvolaplayer#76</li>
 <li>Preferences dialog: Components tab was renamed to Features as it is more user-friendly.</li>
 </ul>
-<h4 id="under-the-hood_1">Under the Hood</h4>
+<h4 id="under-the-hood_2">Under the Hood</h4>
 <ul>
 <li>Inter-process communication has been reworked for greater flexibility as required by the HTTP Remote Control
     feature.</li>
@@ -274,7 +331,7 @@ apps usually have higher memory usage than native apps.</p>
 <li>The build script now honors the VAPIDIR env variable.</li>
 <li>Added a script to set up Nuvola CDK environment (<code>setup_nuvolacdk.sh</code>).</li>
 </ul>
-<h4 id="bug-fixes_1">Bug Fixes</h4>
+<h4 id="bug-fixes_2">Bug Fixes</h4>
 <ul>
 <li>"Too many flash plugins" false positives. Resolve symlinks and track final paths not to count duplicates.
     Issue: tiliado/nuvolaplayer#159</li>
@@ -290,7 +347,7 @@ apps usually have higher memory usage than native apps.</p>
 </ul>
 <h3 id="milestone-311">Milestone 3.1.1</h3>
 <p>The milestone 3.1.1 was released on October 2016.</p>
-<h4 id="new-features_2">New Features</h4>
+<h4 id="new-features_3">New Features</h4>
 <dl>
 <dt><a href="../3.1/explore.html#media-player-indicator-extension">Ability to both display and set track rating in Media Player Indicator GNOME Shell extension</a></dt>
 <dd>Providing a streaming service supports it, Nuvola Player 3.1 exports track rating in MPRIS
@@ -307,7 +364,7 @@ from your wrist.</dd>
 <dt><a href="../3.1/explore.html#password-manager">Password Manager</a></dt>
 <dd>With the Password Manager, you can store passwords from login forms in a secure keyring.</dd>
 </dl>
-<h4 id="enhancements_2">Enhancements:</h4>
+<h4 id="enhancements_3">Enhancements:</h4>
 <ul>
 <li>An option to always run in background regardless a song is playing or not. See in action in
     <a href="./explore.html#play-in-background-with-notifications">Unity</a> or
@@ -320,7 +377,7 @@ from your wrist.</dd>
 <li>All web app scripts have been ported to comply with the latest guidelines.</li>
 <li>Packaging improvements: support of independent installation of individual scripts and correct package metadata (e.g. license and homepage).</li>
 </ul>
-<h4 id="bug-fixes_2">Bug Fixes</h4>
+<h4 id="bug-fixes_3">Bug Fixes</h4>
 <ul>
 <li>Remove config option <code>--with-appindicator</code> as the AppIndicator integration is currently unmaintained. Issue: tiliado/nuvolaplayer#201, tiliado/nuvolaplayer#45</li>
 <li>Add missing <code>-a/--app-id</code> command-line argument to the <code>--help</code> screen. Issue: tiliado/nuvolaplayer#147 </li>
