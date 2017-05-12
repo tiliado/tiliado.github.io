@@ -156,7 +156,7 @@ Nuvola Player<br><small>Cloud music integration for your Linux desktop</small></
     
     <div class="panel panel-info"><p class="panel-heading">Supported Releases</p><div class="panel-body">
 <p>The Nuvola Player 3 project officially supports and provides packages for
-Fedora 23-25.</p>
+Fedora 24-25.</p>
 </div></div>
 <h2 id="install">Choose Installation Method</h2>
 <p>There are two ways how to install Nuvola Player on your system. Choose the one which suits you best.</p>
@@ -182,7 +182,6 @@ Fedora 23-25.</p>
 <ol>
 <li>Download Tiliado Repository Installer for your
     distribution release and open it with Software Install tool.<ul>
-<li><a href="https://tiliado.eu/repository-installer/download/fc23/">Fefora 23</a></li>
 <li><a href="https://tiliado.eu/repository-installer/download/fc24/">Fedora 24</a></li>
 <li><a href="https://tiliado.eu/repository-installer/download/fc25/">Fedora 25</a></li>
 </ul>
@@ -274,8 +273,14 @@ so it <strong>cannot be installed automatically with Nuvola Player 3</strong> pa
 </ul>
 </div>
 <h3 id="mp3">Install GStreamer MP3 Audio Decoder</h3>
+<h4 id="fedora-25">Fedora 25+</h4>
 <div class="panel panel-info"><p class="panel-heading">Info</p><div class="panel-body">
-<p>Fedora repository doesn't contain a GStreamer MP3 Audio Decoder package,
+<p>Fedora repository contain a GStreamer MP3 Audio Decoder package since Fedora 25,
+install package <a href="https://admin.fedoraproject.org/pkgdb/package/rpms/gstreamer1-plugin-mpg123/">gstreamer1-plugin-mpg123</a>.</p>
+</div></div>
+<h4 id="fedora-24">Fedora 24</h4>
+<div class="panel panel-info"><p class="panel-heading">Info</p><div class="panel-body">
+<p>Fedora 24 repository doesn't contain a GStreamer MP3 Audio Decoder package,
 so it <strong>cannot be installed automatically with Nuvola Player 3</strong> package and it's necessary to
 <a href="https://ask.fedoraproject.org/en/question/42073/how-i-can-install-audio-codecs-like-mp3/">install it manually</a>.</p>
 </div></div>
