@@ -6,16 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
 
-        <title>Get Help with Nuvola Apps</title>
+        <title>Install Nuvola 4</title>
     
-  <meta itemprop="name" content="Get Help with Nuvola Apps">
-  <meta property="og:title" content="Get Help with Nuvola Apps" />
-  <meta name="twitter:title" content="Get Help with Nuvola Apps" />
+  <meta itemprop="name" content="Install Nuvola 4">
+  <meta property="og:title" content="Install Nuvola 4" />
+  <meta name="twitter:title" content="Install Nuvola 4" />
   <meta property="og:type" content="article" />
   <meta name="twitter:card" content="summary" />
-  <meta property="og:url" content="http://tiliado.github.io/nuvolaplayer/documentation/3.1/help.html" />
-  <meta name="twitter:url" content="http://tiliado.github.io/nuvolaplayer/documentation/3.1/help.html" />
+  <meta property="og:url" content="http://tiliado.github.io/nuvolaplayer/documentation/4/install.html" />
+  <meta name="twitter:url" content="http://tiliado.github.io/nuvolaplayer/documentation/4/install.html" />
   
+    <meta itemprop="image" content="http://tiliado.github.io/nuvolaplayer/documentation/images/3.0/unity/unity_google_play_music_launcher_thumbs_up.png"> 
+    <meta property="og:image" content="http://tiliado.github.io/nuvolaplayer/documentation/images/3.0/unity/unity_google_play_music_launcher_thumbs_up.png" />
+    <meta name="twitter:image" content="http://tiliado.github.io/nuvolaplayer/documentation/images/3.0/unity/unity_google_play_music_launcher_thumbs_up.png" />
+  
+  
+    
+    <meta name="description" content="Nuvola 4 is the fourth generation of a runtime for web-based music streaming services that provides more native user experience and integration with Linux desktop environments than usual web browsers can offer. Nuvola Players handles multimedia keys, shows desktop notifications, integrates with various sound indicators, media player applets, GNOME lock screen and launchers and more." />
+    <meta property="og:description" content="Nuvola 4 is the fourth generation of a runtime for web-based music streaming services that provides more native user experience and integration with Linux desktop environments than usual web browsers can offer. Nuvola Players handles multimedia keys, shows desktop notifications, integrates with various sound indicators, media player applets, GNOME lock screen and launchers and more." />
+    <meta name="twitter:description" content="Nuvola 4 is the fourth generation of a runtime for web-based music streaming services that provides more native user experience and integration with Linux desktop environments than usual web browsers can offer. Nuvola Players handles multimedia keys, shows desktop notifications, integrates with various sound indicators, media player applets, GNOME lock screen and launchers and more." />
+    <meta itemprop="description" content="Nuvola 4 is the fourth generation of a runtime for web-based music streaming services that provides more native user experience and integration with Linux desktop environments than usual web browsers can offer. Nuvola Players handles multimedia keys, shows desktop notifications, integrates with various sound indicators, media player applets, GNOME lock screen and launchers and more.">
   
   <meta name="twitter:site" content="@NuvolaPlayer" />
   <meta name="twitter:creator" content="@NuvolaPlayer" />
@@ -118,7 +128,7 @@ Nuvola Player<br><small>Cloud music integration for your Linux desktop</small></
     <div class="collapse navbar-collapse" id="navbar-collapse-1">
   <ul class="nav navbar-nav">
     <li><a href="../index.html">Index</a></li>
-    <li><a href="../4.html"><b>4.x</b> Rolling Releases</a></li>
+    <li class="active"><a href="../4.html"><b>4.x</b> Rolling Releases</a></li>
     <li><a href="../3.0.html"><b>3.0</b> Stable Releases</a></li>
   </ul>
 </div><!-- .navbar-collapse -->
@@ -130,7 +140,7 @@ Nuvola Player<br><small>Cloud music integration for your Linux desktop</small></
         
   <div class="col-xs-24">
       <div class="page-header text-center">
-        <h1 id="top">Get Help with Nuvola Apps</h1>
+        <h1 id="top">Install Nuvola 4</h1>
       </div>
   </div>
   <div class="col-xs-24 col-md-6">
@@ -138,65 +148,71 @@ Nuvola Player<br><small>Cloud music integration for your Linux desktop</small></
       <p><strong>Contents</strong></p>
       <div class="toc">
 <ul>
-<li><a href="#tiliadoeu-website">Tiliado.eu Website</a></li>
-<li><a href="#tiliado-repositories">Tiliado Repositories</a></li>
-<li><a href="#nuvola-apps">Nuvola Apps</a><ul>
-<li><a href="#feature-requests">Feature Requests</a></li>
-<li><a href="#documentation-and-optional-features">Documentation and Optional Features</a></li>
-<li><a href="#official-flatpak-builds">Official Flatpak Builds</a></li>
-<li><a href="#legacy-ubuntudebianfedora-packages">Legacy Ubuntu/Debian/Fedora Packages</a></li>
-<li><a href="#third-party-builds">Third-Party Builds</a></li>
-</ul>
-</li>
+<li><a href="#installation-instructions">Installation Instructions</a></li>
+<li><a href="#explore-features">Explore Features</a></li>
 </ul>
 </div>
     
   </div>
   <div class="col-xs-24 col-md-18 pull-right-md">
     
-       <div class="alert alert-danger" role="alert"><strong>Nuvola Player 3.1 is obsolete.</strong>
-       You should switch to <a href="../4.html">Nuvola Apps 4.x Rolling Releases</a> or
-       <a href="../3.0.html">Nuvola Player 3.0 Stable Releases</a>.</div>
+       <div class="alert alert-info" role="alert"><strong>Nuvola Apps 4.x is the current rolling series.</strong>
+       New buils are constantly rolling out as new features are being developed.
+       <strong>Do you want something a bit more stable?</strong>
+       Check out <a href="../3.0.html">Nuvola Player 3.0 Stable Releases</a>.</div>
     
     
-    <p>Whenever you encounter a bug in Nuvola Apps, don't hesitate to report it. First of all, it is
-necessary to submit your issue to the right place.</p>
-<h2 id="tiliadoeu-website">Tiliado.eu Website</h2>
-<p>If you have trouble with with <strong>Tiliado.eu website</strong> (tiliado.eu domain), your Tiliado account and
-memberships, contact <a href="mailto:support@tiliado.eu">Tiliado support</a>.</p>
-<h2 id="tiliado-repositories">Tiliado Repositories</h2>
-<p>If you have trouble with <strong>Tiliado Repositories</strong>, Tiliado Repository Installer and installation of
-Nuvola Apps from legacy Ubuntu/Debian/Fedora packages provided by Tiliado Repositories, report your issue at
-<a href="https://github.com/tiliado/tiliado-repositories/issues">Tiliado Repositories bug tracker</a>.</p>
-<h2 id="nuvola-apps">Nuvola Apps</h2>
-<h3 id="feature-requests">Feature Requests</h3>
-<p>If you have a feature request, <a href="https://github.com/tiliado/nuvolaplayer/issues/new">create a ticket in our bug tracker</a>.
-Please describe your requested feature thoroughly.</p>
-<h3 id="documentation-and-optional-features">Documentation and Optional Features</h3>
-<p>It might be helpful to look at the <a href="http://tiliado.github.io/nuvolaplayer/documentation/3.1.html">Nuvola Apps documentation</a>
-first. If you would like to know which optional features are available and how to enable them, see
-the <a href="./explore.html">description of Nuvola Apps features</a>.</p>
-<h3 id="official-flatpak-builds">Official Flatpak Builds</h3>
-<p>If you use <strong>the official flatpak builds of Nuvola Apps</strong> installed from the
-<a href="https://nuvola.tiliado.eu">Nuvola Apps Repository Index</a>, you are eligible for user support
-free of charge. In that case, follow
-<a href="https://github.com/tiliado/nuvolaplayer/wiki/Bug-Reporting-Guidelines">the Bug Reporting Guidelines</a>
-to create a new bug report.</p>
-<h3 id="legacy-ubuntudebianfedora-packages">Legacy Ubuntu/Debian/Fedora Packages</h3>
-<p>If you use <strong>the official Ubuntu/Debian/Fedora packages of Nuvola Apps</strong> installed from the 
-<a href="https://tiliado.eu/nuvolaplayer/repository/">Tiliado Repository</a>, you are also eligible for user support
-free of charge. In that case, follow
-<a href="https://github.com/tiliado/nuvolaplayer/wiki/Bug-Reporting-Guidelines">the Bug Reporting Guidelines</a>
-to create a new bug report.</p>
-<h3 id="third-party-builds">Third-Party Builds</h3>
-<p>Unfortunately, Nuvola Project does not have enough neither human nor financial resources to support third-party builds
-free of charge. Investigation of issues of these build is often tedious and very demanding as Nuvola Project does not
-have these builds under control and cannot guarantee that they have been built properly and use a complete set of
-correct runtime dependencies.</p>
-<p>However, the Nuvola Apps core developer, <a href="mailto:support@tiliado.eu">Jiri Janousek</a>, offers <strong>pre-paid support contracts</strong>
-(generally $60 USD for the first hour, including a setup fee, and $40/hour afterwards).
-<a href="mailto:support@tiliado.eu">Click here to send a quote</a>. Alternatively, you can contact the customer care of your
-distributor, if there is any.</p>
+    <h3 id="installation-instructions">Installation Instructions</h3>
+<p>Nuvola Project provides <strong>cross-distribution flatpak packages</strong> of Nuvola 4, which contain all
+requires dependencies. In order to install a particular Nuvola app, follow steps in the
+<a href="https://nuvola.tiliado.eu/">Nuvola Apps Repository Index</a> portal according to your distribution:</p>
+<ul>
+<li><a href="https://nuvola.tiliado.eu/#!index!ubuntu!xenial">Ubuntu 16.04 Xenial Xerus</a></li>
+<li><a href="https://nuvola.tiliado.eu/#!index!ubuntu!yakkety">Ubuntu 16.10 Yakkety Yak</a></li>
+<li><a href="https://nuvola.tiliado.eu/#!index!elementary!loki">elementaryOS 0.4 Loki</a></li>
+<li><a href="https://nuvola.tiliado.eu/#!index!debian!jessie">Debian 8 Jessie (stable)</a></li>
+<li><a href="https://nuvola.tiliado.eu/#!index!debian!stretch">Debian 9 Stretch (testing)</a></li>
+<li><a href="https://nuvola.tiliado.eu/#!index!debian!sid">Debian Sid (unstable)</a></li>
+<li><a href="https://nuvola.tiliado.eu/#!index!fedora!fc25">Fedora 25</a></li>
+<li><a href="https://nuvola.tiliado.eu/#!index!fedora!fc24">Fedora 24</a></li>
+<li><a href="https://nuvola.tiliado.eu/#!index!archlinux">Arch Linux</a></li>
+<li><a href="https://nuvola.tiliado.eu/#!index!other">Other linux</a></li>
+</ul>
+<h3 id="explore-features">Explore Features</h3>
+<div class="row">
+<div class="col-sm-12">
+<div class="thumbnail">
+<a href="../4/explore.html#explore-unity"><img height="192" src="../images/3.0/unity/unity_google_play_music_launcher_thumbs_up[256x192].png" width="256"/></a>
+<div class="caption">
+<a class="btn btn-primary btn-block" href="../4/explore.html#explore-unity" role="button">Unity</a>
+</div>
+</div>
+</div>
+<div class="col-sm-12">
+<div class="thumbnail">
+<a href="../4/explore.html#explore-gnome"><img height="192" src="../images/3.0/gnome/gnome_add_to_favorites[256x192].png" width="256"/></a>
+<div class="caption">
+<a class="btn btn-primary btn-block" href="../4/explore.html#explore-gnome" role="button">GNOME</a>
+</div>
+</div>
+</div>
+<div class="col-sm-12">
+<div class="thumbnail">
+<a href="../4/explore.html#explore-pantheon"><img src="../images/3.1/pantheon/pantheon_dock_thumbs_up_done_with_window[320x].png" width="320"/></a>
+<div class="caption">
+<a class="btn btn-primary btn-block" href="../4/explore.html#explore-pantheon" role="button">elementaryOS</a>
+</div>
+</div>
+</div>
+<div class="col-sm-12">
+<div class="thumbnail">
+<a href="../4/explore.html#explore-terminal"><img height="192" src="../images/3.0/unity/unity_nuvolactl_multiple_apps[256x192].png" width="256"/></a>
+<div class="caption">
+<a class="btn btn-primary btn-block" href="../4/explore.html#explore-terminal" role="button">Terminal &amp; scripts</a>
+</div>
+</div>
+</div>
+</div>
 
     <hr />
 <div class="panel panel-primary">
