@@ -150,11 +150,18 @@ Nuvola Player<br><small>Cloud music integration for your Linux desktop</small></
 <ul>
 <li><a href="#about-nuvola-apps">About Nuvola Apps</a></li>
 <li><a href="#whats-new">What's New</a><ul>
+<li><a href="#release-49">Release 4.9</a><ul>
+<li><a href="#enhancements">Enhancements</a></li>
+<li><a href="#under-the-hood">Under the hood</a></li>
+<li><a href="#nuvola-sdk-490">Nuvola SDK 4.9.0</a></li>
+<li><a href="#diorite-490">Diorite 4.9.0</a></li>
+</ul>
+</li>
 <li><a href="#release-48">Release 4.8</a><ul>
 <li><a href="#new-features">New Features</a></li>
 <li><a href="#discontinued-features">Discontinued Features</a></li>
 <li><a href="#news-for-script-maintainers">News for Script Maintainers</a></li>
-<li><a href="#under-the-hood">Under the Hood</a></li>
+<li><a href="#under-the-hood_1">Under the Hood</a></li>
 <li><a href="#diorite-480">Diorite 4.8.0</a></li>
 </ul>
 </li>
@@ -162,7 +169,7 @@ Nuvola Player<br><small>Cloud music integration for your Linux desktop</small></
 <li><a href="#new-features_1">New Features</a></li>
 <li><a href="#bug-fixes">Bug Fixes:</a></li>
 <li><a href="#news-for-script-maintainers_1">News for Script Maintainers:</a></li>
-<li><a href="#under-the-hood_1">Under the Hood:</a></li>
+<li><a href="#under-the-hood_2">Under the Hood:</a></li>
 <li><a href="#nuvola-sdk-470">Nuvola SDK 4.7.0</a></li>
 <li><a href="#diorite-470">Diorite 4.7.0</a></li>
 </ul>
@@ -172,7 +179,7 @@ Nuvola Player<br><small>Cloud music integration for your Linux desktop</small></
 <li><a href="#new-features_2">New Features</a></li>
 <li><a href="#bug-fixes_1">Bug fixes</a></li>
 <li><a href="#news-for-script-maintainers_2">News for Script Maintainers</a></li>
-<li><a href="#under-the-hood_2">Under the Hood</a></li>
+<li><a href="#under-the-hood_3">Under the Hood</a></li>
 <li><a href="#nuvola-sdk-460">Nuvola SDK 4.6.0</a></li>
 <li><a href="#diorite-460">Diorite 4.6.0</a></li>
 </ul>
@@ -182,7 +189,7 @@ Nuvola Player<br><small>Cloud music integration for your Linux desktop</small></
 <li><a href="#new-features_3">New Features</a></li>
 <li><a href="#bug-fixes_2">Bug fixes</a></li>
 <li><a href="#news-for-script-maintainers_3">News for Script Maintainers</a></li>
-<li><a href="#under-the-hood_3">Under the Hood</a></li>
+<li><a href="#under-the-hood_4">Under the Hood</a></li>
 <li><a href="#nuvola-sdk-45">Nuvola SDK 4.5</a></li>
 <li><a href="#diorite-45">Diorite 4.5</a></li>
 </ul>
@@ -190,32 +197,32 @@ Nuvola Player<br><small>Cloud music integration for your Linux desktop</small></
 <li><a href="#milestone-44">Milestone 4.4</a><ul>
 <li><a href="#gallery_2">Gallery</a></li>
 <li><a href="#new-features_4">New Features</a></li>
-<li><a href="#enhancements">Enhancements</a></li>
+<li><a href="#enhancements_1">Enhancements</a></li>
 <li><a href="#web-app-scripts">Web App Scripts</a></li>
 <li><a href="#bug-fixes_3">Bug fixes</a></li>
-<li><a href="#under-the-hood_4">Under the Hood</a></li>
+<li><a href="#under-the-hood_5">Under the Hood</a></li>
 <li><a href="#nuvola-sdk-440">Nuvola SDK 4.4.0</a></li>
 <li><a href="#diorite-440">Diorite 4.4.0</a></li>
 </ul>
 </li>
 <li><a href="#milestone-313">Milestone 3.1.3</a><ul>
 <li><a href="#new-features_5">New Features</a></li>
-<li><a href="#enhancements_1">Enhancements</a></li>
+<li><a href="#enhancements_2">Enhancements</a></li>
 <li><a href="#bug-fixes_4">Bug fixes</a></li>
-<li><a href="#under-the-hood_5">Under the Hood</a></li>
+<li><a href="#under-the-hood_6">Under the Hood</a></li>
 </ul>
 </li>
 <li><a href="#milestone-312">Milestone 3.1.2</a><ul>
 <li><a href="#new-features_6">New Features</a></li>
-<li><a href="#enhancements_2">Enhancements</a></li>
-<li><a href="#under-the-hood_6">Under the Hood</a></li>
+<li><a href="#enhancements_3">Enhancements</a></li>
+<li><a href="#under-the-hood_7">Under the Hood</a></li>
 <li><a href="#bug-fixes_5">Bug Fixes</a></li>
 <li><a href="#news-for-script-maintainers_4">News for Script Maintainers</a></li>
 </ul>
 </li>
 <li><a href="#milestone-311">Milestone 3.1.1</a><ul>
 <li><a href="#new-features_7">New Features</a></li>
-<li><a href="#enhancements_3">Enhancements:</a></li>
+<li><a href="#enhancements_4">Enhancements:</a></li>
 <li><a href="#bug-fixes_6">Bug Fixes</a></li>
 <li><a href="#news-for-script-maintainers_5">News for Script Maintainers:</a></li>
 <li><a href="#changes-in-dependencies">Changes in Dependencies</a></li>
@@ -246,6 +253,58 @@ apps usually have higher memory usage than native apps.</p>
     <a href="https://twitter.com/NuvolaPlayer">Twitter</a>.</li>
 <li>Subscribe to the Nuvola Player Newsletter: <a href="http://eepurl.com/bLbm5H">weekly</a>
     or <a href="http://eepurl.com/bLbtM1">monthly</a>.</li>
+</ul>
+<h3 id="release-49">Release 4.9</h3>
+<p>Nuvola 4.9 was released on December 17th, 2017. It is mostly a maintenance release as most of energy is invested in the
+Chromium port of Nuvola and the development of other features has slowed down. The current status of this ambitious
+effort will be described in a separate announcement.</p>
+<h4 id="enhancements">Enhancements</h4>
+<ul>
+<li><strong>URL entry widget</strong> was added: Press Ctrl+L or click the <em>gear menu</em> button → <em>Load URL</em> to display/change the
+    current URL.</li>
+<li>Updated script: <strong>Yandex Music 1.5</strong> was adopted by Aleksey Zhidkov and enhanced with an integrated Like button.
+    An album art fix by Alexander Konarev has been also incorporated.
+    Issue: <a href="https://github.com/tiliado/nuvola-app-yandex-music/issues/2">tiliado/nuvola-app-yandex-music#2</a>,
+    <a href="https://github.com/tiliado/nuvola-app-yandex-music/issues/10">tiliado/nuvola-app-yandex-music#10</a>.</li>
+<li>Updated script: <strong>SiriusXM 1.4</strong> by Jiří Janoušek. Metadata parsing adapted to recent SiriusXM changes.</li>
+<li>Updated script: <strong>BBC iPlayer 1.3</strong> by Andrew Stubbs. Fixed integration of radio shows, added integration of
+    progress bar, volume bar and skip action.</li>
+<li>Page <strong>loading indicator</strong> was added.
+    Issue: <a href="https://github.com/tiliado/nuvolaruntime/issues/229">tiliado/nuvolaruntime#229</a></li>
+<li>If Bumblebeed is detected, Nuvola assumes that the integrated Intel graphics card is the primary and skips
+    unnecessary checks for an NVidia flatpak driver.
+    Issue: <a href="https://github.com/tiliado/nuvolaruntime/issues/380">tiliado/nuvolaruntime#380</a></li>
+<li>Various fixes regarding VDPAU &amp; VA-API drivers.
+    Issue: <a href="https://github.com/tiliado/nuvolaruntime/issues/380">tiliado/nuvolaruntime#380</a></li>
+</ul>
+<h4 id="under-the-hood">Under the hood</h4>
+<ul>
+<li>WebKitGTK &gt;= 2.18.0 is required.</li>
+<li>If Nuvola is told that WebKitGTK supports MSE, it checks whether it is so and aborts otherwise. Don't use
+    <code>--webkitgtk-supports-mse</code> if it isn't true.</li>
+<li>Fixed various memory leaks.</li>
+<li>Ongoing optimizations to replace synchronous IPC calls with asynchronous variants.</li>
+<li><a href="https://github.com/tiliado/valacef">ValaCEF project</a> has been created to provide Nuvola with Vala bindings
+    for Chromium Embedded Framework (CEF).</li>
+</ul>
+<h4 id="nuvola-sdk-490">Nuvola SDK 4.9.0</h4>
+<ul>
+<li>Default API version is 4.9.</li>
+</ul>
+<h4 id="diorite-490">Diorite 4.9.0</h4>
+<ul>
+<li>New widget: Drtgtk.Entry - an enhanced version og Gtk.Entry.</li>
+<li>Fixed parsing of RPC notifications.
+    Issue: <a href="https://github.com/tiliado/nuvolaruntime/issues/385">tiliado/nuvolaruntime#385</a></li>
+<li>New widget: Drtgtk.HeaderBarTitle - a custom title widget for Gtk.HeaderBar.</li>
+<li>New utility function: System.cmdline_for_pid - Get command line of a process with given PID.</li>
+<li>Better debugging: Distinguish between socket creation errors.
+    Issue: <a href="https://github.com/tiliado/nuvolaruntime/issues/378">tiliado/nuvolaruntime#378</a></li>
+<li>New namespace: Drt.Dbus -  DBus introspection and service activation.</li>
+<li>New utility method: Drt.Flatpak.check_desktop_portal_available - to check whether a proper XDG Desktop Portal DBus
+    interface is present.</li>
+<li>New functionality: Functions to get, set and look up GTK+ 3 themes - see Drtgtk.DesktopShell.</li>
+<li>New widget: Drtgtk.GtkThemeSelector - a selector to list and change a GTK+ theme.</li>
 </ul>
 <h3 id="release-48">Release 4.8</h3>
 <p>Nuvola 4.8 was released on September 29th, 2017.</p>
@@ -282,7 +341,7 @@ apps usually have higher memory usage than native apps.</p>
     JavaScript API reference now supports new annotations such as "Deprecated since", "Available since" and
     "asynchronous" function.</li>
 </ul>
-<h4 id="under-the-hood">Under the Hood</h4>
+<h4 id="under-the-hood_1">Under the Hood</h4>
 <ul>
 <li>Nuvola uses new IPC API from Diorite 4.8 and replaced a lot of synchronous IPC calls between WebWorker and AppRunner
     processes with asynchronous variants. This should improve the performance of the WebKit WebProcess, reduce lags and
@@ -315,7 +374,7 @@ apps usually have higher memory usage than native apps.</p>
 <ul>
 <li>API 4.6 is required for new scripts.</li>
 </ul>
-<h4 id="under-the-hood_1">Under the Hood:</h4>
+<h4 id="under-the-hood_2">Under the Hood:</h4>
 <ul>
 <li>Nuvola no longer bundles <code>*.vapi</code> files but depends on those of Valac 0.36.3. However, glib-2.0.vapi and
     webkit2gtk-web-extension-4.0.vapi must be patched to work properly (see <code>vapi/*.patch</code>). You may need to modify
@@ -375,7 +434,7 @@ apps usually have higher memory usage than native apps.</p>
 <li>Developer sidebar can now change track rating.</li>
 <li>Media player API documentation was updated with track rating.</li>
 </ul>
-<h4 id="under-the-hood_2">Under the Hood</h4>
+<h4 id="under-the-hood_3">Under the Hood</h4>
 <ul>
 <li>New dependency: <a href="https://github.com/unitjs/unit.js/releases/tag/v2.0.0">unit.js</a> 2.0.0 
    (installed as /usr/share/javascript/unitjs/unit.js) is used for JavaScript unit tests (included in the test service</li>
@@ -450,7 +509,7 @@ apps usually have higher memory usage than native apps.</p>
 <li><code>Nuvola.triggerMouseEvent</code> and <code>clickOnElement</code> support relative x &amp; y coordinates, which is useful for clicking on
     a progress bar or a volume bar.</li>
 </ul>
-<h4 id="under-the-hood_3">Under the Hood</h4>
+<h4 id="under-the-hood_4">Under the Hood</h4>
 <ul>
 <li><strong>New dependencies:</strong> libdrm &gt;= 2.2 and libdri2 &gt;= 1.0</li>
 <li>Nuvola checks whether VDPAU and VA-API drivers are installed and prints debugging information to console.
@@ -498,7 +557,7 @@ apps usually have higher memory usage than native apps.</p>
 <li>Users can easily clear cookies, cache and temporary files, IndexedDB and WebSQL databases and local storage
     from the Preferences dialog → tab Website Data. Issue: <a href="https://github.com/tiliado/nuvolaplayer/issues/331">tiliado/nuvolaplayer#331</a></li>
 </ul>
-<h4 id="enhancements">Enhancements</h4>
+<h4 id="enhancements_1">Enhancements</h4>
 <ul>
 <li>Versioning scheme was changed to be more compact, e.g. 4.4.1 instead of 3.1.4-1.gabcd. Nuvola 4.0 was re-targeted
     as Nuvola 5.0.</li>
@@ -523,7 +582,7 @@ apps usually have higher memory usage than native apps.</p>
 <li>Broken -L/--log-file options were removed. Issue: <a href="https://github.com/tiliado/nuvolaplayer/issues/338">tiliado/nuvolaplayer#338</a></li>
 <li>Various fixes of HTTP Remote Control feature.</li>
 </ul>
-<h4 id="under-the-hood_4">Under the Hood</h4>
+<h4 id="under-the-hood_5">Under the Hood</h4>
 <ul>
 <li>Nuvola's filesystem namespace was changed from <code>nuvolaplayer3</code> to <code>nuvolaruntime</code>. The data dir is installed at
     PREFIX/share/nuvolaruntime, libraries were renamed to <code>libnuvolaruntime-*.so</code> and binaries to <code>nuvola(ctl)</code>.
@@ -566,7 +625,7 @@ apps usually have higher memory usage than native apps.</p>
     Issue: <a href="https://github.com/tiliado/nuvolaplayer/issues/4">tiliado/nuvolaplayer#4</a></li>
 <li>All three variants of the Arc theme have been added to Nuvola flatpaks. Issue: tiliado/nuvolaplayer/issues/318</li>
 </ul>
-<h4 id="enhancements_1">Enhancements</h4>
+<h4 id="enhancements_2">Enhancements</h4>
 <ul>
 <li>Ubuntu themes have been updated. Issue: <a href="https://github.com/tiliado/nuvolaplayer/issues/324">tiliado/nuvolaplayer#324</a></li>
 <li>Initial start-up of flatpak builds is faster.</li>
@@ -580,7 +639,7 @@ apps usually have higher memory usage than native apps.</p>
 <li>Fixed activation for Premium users. Issue: <a href="https://github.com/tiliado/nuvolaplayer/issues/325">tiliado/nuvolaplayer#325</a></li>
 <li>App menu, toolbar &amp; menu bar handling was refactored and double app menus fixed. Issue: <a href="https://github.com/tiliado/diorite/issues/4">tiliado/diorite#4</a></li>
 </ul>
-<h4 id="under-the-hood_5">Under the Hood</h4>
+<h4 id="under-the-hood_6">Under the Hood</h4>
 <ul>
 <li>Build script of Nuvola was reworked, ported to Waf 1.9.10 and supports branding. See Readme.md
     for more information.</li>
@@ -601,7 +660,7 @@ apps usually have higher memory usage than native apps.</p>
 <li>WebApp scripts provide own desktop files so the unnecessary create/delete desktop launchers actions
     were removed.</li>
 </ul>
-<h4 id="enhancements_2">Enhancements</h4>
+<h4 id="enhancements_3">Enhancements</h4>
 <ul>
 <li>Enhanced support of HTML5 Audio and Media Source Extension (MSE), which is currently enabled only
     in the BBC iPlayer script with a custom WebKitGTK+ build.</li>
@@ -609,7 +668,7 @@ apps usually have higher memory usage than native apps.</p>
     Issue: <a href="https://github.com/tiliado/nuvolaplayer/issues/76">tiliado/nuvolaplayer#76</a></li>
 <li>Preferences dialog: Components tab was renamed to Features as it is more user-friendly.</li>
 </ul>
-<h4 id="under-the-hood_6">Under the Hood</h4>
+<h4 id="under-the-hood_7">Under the Hood</h4>
 <ul>
 <li>Inter-process communication has been reworked for greater flexibility as required by the HTTP Remote Control
     feature.</li>
@@ -652,7 +711,7 @@ from your wrist.</dd>
 <dt><a href="../4/explore.html#password-manager">Password Manager</a></dt>
 <dd>With the Password Manager, you can store passwords from login forms in a secure keyring.</dd>
 </dl>
-<h4 id="enhancements_3">Enhancements:</h4>
+<h4 id="enhancements_4">Enhancements:</h4>
 <ul>
 <li>An option to always run in background regardless a song is playing or not. See in action in
     <a href="./explore.html#play-in-background-with-notifications">Unity</a> or
