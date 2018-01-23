@@ -192,9 +192,8 @@ Fedora 25-26.</p>
 <p>Software Install tool is not reliable behind HTTP proxy server and installation may fail. In
 that case, please install the Tiliado Repository Installer from command line under root/superuser
 account.</p>
-<div class="codehilite"><pre><span></span>su
-dnf install /path/to/location/of/tiliado-repositories*.rpm
-</pre></div>
+<pre class="codehilite"><code>su
+dnf install /path/to/location/of/tiliado-repositories*.rpm</code></pre>
 </div></div>
 <div class="cointainer">
 <ul class="thumbnails row" data-toggle="lightbox">
@@ -288,15 +287,13 @@ so it <strong>cannot be installed automatically with Nuvola Player 3</strong> pa
 <li>Run command <code>su</code> or <code>sudo -i</code> to get superuser rights.</li>
 <li>
 <p>Run following command to add a RPM Fusion repository.</p>
-<div class="codehilite"><pre><span></span>dnf install --nogpgcheck \
+<pre class="codehilite"><code class="language-text">dnf install --nogpgcheck \
 http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
-http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-</pre></div>
+http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm</code></pre>
 </li>
 <li>
 <p>Run following command to install GStreamer MP3 Audio Decoder from the RPM Fusion repository.</p>
-<div class="codehilite"><pre><span></span>dnf install gstreamer1-{libav,plugins-{good,ugly,bad-free}}
-</pre></div>
+<pre class="codehilite"><code class="language-text">dnf install gstreamer1-{libav,plugins-{good,ugly,bad-free}}</code></pre>
 </li>
 <li>
 <p>Close both terminal and Nuvola Player.</p>
