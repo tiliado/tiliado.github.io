@@ -150,6 +150,12 @@ Nuvola Player<br><small>Cloud music integration for your Linux desktop</small></
 <ul>
 <li><a href="#about-nuvola-apps">About Nuvola Apps</a></li>
 <li><a href="#whats-new">What's New</a><ul>
+<li><a href="#release-411">Release 4.11</a><ul>
+<li><a href="#changes-for-users">Changes for Users</a></li>
+<li><a href="#changes-for-script-maintainers">Changes for Script Maintainers</a></li>
+<li><a href="#changes-for-third-party-packagers">Changes for Third-Party Packagers</a></li>
+</ul>
+</li>
 <li><a href="#release-410">Release 4.10</a><ul>
 <li><a href="#new-features">New features</a></li>
 <li><a href="#enhancements">Enhancements</a></li>
@@ -261,6 +267,79 @@ apps usually have higher memory usage than native apps.</p>
     <a href="https://twitter.com/NuvolaPlayer">Twitter</a>.</li>
 <li>Subscribe to the Nuvola Player Newsletter: <a href="http://eepurl.com/bLbm5H">weekly</a>
     or <a href="http://eepurl.com/bLbtM1">monthly</a>.</li>
+</ul>
+<h3 id="release-411">Release 4.11</h3>
+<p>Nuvola 4.11 was released on May 8th, 2018.</p>
+<h4 id="changes-for-users">Changes for Users</h4>
+<ul>
+<li><a href="https://medium.com/nuvola-news/nuvola-adds-detection-of-headphones-and-changes-approach-to-gtk-theming-274cab6772fe">Nuvola Adds Detection of Headphones and Changes Approach to GTK Theming</a>:
+    Nuvola can detect when <strong>headphones are (un)plugged</strong> and mute, pause or resume playback accordingly.
+    Theming has changed: <strong>Greybird</strong> is used as a fallback theme instead of Adwaita, and Nuvola no longer bundles
+    other GTK+ themes but embraces Flatpak <strong>GTK+ theme extensions</strong> instead.</li>
+<li><a href="https://medium.com/nuvola-news/nuvola-4-10-23-325c54a9d494">Nuvola Updates 8tracks, Bandcamp, Google Play Music, and Google Calendar</a>:
+    Flatpaks of <strong>8tracks, Bandcamp, and Google Play Music</strong>were updated to use Chromium-based backend for music
+    playback without Flash plugin. <strong>Google Calendar</strong> also uses Chromium engine for better performance and desktop
+    notifications instead of web app alerts.</li>
+<li><a href="https://medium.com/nuvola-news/nuvola-4-10-29-784f90063b44">Nuvola Supports Ubuntu 18.04; Updates OwnCloud Music, Plex Music, Pocket Casts, and SiriusXM</a>:
+    Flatpaks of <strong>OwnCloud Music, Plex Music, Pocket Casts, and SiriusXM</strong> were updated to use Chromium-based backend
+    for music playback without Flash plugin and to improve desktop integration features such as a track progress bar
+    and volume slider. <a href="https://nuvola.tiliado.eu/nuvola/ubuntu/bionic/">Installation instructions</a> were updated
+    for <strong>Ubuntu 18.04 LTS</strong>.</li>
+<li><a href="https://medium.com/nuvola-news/nuvola-updates-amazon-cloud-player-bbc-iplayer-jupiter-broadcasting-supports-fedora-28-38c809a08639">Nuvola Updates Amazon Cloud Player, BBC iPlayer &amp; Jupiter Broadcasting; Supports Fedora 28</a>:
+    Flatpaks of<strong> Amazon Cloud Player, BBC iPlayer &amp; Jupiter Broadcasting </strong>— all maintained by Andrew Stubbs — were
+    updated to use Chromium-based backend for music playback without Flash plugin whenever possible.
+    <a href="https://nuvola.tiliado.eu/nuvola/ubuntu/bionic/">Installation instructions</a> were updated for <strong>Fedora 28</strong>,
+    and <strong>Nuvola Runtime</strong> received a few tweaks.</li>
+</ul>
+<h4 id="changes-for-script-maintainers">Changes for Script Maintainers</h4>
+<ul>
+<li>New utility function <code>Nuvola.queryText()</code>
+    (<a href="https://tiliado.github.io/nuvolaplayer/development/apps/api_reference.html#Nuvola.queryText">doc</a>)
+    used to query an element by a CSS selector expression and return text content or null.</li>
+<li>New utility function <code>Nuvola.queryAttribute()</code>
+    (<a href="https://tiliado.github.io/nuvolaplayer/development/apps/api_reference.html#Nuvola.queryAttribute">doc</a>)
+    used to query an element by a CSS selector expression and return its attribute or null.</li>
+<li>New utility function <code>Nuvola.setInputValueWithEvent()</code>
+    (<a href="https://tiliado.github.io/nuvolaplayer/development/apps/api_reference.html#Nuvola.setInputValueWithEvent">doc</a>)
+    used to set the value of an input element and then emit an<code>input</code> event.</li>
+<li>New utility function <code>Nuvola.exportImageAsBase64()</code>
+    (<a href="https://tiliado.github.io/nuvolaplayer/development/apps/api_reference.html#Nuvola.exportImageAsBase64">doc</a>)
+    used to load and export an image as base64 data URI, e.g., in the case of <code>blob://</code> resources.</li>
+<li>The Chromium-based backend now supports URL filtering for external links, which is more powerful than that of
+    WebKitGTK backend, e.g., it can detect JavaScript redirects in initially empty pop-up windows.</li>
+<li>Developer tools add the WebView sidebar to retrieve and change the dimensions of the web view or to take a snapshot.
+    It will be used to provide
+    <a href="https://github.com/tiliado/nuvolasdk/issues/5">AppStream metadata with per-app screenshots</a>
+    to be shown in GNOME Software, for example.</li>
+<li>Nuvola ADK includes <a href="https://standardjs.com/">Standard JavaScript code style checker</a>. You can use the <code>standard</code>
+    command to check the style of your script or use <code>standard --fix</code> to convert it.</li>
+<li><a href="https://tiliado.github.io/nuvolaplayer/development/apps/api_reference.html">NuvolaKit JavaScript API Reference</a>
+    was updated with new symbols and
+    <a href="https://tiliado.github.io/nuvolaplayer/development/apps/api_reference.html#x-changelog-4-11">changelogs</a>
+    were added to track changes more easily.</li>
+<li>Nuvola SDK calculates a micro version number from git as the number of commits from the last tag and adds it to
+    <code>metadata.json</code>. The micro version number is shown in the About dialog.</li>
+<li>Nuvola SDK uses two spaces for the indentation of JSON files.</li>
+</ul>
+<h4 id="changes-for-third-party-packagers">Changes for Third-Party Packagers</h4>
+<ul>
+<li>Nuvola can still be
+    <a href="https://github.com/tiliado/nuvolaruntime/blob/master/BUILD.md#web-engines">built without the Chromium-based backend</a>.
+    Please let us know whether you still need that possibility or the WebKitGTK-based backend can be removed.</li>
+<li>Vala ≥ 0.40.4 is required and all compatibility issues with Valac 0.40 were fixed.
+    [<a href="https://github.com/tiliado/diorite/issues/19">GitHub 1</a>, <a href="https://github.com/tiliado/diorite/issues/23">GitHub 2</a>]</li>
+<li>New dependencies: libpulse and libpulse-mainloop-glib.</li>
+<li>Canonical’s appindicator3 was replaced with a better maintained fork (libayatana-appindicator3) from
+    <a href="https://ayatanaindicators.github.io/">Ayatana Indicators project</a>.</li>
+<li>The WebKitGTK+ VAPI patch was dropped.</li>
+<li>WAF build system was upgraded to 2.0.6.</li>
+<li>Build instructions were updated and moved to a<code>BUILD.md</code> file
+    [<a href="https://github.com/tiliado/nuvolaruntime/blob/master/BUILD.md#web-engines">GitHub</a>].</li>
+<li>Another batch of scripts was ported to use the Chromium-based backend: 8tracks, Bandcamp, Google Calendar,
+    OwnCloud Music, Plex Music, Pocket Casts, SiriusXM, Amazon Cloud Player, BBC iPlayer, and Jupiter Broadcasting.
+    If you still support only the WebKitGTK-based backend, you can try to remove <code>Chromium[] Feature[MSE]</code> flags from
+    their requirements and add <code>Feature[Flash]</code> when necessary. However, this should be done on a case-by-case basis
+    and only after careful testing. We do not test and support these modifications though.</li>
 </ul>
 <h3 id="release-410">Release 4.10</h3>
 <p>Nuvola 4.10 was released on March 4th, 2018.</p>
