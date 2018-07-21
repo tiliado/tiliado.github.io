@@ -150,6 +150,12 @@ Nuvola Player<br><small>Cloud music integration for your Linux desktop</small></
 <ul>
 <li><a href="#about-nuvola-apps">About Nuvola Apps</a></li>
 <li><a href="#whats-new">What's New</a><ul>
+<li><a href="#release-4120">Release 4.12.0</a><ul>
+<li><a href="#whats-new-for-users">What’s New for Users</a></li>
+<li><a href="#whats-new-for-script-maintainers">What’s New for Script Maintainers</a></li>
+<li><a href="#whats-new-for-third-party-packagers">What’s New for Third-Party Packagers</a></li>
+</ul>
+</li>
 <li><a href="#release-411">Release 4.11</a><ul>
 <li><a href="#changes-for-users">Changes for Users</a></li>
 <li><a href="#changes-for-script-maintainers">Changes for Script Maintainers</a></li>
@@ -267,6 +273,81 @@ apps usually have higher memory usage than native apps.</p>
     <a href="https://twitter.com/NuvolaPlayer">Twitter</a>.</li>
 <li>Subscribe to the Nuvola Player Newsletter: <a href="http://eepurl.com/bLbm5H">weekly</a>
     or <a href="http://eepurl.com/bLbtM1">monthly</a>.</li>
+</ul>
+<h3 id="release-4120">Release 4.12.0</h3>
+<p>Nuvola 4.12 was released on July 21st, 2018.</p>
+<h4 id="whats-new-for-users">What’s New for Users</h4>
+<p>Nuvola 4.12 gathers all goodies that were continuously released to
+<a href="https://nuvola.tiliado.eu/">the genuine flatpak builds of Nuvola</a> since May 8th, 2018:</p>
+<ul>
+<li><a href="https://medium.com/nuvola-news/nuvola-adds-three-new-scripts-brain-fm-focus-will-and-npr-one-ca989ad0530a">Nuvola Adds Three New Scripts: Brain.fm, Focus@Will, and NPR One</a>
+    (May 20th, 2018): Three new scripts were added to the stable Flatpak repository: <strong>Brain.fm</strong>, <strong>Focus@Will</strong>,
+    and <strong>NPR One</strong>.</li>
+<li><a href="https://medium.com/nuvola-news/nuvola-adds-pandora-radio-updates-sound-cloud-sirius-xm-1691822ef1fe">Nuvola Adds Pandora Radio, Updates Sound Cloud &amp; Sirius XM</a>
+    (June 3rd, 2018): A new script was added to the stable Flatpak repository: <strong>Pandora Radio</strong>. <strong>Sound Cloud</strong> got
+    a new maintainer and was significantly improved. <strong>Sirius XM</strong> was adjusted to recent changes in its web interface.
+    Finally, <strong>Nuvola Runtime</strong> received a few tweaks.</li>
+<li><a href="https://medium.com/nuvola-news/nuvola-adds-qobuz-updates-kexp-radio-and-yandex-music-a67c9ee8d783">Nuvola Adds Qobuz, Updates KEXP Radio and Yandex Music</a>
+    (June 17th, 2018): A new script was added to the stable Flatpak repository: <strong>Qobuz</strong>. <strong>KEXP Radio</strong> got a new
+    maintainer and was adjusted to new player interface. <strong>Yandex Music</strong> was ported to Chromium-based backend for
+    audio playback without Flash plugin. Finally, <strong>Nuvola Runtime</strong> received a few tweaks.</li>
+<li><a href="https://medium.com/nuvola-news/nuvola-adds-youtube-music-updates-jango-tune-in-drops-logitech-media-server-37dfc73bc6f9">Nuvola Adds YouTube Music, Updates Jango &amp; Tune In, Drops Logitech Media Server</a>
+    (June 30th, 2018): A new script was added to the stable Flatpak repository: <strong>YouTube Music</strong>. <strong>Jango &amp; Tune In</strong>
+    integrations got a new maintainer, were ported to the Chromium-based backend for audio playback without Flash
+    plugin and updated to the latest Nuvola standards. <strong>Logitech Media Server</strong> script is now unsupported until a new
+    maintainer is found. Finally, <strong>Nuvola Runtime</strong> received a few tweaks.</li>
+<li><a href="https://medium.com/nuvola-news/nuvola-brings-redesigned-preferences-dialog-more-appearance-settings-and-bug-fixes-6545325b35f3">Nuvola Brings Redesigned Preferences Dialog, More Appearance Settings, and Bug Fixes</a>
+    (July 14th, 2018): The latest flatpak builds of Nuvola Apps bring redesigned Preferences dialog with expanded
+    Appearance section as well as a few bug fixes.</li>
+</ul>
+<h4 id="whats-new-for-script-maintainers">What’s New for Script Maintainers</h4>
+<ul>
+<li>Commands <code>nuvolasdk new-project</code>, <code>nuvolasdk convert-project</code> and <code>nuvolasdk check-project</code> were updated to follow
+    the latest Nuvola standards: two space indentations and no trailing whitespace are used for <code>metadata.in.json</code> and
+    <a href="https://wiki.gnome.org/Design/Whiteboards/AppMenuMigration">Standard JS code style</a> is enforced for <code>integrate.js</code>.</li>
+<li>The <code>README.md</code>template was updated and the command <code>nuvolasdk convert-project</code>creates <code>template--README.md</code> &amp;
+    <code>template--README.md.diff</code> files to help with the update of your <code>README.md</code>file.</li>
+<li>Nuvola SDK build system: If <code>src/webview.png</code> image is found, it is used to generate screenshots combining that web
+    view snapshot image with <a href="https://github.com/tiliado/nuvolasdk/tree/master/nuvolasdk/data/screenshots">base Nuvola screenshots</a>.
+    The resulting images can be found in the screenshots subdirectory. More screenshot types will be added in the next
+    development cycle. [<a href="https://github.com/tiliado/nuvolasdk/issues/5">GitHub ticket</a>]</li>
+<li>Changes in <a href="https://tiliado.github.io/nuvolaplayer/development/apps/guidelines.html">guidelines</a>:
+    <a href="https://tiliado.github.io/nuvolaplayer/development/apps/screenshots.html">Web view snapshots</a> are mandatory,
+    <a href="https://standardjs.com/">Standard JS coding style</a> for <code>integrate.json</code> is mandatory,
+    the minimal API level was raised to 4.11.</li>
+<li><a href="https://tiliado.github.io/nuvolaplayer/development/apps/api_reference.html#Nuvola.Core::NavigationRequest">Nuvola.Core::NavigationRequest</a>:
+    You can overwrite <code>request.url</code> field to force redirect during
+    <a href="https://tiliado.github.io/nuvolaplayer/development/apps/url-filtering.html">URL filtering</a>.</li>
+<li><a href="https://tiliado.github.io/nuvolaplayer/development/apps/api_reference.html#Nuvola.queryAttribute">Nuvola.queryAttribute</a>:
+    You can specify a parent element and a relative selector as an array of [parent element, selector].</li>
+<li><a href="https://tiliado.github.io/nuvolaplayer/development/apps/api_reference.html#Nuvola.queryText">Nuvola.queryText</a>:
+    You can specify a parent element and a relative selector as an array of [parent element, selector].</li>
+<li><a href="https://tiliado.github.io/nuvolaplayer/development/apps/api_reference.html#Nuvola.setInputValueWithEvent">Nuvola.setInputValueWithEvent</a>:
+    The change event is emitted as well.</li>
+<li>Nuvola ADK is no longer built with the WebKitGTK+ backend.</li>
+<li>The default web app requirements <code>Feature[Flash] Codec[MP3]</code>were dropped.</li>
+<li>An issue with radio actions in developer sidebar toggling themselves without user interaction was fixed.
+    [<a href="https://github.com/tiliado/nuvolaruntime/issues/440">GitHub ticket</a>]</li>
+<li><a href="https://tiliado.github.io/nuvolaplayer/development/apps/tutorial.html">Service Integrations Tutorial</a> and
+    <a href="https://tiliado.github.io/nuvolaplayer/development/apps/mediaplayer.html">Media Player Integration</a> pages were
+    updated to use <a href="https://groups.google.com/d/msg/nuvola-player-devel/xGOeh7hN0VE/xdIbhnHiAwAJ">a new demo player</a>. </li>
+</ul>
+<h4 id="whats-new-for-third-party-packagers">What’s New for Third-Party Packagers</h4>
+<ul>
+<li>A <strong>build error</strong> with<code>--no-cef</code> flag was fixed and a <strong>continuous integration</strong> task was set up to test a build
+    configuration with this flag after each commit. [<a href="https://github.com/tiliado/nuvolaruntime/issues/435">GitHub ticket</a>]</li>
+<li>Since the genuine flatpak builds of Nuvola no longer use WebKitGTK+ backend, <strong>all scripts are tested only with
+    the Chromium backend</strong> and specify <code>Chromium[X.Y.Z]</code> requirement for that reason. If you are stuck with
+    the WebKitGTK backend, you may remove <code>Chromium[X.Y.Z] Feature[MSE]</code> requirements to make the script run with
+    the WebKitGTK+ backend and add <code>Feature[Flash]</code> to use Flash plugin for audio playback. However, this should be
+    done on a case-by-case basis and after careful testing.</li>
+<li>Nuvola SDK build system: <strong>New dependency</strong> for building Nuvola scripts:
+    <a href="https://pypi.org/project/Pillow/">Pillow</a> ≥ 4.3.</li>
+<li>Nuvola SDK build system: If <code>src/webview.png</code> image is found, it is used to generate screenshots combining that
+    <strong>web view snapshot image</strong> with
+    <a href="https://github.com/tiliado/nuvolasdk/tree/master/nuvolasdk/data/screenshots">base Nuvola screenshots</a>.
+    The resulting images can be found in the screenshots subdirectory. More screenshot types will be added in the next
+    development cycle. [<a href="https://github.com/tiliado/nuvolasdk/issues/5">GitHub ticket</a>]</li>
 </ul>
 <h3 id="release-411">Release 4.11</h3>
 <p>Nuvola 4.11 was released on May 8th, 2018.</p>
